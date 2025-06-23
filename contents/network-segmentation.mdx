@@ -1,0 +1,46 @@
+---
+title: "Network Segmentation"
+description: "Dividing a network into smaller parts to improve performance and security"
+category: "Network Security"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+relatedTerms:
+  - name: "Firewall"
+    slug: "firewall"
+    description: "Used to enforce boundaries between segments"
+  - name: "Zero Trust"
+    slug: "zero-trust"
+    description: "Often implemented with segmentation"
+  - name: "VLAN"
+    slug: "vlan"
+    description: "Virtual LANs help with logical segmentation"
+resources:
+  - title: "Benefits of Network Segmentation"
+    url: "#"
+  - title: "Microsegmentation vs Traditional Segmentation"
+    url: "#"
+quickFacts:
+  "Purpose": "Contain breaches, limit lateral movement"
+  "Implementation": "VLANs, firewalls, subnets"
+  "Benefit": "Smaller blast radius in an attack"
+  "Example": "Isolating IoT devices from internal systems"
+---
+
+## What is Network Segmentation?
+
+**Network Segmentation** improves security by splitting a network into smaller zones. This limits access and helps contain threats, reducing how far attackers can move within a compromised system.
+
+## Key Concepts
+
+- **Macrosegmentation** – Large zones by department or function
+- **Microsegmentation** – Fine-grained, user/device-level separation
+- **Access Control Lists** – Define allowed communications
+
+## Best Practices
+
+- Segment sensitive data zones (e.g., payment systems)
+- Monitor and log traffic between segments
+- Use firewalls and VLANs strategically
+- Apply least privilege to inter-segment communication

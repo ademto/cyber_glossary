@@ -1,0 +1,48 @@
+---
+title: "Key Management"
+description: "The process of generating, distributing, storing, and rotating cryptographic keys securely"
+category: "Cryptography"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+relatedTerms:
+  - name: "Encryption"
+    slug: "encryption"
+    description: "Relies on securely managed keys"
+  - name: "HSM"
+    slug: "hardware-security-module"
+    description: "Dedicated device for managing and securing keys"
+  - name: "PKI"
+    slug: "pki"
+    description: "System for managing keys and certificates"
+resources:
+  - title: "Key Management Lifecycle Explained"
+    url: "#"
+  - title: "Best Practices for Cloud Key Management"
+    url: "#"
+quickFacts:
+  "Key Functions": "Generation, distribution, storage, rotation"
+  "Tools": "AWS KMS, Azure Key Vault, HashiCorp Vault"
+  "Best Practice": "Separate keys by purpose and system"
+  "Failure Risk": "Key compromise = full data breach"
+---
+
+## What is Key Management?
+
+**Key Management** ensures the secure lifecycle of encryption keys. Poor key handling can make even the strongest encryption useless.
+
+## Lifecycle Steps
+
+1. Generate strong keys
+2. Securely distribute to systems
+3. Rotate and retire regularly
+4. Protect keys with hardware or dedicated services
+5. Audit key usage
+
+## Best Practices
+
+- Use hardware-backed storage (HSMs)
+- Isolate keys by environment (dev/prod)
+- Use automatic key rotation
+- Log and monitor all access

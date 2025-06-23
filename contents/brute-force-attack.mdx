@@ -1,0 +1,46 @@
+---
+title: "Brute Force Attack"
+description: "An attack that tries all possible combinations to guess credentials"
+category: "Attack Techniques"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+relatedTerms:
+  - name: "Dictionary Attack"
+    slug: "dictionary-attack"
+    description: "Uses a list of common passwords"
+  - name: "Password Cracking"
+    slug: "password-cracking"
+    description: "Methods to uncover or guess passwords"
+  - name: "Rate Limiting"
+    slug: "rate-limiting"
+    description: "Slows down repeated login attempts"
+resources:
+  - title: "Preventing Brute Force Attacks"
+    url: "#"
+  - title: "Password Policy Best Practices"
+    url: "#"
+quickFacts:
+  "Target": "Usernames, passwords, encryption keys"
+  "Tools Used": "Hydra, John the Ripper, Burp Suite"
+  "Defense": "MFA, CAPTCHA, lockouts"
+  "Example": "Trying every PIN from 0000 to 9999"
+---
+
+## What is a Brute Force Attack?
+
+A **Brute Force Attack** involves guessing login credentials or encryption keys by systematically trying all possible combinations until the correct one is found.
+
+## Common Types
+
+- **Simple brute force** – Tries every combination
+- **Dictionary attack** – Uses known wordlists
+- **Credential stuffing** – Tries known username-password pairs
+
+## Best Practices
+
+- Enforce strong password policies
+- Use rate limiting and account lockouts
+- Deploy multi-factor authentication (MFA)
+- Monitor login attempts and failed logins

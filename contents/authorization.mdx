@@ -1,0 +1,46 @@
+---
+title: "Authorization"
+description: "The process of determining what an authenticated user is allowed to do"
+category: "Access Control"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+relatedTerms:
+  - name: "Authentication"
+    slug: "authentication"
+    description: "Verifying the identity of a user before granting access"
+  - name: "Least Privilege"
+    slug: "least-privilege"
+    description: "Granting only necessary permissions to users"
+  - name: "RBAC"
+    slug: "role-based-access-control"
+    description: "Assigning permissions based on user roles"
+resources:
+  - title: "Difference Between Authentication and Authorization"
+    url: "#"
+  - title: "How Role-Based Access Control Works"
+    url: "#"
+quickFacts:
+  "Primary Role": "Grant or restrict access to resources"
+  "Depends On": "Successful authentication"
+  "Common Systems": "RBAC, ABAC"
+  "Example": "A user logs in but can only view reports, not edit them"
+---
+
+## What is Authorization?
+
+**Authorization** defines what a user is permitted to do after their identity is authenticated. It governs access to systems, data, and features based on user roles, policies, or attributes.
+
+## Common Models
+
+- **Role-Based Access Control (RBAC)**
+- **Attribute-Based Access Control (ABAC)**
+- **Discretionary/ Mandatory Access Control**
+
+## Best Practices
+
+- Use least privilege principle
+- Separate authentication and authorization logic
+- Audit and log access attempts
+- Review permissions periodically

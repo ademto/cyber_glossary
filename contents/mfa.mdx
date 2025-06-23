@@ -1,0 +1,46 @@
+---
+title: "Multi-Factor Authentication (MFA)"
+description: "A security mechanism that requires two or more methods of verification before granting access"
+category: "Authentication"
+riskLevel: "High"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "High"
+relatedTerms:
+  - name: "Authentication"
+    slug: "authentication"
+    description: "Verifying identity before access"
+  - name: "2FA"
+    slug: "two-factor-authentication"
+    description: "Using two verification methods"
+  - name: "Biometrics"
+    slug: "biometrics"
+    description: "Fingerprint, facial recognition, and other physical identifiers"
+resources:
+  - title: "MFA Deployment Strategies"
+    url: "#"
+  - title: "Why MFA is Critical for Zero Trust"
+    url: "#"
+quickFacts:
+  "Types of Factors": "Knowledge, Possession, Inherence"
+  "Goal": "Reduce identity-based attacks"
+  "User Impact": "Slightly more friction for much more security"
+  "Example": "Login requires password + fingerprint scan"
+---
+
+## What is MFA?
+
+**Multi-Factor Authentication** strengthens account security by requiring users to present two or more verification factors. Even if one factor (like a password) is compromised, an attacker still can't access the system without the others.
+
+## MFA Factors
+
+1. **Something you know** – Password, PIN
+2. **Something you have** – Phone, token
+3. **Something you are** – Biometric traits
+
+## Best Practices
+
+- Combine different types of factors
+- Use app-based authenticators over SMS when possible
+- Enforce MFA for all admin and sensitive access
+- Monitor for MFA fatigue attacks

@@ -1,0 +1,46 @@
+---
+title: "Hashing"
+description: "The process of transforming data into a fixed-length string, typically for integrity verification or secure storage"
+category: "Cryptography"
+riskLevel: "Medium"
+severity: 7
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+relatedTerms:
+  - name: "Encryption"
+    slug: "encryption"
+    description: "Converts readable data to ciphertext"
+  - name: "Digital Signature"
+    slug: "digital-signature"
+    description: "Combines hashing with encryption to ensure data origin and integrity"
+  - name: "Checksum"
+    slug: "checksum"
+    description: "A basic method for verifying data integrity"
+resources:
+  - title: "Hash Functions Explained (SHA-2, SHA-3)"
+    url: "#"
+  - title: "Hashing vs Encryption"
+    url: "#"
+quickFacts:
+  "Output": "Fixed-length digest"
+  "Common Use": "Password storage, data verification"
+  "Popular Algorithms": "SHA-256, SHA-3, BLAKE2"
+  "Example": "File download page includes SHA-256 hash for verification"
+---
+
+## What is Hashing?
+
+**Hashing** is a one-way cryptographic function that transforms input data into a fixed-size string, called a hash or digest. It's widely used to verify integrity and store sensitive data like passwords securely.
+
+## Key Properties
+
+- **Deterministic** – Same input gives same output
+- **Irreversible** – Cannot get original from hash
+- **Collision-resistant** – Hard to find two inputs with same hash
+
+## Best Practices
+
+- Never store plaintext passwords — only hashed (and salted)
+- Use strong algorithms like SHA-256
+- Avoid outdated hashes like MD5 and SHA-1
+- Don’t use hashing for encryption — it’s not reversible

@@ -1,0 +1,47 @@
+---
+title: "Man-in-the-Middle Attack (MITM)"
+description: "An attack where an adversary secretly intercepts and alters communication between two parties"
+category: "Attack Techniques"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+relatedTerms:
+  - name: "Spoofing"
+    slug: "spoofing"
+    description: "Faking identity to deceive systems or users"
+  - name: "SSL Stripping"
+    slug: "ssl-stripping"
+    description: "Downgrading HTTPS to HTTP to intercept traffic"
+  - name: "Packet Sniffing"
+    slug: "packet-sniffing"
+    description: "Capturing unencrypted data in transit"
+resources:
+  - title: "Preventing MITM Attacks"
+    url: "#"
+  - title: "Wi-Fi Security Essentials"
+    url: "#"
+quickFacts:
+  "Attack Vector": "Public Wi-Fi, DNS hijack, ARP spoofing"
+  "Defense": "HTTPS, VPNs, certificate pinning"
+  "Example": "Interception of login credentials on public Wi-Fi"
+  "Detection": "Look for invalid certificates or odd redirects"
+---
+
+## What is a MITM Attack?
+
+A **Man-in-the-Middle (MITM) Attack** occurs when a third party secretly relays or alters communication between two systems without either party knowing.
+
+## Common MITM Techniques
+
+- **ARP Spoofing**
+- **DNS Spoofing**
+- **SSL Stripping**
+- **Session Hijacking**
+
+## Best Practices
+
+- Always use HTTPS
+- Educate users not to connect to unknown Wi-Fi
+- Use VPNs when traveling or on public networks
+- Monitor for DNS or ARP poisoning attempts

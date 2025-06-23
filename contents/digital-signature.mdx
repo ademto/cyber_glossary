@@ -1,0 +1,46 @@
+---
+title: "Digital Signature"
+description: "A cryptographic technique used to verify the authenticity and integrity of digital messages or documents"
+category: "Cryptography"
+riskLevel: "Medium"
+severity: 7
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+relatedTerms:
+  - name: "Public Key Infrastructure (PKI)"
+    slug: "pki"
+    description: "System for managing keys and certificates"
+  - name: "Hashing"
+    slug: "hashing"
+    description: "Used in creating digital signatures"
+  - name: "Non-Repudiation"
+    slug: "non-repudiation"
+    description: "Proof that a message was sent by a specific party"
+resources:
+  - title: "How Digital Signatures Work"
+    url: "#"
+  - title: "Benefits of Using Digital Signatures"
+    url: "#"
+quickFacts:
+  "Purpose": "Authenticate sender and ensure message integrity"
+  "Key Tools": "Private and public key pairs"
+  "Example": "Signing PDF contracts"
+  "Used In": "Email, code signing, documents"
+---
+
+## What is a Digital Signature?
+
+A **Digital Signature** is a mathematical scheme based on public key cryptography that ensures the recipient knows a message or file came from a specific sender and was not altered in transit.
+
+## How It Works
+
+- Sender hashes the message
+- Hash is encrypted with sender's private key
+- Recipient decrypts with sender’s public key and compares hashes
+
+## Best Practices
+
+- Use trusted certificate authorities (CAs)
+- Keep private keys secure
+- Use digital signatures for legal documents, software distribution, and secure emails
+- Verify signature validity before trusting content
