@@ -1,11 +1,14 @@
 ---
 title: "Penetration Testing"
-description: "A simulated cyberattack used to identify vulnerabilities before real attackers exploit them"
-category: "Security Assessment"
+description: "A simulated cyberattack conducted by ethical hackers to identify and exploit vulnerabilities before malicious actors can use them"
+category: "Security Testing"
 riskLevel: "Medium"
 severity: 7
 lastUpdated: "June 2025"
 threatLevel: "Medium"
+skillPath: ["Penetration Testing", "Vulnerability Assessment", "Security Testing", "Ethical Hacking"]
+jobPath: ["Penetration Tester", "Security Consultant", "Ethical Hacker", "Security Engineer"]
+certsPath: ["OSCP", "CEH", "SANS GPEN", "CompTIA Security+"]
 relatedTerms:
   - name: "Vulnerability Assessment"
     slug: "vulnerability-assessment"
@@ -22,27 +25,57 @@ resources:
   - title: "Top Tools for Pentesting"
     url: "#"
 quickFacts:
-  "Also Called": "Ethical Hacking"
-  "Tools Used": "Metasploit, Burp Suite, Nmap"
+  "Also Called": "Ethical Hacking, Pentesting"
+  "Tools Used": "Metasploit, Burp Suite, Nmap, Wireshark"
   "Goal": "Identify and fix weaknesses"
   "Reporting": "Findings are documented and rated by severity"
 ---
 
 ## What is Penetration Testing?
 
-**Penetration Testing** is a proactive cybersecurity practice where ethical hackers simulate attacks to find security flaws. It mimics the actions of real attackers to test the effectiveness of security controls.
+**Penetration Testing** (pentesting) is a proactive cybersecurity practice where authorized security professionals simulate real-world attacks to identify vulnerabilities and test the effectiveness of security controls. It goes beyond automated scanning to actively exploit weaknesses.
 
 ## Phases of a Pen Test
 
-1. **Reconnaissance**
-2. **Scanning & Enumeration**
-3. **Exploitation**
-4. **Post-Exploitation**
-5. **Reporting**
+### 1. **Planning & Reconnaissance**
+- Define scope and objectives
+- Gather information about the target
+- Identify potential attack vectors
+
+### 2. **Scanning & Enumeration**
+- Use tools to discover open ports and services
+- Map the network architecture
+- Identify potential vulnerabilities
+
+### 3. **Exploitation**
+- Attempt to exploit identified vulnerabilities
+- Gain unauthorized access to systems
+- Escalate privileges where possible
+
+### 4. **Post-Exploitation**
+- Document the extent of access gained
+- Identify sensitive data and systems
+- Test persistence mechanisms
+
+### 5. **Reporting & Remediation**
+- Document all findings with evidence
+- Provide actionable remediation steps
+- Rate vulnerabilities by severity
+
+## Types of Penetration Tests
+
+- **Black Box** – No prior knowledge of the target
+- **White Box** – Full knowledge of systems and architecture
+- **Gray Box** – Limited knowledge of the target
+- **Web Application** – Focused on web-based systems
+- **Network** – Testing network infrastructure
+- **Social Engineering** – Testing human vulnerabilities
 
 ## Best Practices
 
 - Clearly define scope and rules of engagement
-- Use professional third-party testers
+- Use professional, certified testers
 - Combine automated and manual methods
 - Remediate findings promptly
+- Conduct regular testing (quarterly or annually)
+- Document all activities and findings

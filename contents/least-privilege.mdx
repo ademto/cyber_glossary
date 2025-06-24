@@ -1,11 +1,14 @@
 ---
 title: "Least Privilege"
-description: "A security principle where users and systems are granted the minimum access necessary to perform their functions"
+description: "A security principle where users and systems are granted only the minimum access necessary to perform their required functions"
 category: "Access Control"
 riskLevel: "High"
 severity: 9
 lastUpdated: "June 2025"
 threatLevel: "High"
+skillPath: ["Identity and Access Management", "Access Control", "Security Fundamentals", "Security Governance"]
+jobPath: ["Identity and Access Management Specialist", "Security Engineer", "Security Analyst", "IT Administrator"]
+certsPath: ["CISSP", "CompTIA Security+", "SANS GSEC", "Microsoft Security Certifications"]
 relatedTerms:
   - name: "Privilege Escalation"
     slug: "privilege-escalation"
@@ -30,18 +33,50 @@ quickFacts:
 
 ## What is Least Privilege?
 
-The **Principle of Least Privilege (PoLP)** is about giving users and systems only the access they absolutely need—and nothing more. It limits the blast radius of attacks and prevents accidental damage.
+The **Principle of Least Privilege (PoLP)** is a fundamental security concept that states users and systems should be granted only the minimum access necessary to perform their required functions. This principle limits the potential damage from compromised accounts and reduces the attack surface.
 
-## Implementation Tactics
+## Core Principles
 
-- Use role-based access
-- Time-bound and just-in-time access
-- Monitor and audit permission use
-- Remove stale or unused accounts
+- **Need-to-know basis** – Access only to information required for job function
+- **Need-to-access basis** – Access only to systems and resources necessary for tasks
+- **Temporal limitation** – Access granted only for the time needed
+- **Justification required** – All access must have a business justification
+
+## Implementation Strategies
+
+### **Role-Based Access Control (RBAC)**
+- Define roles based on job functions
+- Assign permissions to roles, not individuals
+- Users inherit permissions through role membership
+- Easier to manage and audit
+
+### **Attribute-Based Access Control (ABAC)**
+- Use attributes (user, resource, environment) for access decisions
+- More granular and flexible than RBAC
+- Can consider context (time, location, device)
+- Complex to implement but very powerful
+
+### **Just-In-Time (JIT) Access**
+- Grant elevated privileges only when needed
+- Time-limited access with automatic expiration
+- Requires approval workflow for sensitive access
+- Reduces standing privileges
+
+## Benefits
+
+- **Reduced attack surface** – Fewer privileged accounts to compromise
+- **Limited lateral movement** – Attackers can't easily escalate privileges
+- **Compliance** – Helps meet regulatory requirements
+- **Audit efficiency** – Easier to track and review access
+- **Accident prevention** – Users can't accidentally damage systems
 
 ## Best Practices
 
-- Apply to humans and machines
-- Integrate with Identity & Access Management (IAM)
-- Automate access revocation
-- Conduct frequent access reviews
+- **Start with new systems** – Implement from the beginning
+- **Inventory existing access** – Document all current permissions
+- **Regular access reviews** – Quarterly or annual reviews
+- **Automate where possible** – Use tools for access management
+- **Monitor access patterns** – Detect unusual privilege usage
+- **Document exceptions** – Justify any elevated access
+- **Train users** – Explain the importance of least privilege
+- **Integrate with IAM** – Use centralized identity management

@@ -1,48 +1,50 @@
 ---
 title: "Zero Trust"
-description: "A security model that assumes no implicit trust and requires continuous verification of every user and device"
+description: "A security model that assumes no implicit trust and requires verification for every access request"
 category: "Security Architecture"
-riskLevel: "High"
-severity: 9
+riskLevel: "Medium"
+severity: 8
 lastUpdated: "June 2025"
-threatLevel: "High"
+threatLevel: "Medium"
+skillPath: ["Security Architecture", "Identity and Access Management", "Network Security", "Security Fundamentals"]
+jobPath: ["Security Architect", "Security Engineer", "Identity Specialist", "Security Consultant"]
+certsPath: ["CISSP", "SANS GSEC", "Microsoft Security Certifications", "CompTIA Security+"]
 relatedTerms:
-  - name: "Access Control"
-    slug: "access-control"
-    description: "Grants or denies access to resources"
-  - name: "MFA"
-    slug: "multi-factor-authentication"
-    description: "Required in Zero Trust environments"
-  - name: "Microsegmentation"
-    slug: "microsegmentation"
-    description: "Breaking networks into small zones to limit breach impact"
+  - name: "Identity and Access Management"
+    slug: "iam"
+    description: "Managing user identities and access rights"
+  - name: "Network Segmentation"
+    slug: "network-segmentation"
+    description: "Dividing networks into secure zones"
+  - name: "Least Privilege"
+    slug: "least-privilege"
+    description: "Giving minimal necessary access"
 resources:
-  - title: "Zero Trust Architecture by NIST"
+  - title: "Zero Trust Architecture Principles"
     url: "#"
-  - title: "Implementing Zero Trust in the Cloud"
+  - title: "Implementing Zero Trust Networks"
     url: "#"
 quickFacts:
-  "Core Idea": "Never trust, always verify"
-  "Focus Areas": "Identity, device, network, app"
-  "Use Case": "Remote access, cloud security"
-  "Example": "Access to files requires MFA + posture check"
+  "Core Principle": "Never trust, always verify"
+  "Components": "Identity, device, network, data"
+  "Implementation": "Phased approach, continuous monitoring"
+  "Example": "Multi-factor auth for every access request"
 ---
 
 ## What is Zero Trust?
 
-**Zero Trust** is a modern security framework that assumes every user and device is potentially compromised. It enforces strict verification regardless of whether access is from inside or outside the network perimeter.
+**Zero Trust** is a security framework that eliminates implicit trust and continuously validates every stage of digital interactions. It operates on the principle of "never trust, always verify" regardless of network location.
 
-## Pillars of Zero Trust
+## Core Principles
 
-- Verify identity continuously
-- Validate device posture
-- Limit access using least privilege
-- Use microsegmentation
-- Monitor and log all activity
+- **Verify Explicitly** – Authenticate and authorize every request
+- **Use Least Privilege** – Grant minimal access necessary
+- **Assume Breach** – Design for potential compromise
+- **Micro-segmentation** – Segment networks into small zones
 
-## Best Practices
+## Implementation Strategy
 
-- Adopt identity-first strategies
-- Integrate with SIEM and EDR tools
-- Enforce device compliance
-- Start with high-value assets
+- Start with identity and access management
+- Implement network segmentation
+- Deploy continuous monitoring
+- Apply to all resources and users

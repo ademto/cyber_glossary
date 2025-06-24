@@ -1,47 +1,50 @@
 ---
 title: "Firewall"
-description: "A network security device or software that monitors and controls incoming and outgoing traffic based on rules"
+description: "A network security device that monitors and controls incoming and outgoing network traffic"
 category: "Network Security"
-riskLevel: "High"
-severity: 8
+riskLevel: "Medium"
+severity: 7
 lastUpdated: "June 2025"
 threatLevel: "Medium"
+skillPath: ["Network Security", "Network Administration", "Security Fundamentals"]
+jobPath: ["Network Security Engineer", "Network Administrator", "Security Engineer", "Security Analyst"]
+certsPath: ["CompTIA Security+", "Cisco CCNA Security", "CISSP", "SANS GSEC"]
 relatedTerms:
-  - name: "IDS"
-    slug: "intrusion-detection-system"
-    description: "Monitors for suspicious activity"
-  - name: "Packet Filtering"
-    slug: "packet-filtering"
-    description: "Blocks or allows data packets based on headers"
-  - name: "Zero Trust"
-    slug: "zero-trust"
-    description: "Assumes no implicit trust within network boundaries"
+  - name: "Network Segmentation"
+    slug: "network-segmentation"
+    description: "Dividing networks into smaller, secure zones"
+  - name: "Intrusion Detection System"
+    slug: "ids"
+    description: "Monitors network for suspicious activity"
+  - name: "DMZ"
+    slug: "dmz"
+    description: "Demilitarized zone for public-facing services"
 resources:
-  - title: "Firewall Types Explained"
+  - title: "Firewall Configuration Best Practices"
     url: "#"
-  - title: "How Firewalls Protect Networks"
+  - title: "Next-Generation Firewalls Explained"
     url: "#"
 quickFacts:
-  "Main Role": "Control network access"
-  "Types": "Hardware, Software, Cloud"
-  "Rules": "Allow, block, log"
-  "Example": "Block all traffic to port 23 (Telnet)"
+  "Types": "Packet Filtering, Stateful, Application Layer"
+  "Placement": "Network perimeter, internal segments"
+  "Purpose": "Control network traffic flow"
+  "Example": "Blocking unauthorized access to internal servers"
 ---
 
 ## What is a Firewall?
 
-A **Firewall** is a security system that filters network traffic based on defined rules. It creates a barrier between a trusted internal network and untrusted external networks, such as the internet.
+**Firewalls** act as a barrier between trusted internal networks and untrusted external networks. They examine network traffic and decide whether to allow or block it based on predefined security rules.
 
-## Common Types
+## Types of Firewalls
 
-- Packet-filtering
-- Stateful inspection
-- Proxy firewalls
-- Next-generation firewalls (NGFW)
+- **Packet Filtering Firewalls** – Basic traffic filtering
+- **Stateful Firewalls** – Track connection state
+- **Application Layer Firewalls** – Deep packet inspection
+- **Next-Generation Firewalls** – Advanced threat protection
 
 ## Best Practices
 
-- Follow the principle of least privilege
+- Use defense in depth with multiple firewall layers
 - Regularly update firewall rules
-- Monitor and log denied attempts
-- Combine with IDS/IPS for layered defense
+- Monitor and log all traffic
+- Test firewall configurations regularly

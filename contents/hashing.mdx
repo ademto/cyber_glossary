@@ -1,11 +1,14 @@
 ---
 title: "Hashing"
-description: "The process of transforming data into a fixed-length string, typically for integrity verification or secure storage"
+description: "A one-way cryptographic function that transforms data into a fixed-length string for integrity verification and secure storage"
 category: "Cryptography"
 riskLevel: "Medium"
 severity: 7
 lastUpdated: "June 2025"
 threatLevel: "Medium"
+skillPath: ["Cryptography Fundamentals", "Data Protection", "Secure Development", "Security Fundamentals"]
+jobPath: ["Cryptographer", "Security Engineer", "Application Security Engineer", "DevSecOps Engineer"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH", "SANS GSEC"]
 relatedTerms:
   - name: "Encryption"
     slug: "encryption"
@@ -30,17 +33,34 @@ quickFacts:
 
 ## What is Hashing?
 
-**Hashing** is a one-way cryptographic function that transforms input data into a fixed-size string, called a hash or digest. It's widely used to verify integrity and store sensitive data like passwords securely.
+**Hashing** is a one-way cryptographic function that transforms input data of any size into a fixed-size string, called a hash or digest. Unlike encryption, hashing is irreversible - you cannot retrieve the original data from the hash value.
 
 ## Key Properties
 
-- **Deterministic** – Same input gives same output
-- **Irreversible** – Cannot get original from hash
-- **Collision-resistant** – Hard to find two inputs with same hash
+- **Deterministic** – Same input always produces the same output
+- **Irreversible** – Cannot derive original data from the hash
+- **Collision-resistant** – Extremely difficult to find two inputs that produce the same hash
+- **Avalanche Effect** – Small changes in input produce completely different outputs
+
+## Common Hash Functions
+
+- **SHA-256** – Widely used, 256-bit output
+- **SHA-3** – Latest SHA standard, more secure
+- **BLAKE2** – Fast and secure alternative
+- **bcrypt** – Specifically designed for password hashing
+- **Argon2** – Winner of password hashing competition
+
+## Applications
+
+- **Password Storage** – Store hashed passwords, not plaintext
+- **Data Integrity** – Verify files haven't been tampered with
+- **Digital Signatures** – Part of the signing process
+- **Blockchain** – Used in cryptocurrency and distributed ledgers
 
 ## Best Practices
 
-- Never store plaintext passwords — only hashed (and salted)
-- Use strong algorithms like SHA-256
-- Avoid outdated hashes like MD5 and SHA-1
-- Don’t use hashing for encryption — it’s not reversible
+- Use strong, modern algorithms (SHA-256, SHA-3, BLAKE2)
+- Always salt passwords before hashing
+- Avoid deprecated algorithms (MD5, SHA-1)
+- Don't use hashing for encryption - it's not reversible
+- Use specialized functions like bcrypt for password hashing

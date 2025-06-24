@@ -1,17 +1,20 @@
 ---
 title: "Backup"
-description: "A copy of data stored separately to restore in case of data loss or corruption"
+description: "A copy of data stored separately to restore in case of data loss, corruption, or cyberattack"
 category: "Business Continuity"
 riskLevel: "Medium"
 severity: 7
 lastUpdated: "June 2025"
 threatLevel: "Medium"
+skillPath: ["Business Continuity", "Data Protection", "Disaster Recovery", "Security Fundamentals"]
+jobPath: ["Backup Administrator", "Systems Administrator", "IT Manager", "Security Engineer"]
+certsPath: ["CompTIA Security+", "CISSP", "ITIL", "Microsoft Azure Certifications"]
 relatedTerms:
   - name: "Disaster Recovery"
     slug: "disaster-recovery"
     description: "Restoring operations after major failures"
   - name: "Ransomware"
-    slug: "ransomware"
+    slug: "ransomeware"
     description: "Backups help recover without paying ransom"
   - name: "Recovery Point Objective"
     slug: "rpo"
@@ -30,17 +33,48 @@ quickFacts:
 
 ## What is a Backup?
 
-A **Backup** is a safety copy of data that can be restored in case of accidental deletion, cyberattack, hardware failure, or natural disaster. It’s a critical part of business continuity planning.
+A **Backup** is a safety copy of data that can be restored in case of accidental deletion, cyberattack, hardware failure, or natural disaster. It's a critical component of business continuity planning and data protection strategies.
 
 ## Backup Types
 
-- **Full** – All data
-- **Incremental** – Changes since last backup
-- **Differential** – Changes since last full backup
+### **Full Backup**
+- Complete copy of all data
+- Takes longest to create and restore
+- Provides fastest recovery time
+- Used as baseline for other backup types
+
+### **Incremental Backup**
+- Only backs up changed data since last backup
+- Fastest to create, slower to restore
+- Requires full backup plus all incremental backups
+- Efficient for storage space
+
+### **Differential Backup**
+- Backs up all changes since last full backup
+- Moderate creation and restore times
+- Requires full backup plus latest differential
+- Good balance of speed and storage
+
+## Backup Strategies
+
+### **3-2-1 Rule**
+- **3 copies** of important data
+- **2 different storage types** (e.g., local drive + cloud)
+- **1 copy offsite** for disaster protection
+
+### **Backup Locations**
+- **Local backups** – Fast access, vulnerable to local disasters
+- **Cloud backups** – Scalable, requires internet connection
+- **Offsite backups** – Disaster protection, slower access
+- **Air-gapped backups** – Isolated from network, ransomware protection
 
 ## Best Practices
 
-- Use the 3-2-1 rule
-- Automate backups
-- Regularly test restore process
-- Encrypt and secure backup locations
+- **Automate backups** to ensure consistency
+- **Test restore procedures** regularly
+- **Encrypt backup data** for security
+- **Monitor backup success** and failures
+- **Document backup procedures** and recovery plans
+- **Use versioning** to protect against ransomware
+- **Implement retention policies** for compliance
+- **Regular backup validation** to ensure data integrity
