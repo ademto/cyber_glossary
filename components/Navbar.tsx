@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Shield } from "lucide-react"
 
 function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   useEffect(() => {
     if (
@@ -45,13 +45,6 @@ function ThemeToggle() {
 }
 
 export default function Navbar() {
-  const [search, setSearch] = useState("");
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement your search logic here
-    alert(`Searching for: ${search}`);
-  };
 
   return (
     <nav className="border-b border-[#585858] px-4">
@@ -60,51 +53,36 @@ export default function Navbar() {
                 <Shield className="h-5 w-5 text-blue-600" />
                 <span className="font-semibold text-gray-900">CyberSec Glossary</span>
             </div>
-        <form onSubmit={handleSearch} className="flex items-center gap-2">
-            <input
-            type="text"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search glossary..."
-            className="px-2 py-1 rounded border border-zinc-400 dark:bg-zinc-800 dark:text-white"
-            />
-            <button
-            type="submit"
-            className="px-2 py-1 rounded bg-zinc-200 dark:bg-zinc-700 dark:text-white"
-            >
-            Search
-            </button>
-        </form>
-        <div className="icons flex items-center gap-4">
-            <ThemeToggle />
-            <a
-            className="text-xl hover:text-zinc-600"
-            href="https://github.com/ademto"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <FaGithub />
-            <span className="sr-only">GitHub</span>
-            </a>
-            <a
-            className="text-xl hover:text-zinc-600"
-            href="https://www.linkedin.com/in/emmanuel-adetoro/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <FaLinkedin />
-            <span className="sr-only">LinkedIn</span>
-            </a>
-            <a
-            className="text-xl hover:text-zinc-600"
-            href="https://twitter.com/yourhandle"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <FaXTwitter />
-            <span className="sr-only">Twitter</span>
-            </a>
-        </div>
+            <div className="icons flex items-center gap-4">
+                <ThemeToggle />
+                <a
+                className="text-xl hover:text-zinc-600"
+                href="https://github.com/ademto"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <FaGithub />
+                <span className="sr-only">GitHub</span>
+                </a>
+                <a
+                className="text-xl hover:text-zinc-600"
+                href="https://www.linkedin.com/in/emmanuel-adetoro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <FaLinkedin />
+                <span className="sr-only">LinkedIn</span>
+                </a>
+                <a
+                className="text-xl hover:text-zinc-600"
+                href="https://twitter.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <FaXTwitter />
+                <span className="sr-only">Twitter</span>
+                </a>
+            </div>
         </div>
     </nav>
   );
