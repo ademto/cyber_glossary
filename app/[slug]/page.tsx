@@ -1,4 +1,5 @@
 import type React from "react"
+import type { Metadata } from "next"
 import { ArrowLeft, BookOpen, ExternalLink, Tag } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -40,6 +41,67 @@ const mdxComponents = {
   blockquote: ({ children }: { children: React.ReactNode }) => (
     <blockquote className="border-l-4 border-primary pl-4 py-2 bg-muted/50 rounded-r mb-4">{children}</blockquote>
   ),
+}
+
+// Generate metadata for individual term pages
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const termData = await getTermBySlug(slug)
+
+  if (!termData) {
+    return {
+      title: "Term Not Found",
+      description: "The requested cybersecurity term could not be found.",
+    }
+  }
+
+  const { frontmatter } = termData
+  const title = frontmatter.acronym 
+    ? `${frontmatter.title} (${frontmatter.acronym}) - Cybersecurity Term`
+    : `${frontmatter.title} - Cybersecurity Term`
+
+  const description = `${frontmatter.description} Learn about ${frontmatter.title.toLowerCase()}, its importance in cybersecurity, risk level: ${frontmatter.riskLevel}, and related career paths.`
+
+  const keywords = [
+    frontmatter.title.toLowerCase(),
+    frontmatter.category.toLowerCase(),
+    "cybersecurity",
+    "security",
+    "information security",
+    ...(frontmatter.acronym ? [frontmatter.acronym.toLowerCase()] : []),
+    ...(frontmatter.skillPath || []),
+    ...(frontmatter.jobPath || []),
+    ...(frontmatter.certsPath || [])
+  ]
+
+  return {
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      url: `https://cyber-glossary.com/${slug}`,
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${frontmatter.title} - Cybersecurity Term`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
+    },
+    alternates: {
+      canonical: `/${slug}`,
+    },
+  }
 }
 
 export async function generateStaticParams() {
