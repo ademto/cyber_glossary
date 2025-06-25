@@ -1,14 +1,12 @@
 import type React from "react"
-import { ArrowLeft, BookOpen, ExternalLink, Search, Share2, Tag } from "lucide-react"
+import { ArrowLeft, BookOpen, ExternalLink, Tag } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { getTermBySlug, getAllTermSlugs } from "@/lib/mdx-utils"
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 
 // MDX Components for custom rendering
