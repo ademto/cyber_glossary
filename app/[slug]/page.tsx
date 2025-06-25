@@ -49,8 +49,13 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function TermPage({ params }: { params: { slug: string } }) {
-  const termData = await getTermBySlug(params.slug)
+interface PageProps {
+  params: Promise<{ slug: string }>
+}
+
+export default async function TermPage({ params }: PageProps) {
+  const { slug } = await params
+  const termData = await getTermBySlug(slug)
 
   if (!termData) {
     notFound()
