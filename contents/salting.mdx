@@ -1,0 +1,246 @@
+---
+title: "Salting"
+description: "A cryptographic technique that adds random data to passwords before hashing to prevent rainbow table attacks and improve password security"
+category: "Cryptography"
+riskLevel: "Low"
+severity: 5
+lastUpdated: "June 2025"
+threatLevel: "Low"
+skillPath: ["Cryptography", "Password Security", "Application Security", "Security Analysis"]
+jobPath: ["Security Engineer", "Application Security Engineer", "Cryptographer", "Security Analyst"]
+certsPath: ["CISSP", "CompTIA Security+", "SANS SEC542", "GIAC GSSP"]
+relatedTerms:
+  - name: "Hashing"
+    slug: "hashing"
+    description: "One-way cryptographic functions"
+  - name: "Key Stretching"
+    slug: "key-stretching"
+    description: "Making brute force attacks more difficult"
+  - name: "Password Security"
+    slug: "password-security"
+    description: "Protecting user passwords"
+resources:
+  - title: "Password Security Best Practices"
+    url: "#"
+  - title: "Cryptographic Salt Implementation"
+    url: "#"
+quickFacts:
+  "Purpose": "Prevent rainbow table attacks on passwords"
+  "Implementation": "Random data added before hashing"
+  "Benefits": "Enhanced password security, attack prevention"
+  "Best Practice": "Unique salt per password, sufficient length"
+---
+
+## What is Salting?
+
+**Salting** is a cryptographic technique that adds random data (called a "salt") to passwords before hashing them. This process prevents rainbow table attacks and ensures that even identical passwords produce different hash values, significantly improving password security and protecting against various attack methods.
+
+## How Salting Works
+
+### **Basic Process**
+- **Password input** – User provides password
+- **Salt generation** – Random salt is generated
+- **Combination** – Password and salt are combined
+- **Hashing** – Combined value is hashed
+- **Storage** – Hash and salt are stored together
+
+### **Salt Properties**
+- **Randomness** – Cryptographically secure random values
+- **Uniqueness** – Each password gets a unique salt
+- **Length** – Sufficient length (typically 16+ bytes)
+- **Storage** – Salt stored alongside hash
+- **Retrieval** – Salt retrieved during verification
+
+### **Verification Process**
+- **Password input** – User provides password for verification
+- **Salt retrieval** – Salt retrieved from storage
+- **Combination** – Password and salt combined
+- **Hashing** – Combined value hashed
+- **Comparison** – Hash compared with stored hash
+
+## Types of Salting
+
+### **Per-Password Salting**
+- **Unique salt** – Each password gets unique salt
+- **Maximum security** – Highest level of protection
+- **Storage overhead** – Requires storing salt per password
+- **Implementation** – Standard practice for password storage
+- **Benefits** – Prevents rainbow table attacks completely
+
+### **Per-User Salting**
+- **User-specific salt** – Same salt for all user passwords
+- **Moderate security** – Better than no salt, less than per-password
+- **Storage efficiency** – One salt per user
+- **Implementation** – Used in some legacy systems
+- **Limitations** – Vulnerable to targeted attacks
+
+### **Application-Level Salting**
+- **Global salt** – Same salt for all passwords in application
+- **Minimal security** – Provides very limited protection
+- **Storage efficiency** – Single salt for entire application
+- **Implementation** – Sometimes used in simple systems
+- **Vulnerabilities** – Still vulnerable to rainbow table attacks
+
+## Salt Generation Methods
+
+### **Cryptographically Secure Random**
+- **Secure algorithms** – Use cryptographically secure random generators
+- **Entropy sources** – High-quality entropy sources
+- **Random length** – Variable salt length for additional security
+- **Implementation** – Standard practice for modern systems
+- **Examples** – /dev/urandom, CryptoAPI, SecureRandom
+
+### **Time-Based Salting**
+- **Timestamp inclusion** – Include current timestamp in salt
+- **Additional entropy** – Adds time-based randomness
+- **Implementation** – Sometimes used as additional entropy
+- **Limitations** – Predictable if timestamp is known
+- **Best practice** – Combine with cryptographically secure random
+
+### **Hardware-Based Salting**
+- **Hardware RNG** – Use hardware random number generators
+- **High entropy** – Very high-quality entropy sources
+- **Implementation** – Used in high-security environments
+- **Cost** – May require specialized hardware
+- **Reliability** – Hardware failure considerations
+
+## Implementation Best Practices
+
+### **Salt Generation**
+- **Cryptographically secure** – Use secure random number generators
+- **Sufficient length** – Minimum 16 bytes (128 bits)
+- **Uniqueness** – Ensure each salt is unique
+- **Randomness** – High-quality entropy sources
+- **Verification** – Validate salt quality
+
+### **Salt Storage**
+- **Secure storage** – Store salts securely alongside hashes
+- **No encryption** – Salts should not be encrypted
+- **Access control** – Restrict access to salt storage
+- **Backup security** – Secure backup of salt data
+- **Retrieval efficiency** – Efficient salt retrieval mechanisms
+
+### **Salt Application**
+- **Consistent application** – Apply salt consistently
+- **Proper combination** – Combine password and salt correctly
+- **Hash selection** – Use appropriate hash functions
+- **Iteration count** – Combine with key stretching
+- **Verification** – Test salt application thoroughly
+
+## Security Benefits
+
+### **Rainbow Table Prevention**
+- **Attack prevention** – Prevents precomputed hash attacks
+- **Computational cost** – Makes attacks computationally expensive
+- **Storage requirements** – Eliminates rainbow table effectiveness
+- **Time requirements** – Significantly increases attack time
+- **Cost effectiveness** – Makes attacks economically unfeasible
+
+### **Password Security Enhancement**
+- **Uniqueness** – Ensures identical passwords have different hashes
+- **Collision prevention** – Prevents hash collisions
+- **Attack resistance** – Resists various attack methods
+- **Brute force protection** – Increases brute force attack difficulty
+- **Dictionary attack protection** – Protects against dictionary attacks
+
+### **Compliance and Standards**
+- **Regulatory compliance** – Meets various security standards
+- **Industry best practices** – Follows security best practices
+- **Audit requirements** – Satisfies security audit requirements
+- **Certification standards** – Meets certification requirements
+- **Legal requirements** – Complies with legal security requirements
+
+## Common Attack Methods
+
+### **Rainbow Table Attacks**
+- **Precomputed tables** – Attackers use precomputed hash tables
+- **Salt prevention** – Salting prevents rainbow table effectiveness
+- **Computational cost** – Makes attacks computationally expensive
+- **Storage requirements** – Eliminates rainbow table storage advantage
+- **Time requirements** – Significantly increases attack time
+
+### **Brute Force Attacks**
+- **Systematic guessing** – Attackers try all possible passwords
+- **Salt impact** – Salting increases attack complexity
+- **Computational overhead** – Adds computational overhead to attacks
+- **Time requirements** – Increases time required for attacks
+- **Cost effectiveness** – Makes attacks less cost-effective
+
+### **Dictionary Attacks**
+- **Word list attacks** – Attackers use word lists and dictionaries
+- **Salt protection** – Salting protects against dictionary attacks
+- **Uniqueness** – Ensures identical passwords have different hashes
+- **Attack prevention** – Prevents efficient dictionary attacks
+- **Security enhancement** – Enhances overall password security
+
+## Implementation Examples
+
+### **Modern Password Storage**
+```python
+import hashlib
+import os
+import bcrypt
+
+# Generate salt
+salt = bcrypt.gensalt()
+
+# Hash password with salt
+hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
+
+# Store hash and salt
+store_password_hash(hashed)
+```
+
+### **Legacy System Upgrade**
+```python
+import hashlib
+import os
+
+# Generate new salt
+salt = os.urandom(16)
+
+# Combine password and salt
+salted_password = password + salt.hex()
+
+# Hash combined value
+hash_value = hashlib.sha256(salted_password.encode()).hexdigest()
+
+# Store hash and salt
+store_password_data(hash_value, salt.hex())
+```
+
+### **Verification Process**
+```python
+def verify_password(stored_hash, stored_salt, input_password):
+    # Combine input password with stored salt
+    salted_input = input_password + stored_salt
+    
+    # Hash combined value
+    input_hash = hashlib.sha256(salted_input.encode()).hexdigest()
+    
+    # Compare hashes
+    return input_hash == stored_hash
+```
+
+## Best Practices
+
+### **Salt Generation**
+- **Use secure RNG** – Cryptographically secure random number generators
+- **Sufficient length** – Minimum 16 bytes (128 bits)
+- **Uniqueness** – Ensure each salt is unique
+- **Randomness** – High-quality entropy sources
+- **Verification** – Validate salt quality
+
+### **Implementation**
+- **Consistent application** – Apply salt consistently
+- **Proper combination** – Combine password and salt correctly
+- **Hash selection** – Use appropriate hash functions
+- **Iteration count** – Combine with key stretching
+- **Testing** – Thorough testing of implementation
+
+### **Security Measures**
+- **Secure storage** – Store salts securely
+- **Access control** – Restrict access to salt data
+- **Backup security** – Secure backup procedures
+- **Monitoring** – Monitor for security issues
+- **Updates** – Regular security updates 

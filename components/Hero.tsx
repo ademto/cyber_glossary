@@ -46,22 +46,6 @@ export default function Hero() {
                     </p>
                 </div>
             </div>
-
-            {/* Quick Navigation */}
-            <div className="mt-12">
-                <h3 className="text-lg font-semibold text-foreground mb-4">Browse by Letter</h3>
-                <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
-                    {alphabetArray.map((letter) => (
-                        <a
-                            key={letter}
-                            href={`#${letter}`}
-                            className="w-10 h-10 flex items-center justify-center rounded-lg border border-border bg-background hover:bg-muted hover:border-primary transition-colors text-sm font-medium text-foreground hover:text-primary"
-                        >
-                            {letter.toUpperCase()}
-                        </a>
-                    ))}
-                </div>
-            </div>
         </section>
     )
 }

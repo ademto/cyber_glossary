@@ -1,0 +1,168 @@
+---
+title: "Fileless Virus"
+description: "Malware that operates in memory without writing files to disk, making detection and removal more challenging"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Digital Forensics", "Memory Forensics", "Threat Intelligence"]
+jobPath: ["Malware Analyst", "Digital Forensics Examiner", "Threat Intelligence Analyst", "Security Analyst"]
+certsPath: ["GIAC GREM", "SANS FOR508", "GCFE", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Memory Forensics"
+    slug: "memory-forensics"
+    description: "Analysis technique for fileless malware"
+  - name: "Living Off the Land"
+    slug: "lotl"
+    description: "Technique using legitimate system tools"
+resources:
+  - title: "Fileless Malware Detection"
+    url: "#"
+  - title: "Memory Forensics Analysis"
+    url: "#"
+quickFacts:
+  "Goal": "Evade traditional file-based detection"
+  "Operation": "Runs entirely in memory"
+  "Detection": "Memory analysis, behavioral monitoring"
+  "Persistence": "Registry, scheduled tasks, WMI"
+---
+
+## What is a Fileless Virus?
+
+A **fileless virus** is malicious software that operates entirely in computer memory without writing files to the disk. This technique makes traditional antivirus solutions less effective since they primarily scan files on disk. Fileless malware uses legitimate system tools and processes to execute malicious code.
+
+## How Fileless Viruses Work
+
+### **Infection Process**
+- **Initial access** – Phishing, exploit kits, or compromised credentials
+- **Memory injection** – Injects code into legitimate processes
+- **Living off the land** – Uses built-in system tools
+- **Persistence** – Establishes long-term presence without files
+
+### **Execution Methods**
+- **Process injection** – Injects code into running processes
+- **Registry execution** – Uses registry keys to store and execute code
+- **WMI persistence** – Uses Windows Management Instrumentation
+- **PowerShell execution** – Leverages PowerShell for malicious activities
+- **Scheduled tasks** – Creates tasks for persistence
+
+## Types of Fileless Malware
+
+### **Memory-Only Malware**
+- **RAM-resident** – Exists only in volatile memory
+- **Process hollowing** – Replaces legitimate process content
+- **DLL injection** – Injects malicious DLLs into processes
+- **Thread injection** – Creates malicious threads in processes
+
+### **Registry-Based Malware**
+- **Registry persistence** – Stores code in registry keys
+- **Registry execution** – Uses registry for code execution
+- **COM hijacking** – Modifies Component Object Model entries
+- **Service manipulation** – Modifies Windows services
+
+### **Script-Based Malware**
+- **PowerShell scripts** – Uses PowerShell for execution
+- **VBScript** – Visual Basic Script execution
+- **JavaScript** – Browser-based execution
+- **Batch files** – Command line script execution
+
+## Detection Challenges
+
+### **Traditional Limitations**
+- **File scanning** – No files to scan on disk
+- **Signature detection** – No static signatures
+- **Sandbox analysis** – May not persist across reboots
+- **Static analysis** – No files to analyze
+
+### **Advanced Detection Methods**
+- **Memory analysis** – Volatile memory examination
+- **Behavioral monitoring** – Process and network behavior
+- **Endpoint detection** – Real-time system monitoring
+- **Network traffic analysis** – Communication patterns
+
+## Analysis Techniques
+
+### **Memory Forensics**
+- **Memory dumps** – Capture system memory
+- **Process analysis** – Examine running processes
+- **Network connections** – Analyze network activity
+- **Registry analysis** – Examine registry modifications
+
+### **Live Analysis**
+- **Process monitoring** – Track process creation and behavior
+- **Network monitoring** – Monitor network communications
+- **Registry monitoring** – Watch for registry changes
+- **API monitoring** – Monitor system API calls
+
+### **Artifact Analysis**
+- **Event logs** – Windows Event Logs
+- **Prefetch files** – Application execution history
+- **Jump lists** – Recent file access
+- **Shellbags** – Folder view settings
+
+## Prevention Strategies
+
+### **Technical Controls**
+- **Application whitelisting** – Only allow approved applications
+- **PowerShell execution policy** – Restrict PowerShell execution
+- **Registry monitoring** – Monitor registry changes
+- **Memory protection** – Enable DEP and ASLR
+
+### **Security Measures**
+- **Privilege management** – Limit user privileges
+- **Network segmentation** – Isolate critical systems
+- **Monitoring tools** – Deploy advanced monitoring
+- **Regular updates** – Keep systems patched
+
+### **Organizational Policies**
+- **Security awareness** – Train users on threats
+- **Incident response** – Plan for fileless attacks
+- **Forensic readiness** – Prepare for investigation
+- **Backup strategies** – Protect critical data
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Isolate affected systems** – Prevent lateral movement
+- **Memory capture** – Preserve volatile evidence
+- **Process analysis** – Identify malicious processes
+- **Network monitoring** – Track communication
+
+### **Investigation Steps**
+- **Memory forensics** – Analyze memory dumps
+- **Registry analysis** – Examine registry artifacts
+- **Timeline analysis** – Create event timeline
+- **IOC extraction** – Identify indicators of compromise
+
+### **Recovery Process**
+- **Process termination** – Stop malicious processes
+- **Registry cleanup** – Remove persistence mechanisms
+- **System restoration** – Restore from clean backups
+- **Monitoring** – Watch for reinfection
+
+## Advanced Techniques
+
+### **Anti-Forensics**
+- **Memory wiping** – Clears traces from memory
+- **Process hiding** – Conceals malicious processes
+- **Network obfuscation** – Hides network communications
+- **Timestomping** – Modifies file timestamps
+
+### **Evasion Methods**
+- **Code obfuscation** – Makes analysis difficult
+- **Encryption** – Encrypts malicious code
+- **Packing** – Compresses and encrypts payloads
+- **Polymorphism** – Changes code structure
+
+## Best Practices
+
+- **Deploy memory monitoring** – Real-time memory analysis
+- **Use advanced EDR** – Endpoint detection and response
+- **Implement zero trust** – Verify all access
+- **Regular training** – Security awareness programs
+- **Forensic readiness** – Prepare investigation capabilities
+- **Incident response plan** – Plan for fileless attacks 

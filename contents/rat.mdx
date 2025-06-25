@@ -1,0 +1,77 @@
+---
+title: "Remote Access Trojan (RAT)"
+description: "A type of Trojan that provides attackers with remote control over infected systems, often used for surveillance and data theft"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Threat Intelligence", "Incident Response", "Digital Forensics"]
+jobPath: ["Malware Analyst", "Threat Intelligence Analyst", "Incident Responder", "Digital Forensics Examiner"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CEH", "CompTIA Security+"]
+relatedTerms:
+  - name: "Trojan"
+    slug: "trojan"
+    description: "Malware disguised as legitimate software"
+  - name: "Keylogger"
+    slug: "keylogger"
+    description: "RATs often include keylogging features"
+  - name: "Command and Control (C2)"
+    slug: "command-and-control"
+    description: "Infrastructure used to control RATs remotely"
+resources:
+  - title: "RAT Detection and Analysis"
+    url: "#"
+  - title: "Preventing RAT Infections"
+    url: "#"
+quickFacts:
+  "Goal": "Provide remote control for surveillance, data theft, and persistence"
+  "Spread": "Phishing, malicious downloads, software vulnerabilities"
+  "Detection": "Network monitoring, endpoint protection, behavioral analysis"
+  "Impact": "Data theft, espionage, system compromise"
+---
+
+## What is a Remote Access Trojan (RAT)?
+
+A **Remote Access Trojan (RAT)** is a type of Trojan malware that allows attackers to remotely control infected systems. RATs are used for surveillance, data theft, espionage, and maintaining persistent access to compromised networks.
+
+## How RATs Work
+
+### **Infection Methods**
+- **Phishing emails** – Malicious attachments or links
+- **Malicious downloads** – Bundled with pirated or fake software
+- **Software vulnerabilities** – Exploits in legitimate applications
+- **Drive-by downloads** – Automatic downloads from compromised websites
+
+### **Capabilities**
+- **Remote desktop control** – Full access to the victim's system
+- **File transfer** – Upload and download files
+- **Keylogging** – Record keystrokes
+- **Screen capture** – Take screenshots
+- **Webcam/microphone access** – Spy on users
+- **Credential theft** – Steal usernames and passwords
+- **Persistence mechanisms** – Survive reboots and detection
+
+## Detection and Prevention
+
+- **Antivirus/EDR** – Use reputable security software
+- **Network monitoring** – Watch for suspicious outbound connections
+- **Patch management** – Keep systems updated
+- **User education** – Avoid suspicious downloads and links
+- **Application whitelisting** – Only allow approved software
+
+## Response and Removal
+
+- **Isolate infected systems** – Prevent further compromise
+- **Quarantine and remove** – Use security tools to remove RATs
+- **Change passwords** – After removal, update all credentials
+- **Monitor for persistence** – Check for backdoors and scheduled tasks
+- **Forensic analysis** – Investigate the extent of compromise
+
+## Best Practices
+
+- **Download from trusted sources** – Avoid third-party sites
+- **Regularly update software** – Patch vulnerabilities
+- **Use strong authentication** – Protect sensitive accounts
+- **Educate users** – Raise awareness of RAT risks
+- **Implement incident response plans** – Prepare for RAT incidents 

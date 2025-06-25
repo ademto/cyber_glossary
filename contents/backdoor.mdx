@@ -1,0 +1,75 @@
+---
+title: "Backdoor"
+description: "A hidden method of bypassing normal authentication to gain unauthorized access to a system, often installed by malware or attackers"
+category: "Threats & Attacks"
+riskLevel: "Critical"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "Critical"
+skillPath: ["Malware Analysis", "Incident Response", "Digital Forensics", "Security Fundamentals"]
+jobPath: ["Malware Analyst", "Incident Responder", "Digital Forensics Examiner", "Security Analyst"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CEH", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Rootkit"
+    slug: "rootkit"
+    description: "Often used to hide backdoors"
+  - name: "Logic Bomb"
+    slug: "logic-bomb"
+    description: "May be used to trigger backdoors"
+resources:
+  - title: "Backdoor Detection and Removal"
+    url: "#"
+  - title: "Understanding Backdoors"
+    url: "#"
+quickFacts:
+  "Goal": "Gain unauthorized access and maintain persistence"
+  "Installation": "Malware, manual insertion, software flaws"
+  "Detection": "Network monitoring, integrity checking, behavioral analysis"
+  "Impact": "System compromise, data theft, espionage"
+---
+
+## What is a Backdoor?
+
+A **backdoor** is a hidden method of bypassing normal authentication or security controls to gain unauthorized access to a computer system. Backdoors are often installed by malware, attackers, or even software developers (intentionally or unintentionally) and are used to maintain persistent access to compromised systems.
+
+## How Backdoors Work
+
+### **Installation Methods**
+- **Malware infection** – Installed by other malware (e.g., Trojans, rootkits)
+- **Manual insertion** – Planted by insiders or developers
+- **Software vulnerabilities** – Exploits in applications or operating systems
+- **Supply chain attacks** – Introduced during software development or distribution
+
+### **Capabilities**
+- **Remote access** – Full control over the system
+- **Command execution** – Run arbitrary commands
+- **File transfer** – Upload and download files
+- **Privilege escalation** – Gain higher-level access
+- **Persistence mechanisms** – Survive reboots and detection
+
+## Detection and Prevention
+
+- **Network monitoring** – Watch for suspicious outbound connections
+- **Integrity checking** – Verify system and application files
+- **Behavioral analysis** – Monitor for unusual activity
+- **Patch management** – Keep systems updated
+- **Application whitelisting** – Only allow approved software
+
+## Response and Removal
+
+- **Isolate infected systems** – Prevent further compromise
+- **Quarantine and remove** – Use security tools to remove backdoors
+- **Change passwords** – After removal, update all credentials
+- **Monitor for persistence** – Check for hidden access methods
+- **Forensic analysis** – Investigate the extent of compromise
+
+## Best Practices
+
+- **Download from trusted sources** – Avoid third-party sites
+- **Regularly update software** – Patch vulnerabilities
+- **Use strong authentication** – Protect sensitive accounts
+- **Educate users** – Raise awareness of backdoor risks
+- **Implement incident response plans** – Prepare for backdoor incidents 

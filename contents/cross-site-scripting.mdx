@@ -1,0 +1,125 @@
+---
+title: "Cross-Site Scripting (XSS)"
+description: "A web application vulnerability where malicious scripts are injected into trusted websites, allowing attackers to execute code in users' browsers"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Web Application Security", "Penetration Testing", "Security Analysis", "Secure Development"]
+jobPath: ["Web Security Specialist", "Penetration Tester", "Security Analyst", "Application Security Engineer"]
+certsPath: ["CEH", "OSCP", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Injection Attacks"
+    slug: "injection-attacks"
+    description: "General category of code injection vulnerabilities"
+  - name: "Web Application Security"
+    slug: "web-app-security"
+    description: "Security measures for web applications"
+  - name: "Content Security Policy"
+    slug: "csp"
+    description: "Security policy to prevent XSS attacks"
+resources:
+  - title: "XSS Prevention Guide"
+    url: "#"
+  - title: "Web Application Security"
+    url: "#"
+quickFacts:
+  "Goal": "Execute malicious scripts in users' browsers"
+  "Types": "Reflected, stored, DOM-based"
+  "Impact": "Session hijacking, data theft, defacement"
+  "Prevention": "Input validation, output encoding, CSP"
+---
+
+## What is Cross-Site Scripting (XSS)?
+
+**Cross-Site Scripting (XSS)** is a web application vulnerability where malicious scripts are injected into trusted websites, allowing attackers to execute arbitrary code in users' browsers. XSS attacks can steal sensitive information, hijack user sessions, or perform actions on behalf of users.
+
+## Types of XSS Attacks
+
+### **Reflected XSS**
+- **Non-persistent** – Malicious script is reflected back to the user
+- **URL parameters** – Script is passed through URL parameters
+- **Form inputs** – Script is submitted through web forms
+- **Search functionality** – Exploiting search features
+- **Error messages** – Script in error page responses
+
+### **Stored XSS**
+- **Persistent** – Malicious script is stored on the server
+- **Database storage** – Script saved in database
+- **User profiles** – Script in user-generated content
+- **Comments and forums** – Script in user comments
+- **File uploads** – Script in uploaded files
+
+### **DOM-Based XSS**
+- **Client-side execution** – Script executed in browser DOM
+- **URL fragments** – Script in URL hash fragments
+- **JavaScript execution** – Script processed by client-side JavaScript
+- **DOM manipulation** – Modifying page structure
+- **Event handlers** – Exploiting event handling
+
+## Common XSS Payloads
+
+### **Session Hijacking**
+- **Cookie theft** – Stealing session cookies
+- **Local storage access** – Accessing browser storage
+- **Session fixation** – Setting session identifiers
+- **Authentication bypass** – Bypassing login mechanisms
+
+### **Data Theft**
+- **Form data capture** – Intercepting form submissions
+- **Keystroke logging** – Recording user input
+- **Screenshot capture** – Taking browser screenshots
+- **Clipboard access** – Reading clipboard contents
+
+### **Defacement and Redirection**
+- **Page defacement** – Modifying website content
+- **Phishing redirection** – Redirecting to fake sites
+- **Malware distribution** – Downloading malicious files
+- **Ad injection** – Inserting unwanted advertisements
+
+## Detection and Prevention
+
+### **Input Validation**
+- **Whitelist validation** – Allow only known good input
+- **Blacklist filtering** – Block known malicious patterns
+- **Length restrictions** – Limit input size
+- **Character encoding** – Proper encoding of special characters
+- **Type checking** – Validate data types
+
+### **Output Encoding**
+- **HTML encoding** – Encode special characters
+- **JavaScript encoding** – Escape JavaScript content
+- **URL encoding** – Encode URL parameters
+- **CSS encoding** – Encode CSS content
+- **Context-aware encoding** – Encode based on output context
+
+### **Security Headers**
+- **Content Security Policy (CSP)** – Restrict script execution
+- **X-XSS-Protection** – Enable browser XSS protection
+- **X-Content-Type-Options** – Prevent MIME type sniffing
+- **X-Frame-Options** – Prevent clickjacking
+- **Strict-Transport-Security** – Enforce HTTPS
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Remove malicious content** – Clean infected pages
+- **Patch vulnerabilities** – Fix XSS vulnerabilities
+- **Monitor for attacks** – Watch for ongoing exploitation
+- **Notify users** – Alert affected users
+
+### **Investigation Steps**
+- **Code review** – Examine application code
+- **Log analysis** – Review web server logs
+- **Impact assessment** – Determine scope of compromise
+- **Forensic analysis** – Collect evidence of attacks
+
+## Best Practices
+
+- **Validate all input** – Check all user input
+- **Encode all output** – Properly encode dynamic content
+- **Use security frameworks** – Leverage secure development frameworks
+- **Regular security testing** – Conduct XSS testing
+- **Security training** – Educate developers
+- **Keep frameworks updated** – Regular security updates 

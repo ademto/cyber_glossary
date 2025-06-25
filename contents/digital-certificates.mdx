@@ -1,0 +1,221 @@
+---
+title: "Digital Certificates"
+description: "Electronic documents that bind public keys to identities, enabling secure communications, authentication, and digital signatures"
+category: "Cryptography"
+riskLevel: "Medium"
+severity: 6
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+skillPath: ["Cryptography", "PKI", "Network Security", "Identity Management"]
+jobPath: ["Security Engineer", "PKI Administrator", "Network Security Engineer", "Cryptographer"]
+certsPath: ["CISSP", "CompTIA Security+", "SANS SEC542", "GIAC GSSP"]
+relatedTerms:
+  - name: "Digital Signatures"
+    slug: "digital-signatures"
+    description: "Cryptographic method for authentication and integrity"
+  - name: "Encryption"
+    slug: "encryption"
+    description: "Protecting data through cryptographic methods"
+resources:
+  - title: "Digital Certificate Management"
+    url: "#"
+  - title: "PKI Implementation Guide"
+    url: "#"
+quickFacts:
+  "Purpose": "Bind public keys to identities for secure communications"
+  "Types": "SSL/TLS, code signing, email, identity certificates"
+  "Components": "Public key, identity, digital signature, validity period"
+  "Standards": "X.509, PKCS, RFC 5280"
+---
+
+## What are Digital Certificates?
+
+**Digital Certificates** are electronic documents that bind public keys to specific identities, enabling secure communications, authentication, and digital signatures. They serve as digital passports that verify the identity of individuals, organizations, or systems in electronic transactions and communications.
+
+## Certificate Components
+
+### **Core Elements**
+- **Public key** – The public key being certified
+- **Subject identity** – Name and identifying information
+- **Issuer identity** – Certificate authority that issued the certificate
+- **Digital signature** – CA's signature validating the certificate
+- **Validity period** – Start and end dates for certificate validity
+
+### **Certificate Information**
+- **Subject name** – Entity name (person, organization, system)
+- **Subject alternative names** – Additional names (DNS, email, IP)
+- **Key usage** – Permitted uses of the certificate
+- **Extended key usage** – Specific application purposes
+- **Certificate policies** – Usage policies and restrictions
+
+### **Technical Details**
+- **Serial number** – Unique identifier for the certificate
+- **Signature algorithm** – Algorithm used for CA signature
+- **Key algorithm** – Algorithm used for the public key
+- **Version** – X.509 certificate version
+- **Extensions** – Additional certificate information
+
+## Certificate Types
+
+### **SSL/TLS Certificates**
+- **Web server certificates** – Secure website communications
+- **Client certificates** – Client authentication
+- **Code signing certificates** – Software and code signing
+- **Email certificates** – Secure email communications
+- **VPN certificates** – Virtual private network authentication
+
+### **Identity Certificates**
+- **Personal certificates** – Individual identity verification
+- **Organizational certificates** – Organization identity
+- **Device certificates** – IoT and device authentication
+- **Service certificates** – Service-to-service authentication
+- **Root certificates** – Trust anchor certificates
+
+### **Specialized Certificates**
+- **Qualified certificates** – Legal electronic signatures
+- **Attribute certificates** – Authorization information
+- **Proxy certificates** – Delegated authentication
+- **Cross-certificates** – CA cross-certification
+- **Bridge certificates** – Trust bridge establishment
+
+## Certificate Lifecycle Management
+
+### **Certificate Generation**
+- **Key pair generation** – Generate public/private key pair
+- **Certificate request** – Create certificate signing request (CSR)
+- **Identity verification** – Verify requester identity
+- **Certificate issuance** – CA issues signed certificate
+- **Certificate distribution** – Distribute to requesting entity
+
+### **Certificate Validation**
+- **Signature verification** – Verify CA signature
+- **Chain validation** – Validate certificate chain
+- **Revocation checking** – Check certificate revocation status
+- **Expiration checking** – Verify certificate expiration
+- **Policy compliance** – Check certificate policy compliance
+
+### **Certificate Renewal**
+- **Expiration monitoring** – Monitor certificate expiration dates
+- **Renewal process** – Initiate certificate renewal
+- **Key rotation** – Rotate cryptographic keys
+- **Certificate replacement** – Replace expiring certificates
+- **Rollover procedures** – Smooth certificate transitions
+
+## Certificate Authorities (CAs)
+
+### **Public CAs**
+- **Commercial CAs** – Publicly trusted certificate authorities
+- **Government CAs** – Government-operated certificate authorities
+- **Browser trust** – Pre-installed in browsers and operating systems
+- **Global recognition** – Internationally recognized trust
+- **Compliance standards** – Meet industry compliance requirements
+
+### **Private CAs**
+- **Enterprise CAs** – Organization-specific certificate authorities
+- **Internal trust** – Trusted within organization boundaries
+- **Custom policies** – Organization-specific certificate policies
+- **Cost control** – Reduced certificate costs
+- **Control** – Complete control over certificate issuance
+
+### **CA Hierarchy**
+- **Root CA** – Top-level certificate authority
+- **Intermediate CAs** – Subordinate certificate authorities
+- **Issuing CAs** – End-entity certificate issuance
+- **Trust chains** – Certificate trust relationships
+- **Cross-certification** – CA trust relationships
+
+## Certificate Standards and Formats
+
+### **X.509 Standard**
+- **Certificate format** – Standard certificate structure
+- **Version support** – Multiple X.509 versions
+- **Extension support** – Extensible certificate format
+- **Interoperability** – Cross-platform compatibility
+- **RFC compliance** – Internet standard compliance
+
+### **Certificate Formats**
+- **PEM format** – Base64 encoded text format
+- **DER format** – Binary certificate format
+- **PKCS#12** – Password-protected certificate format
+- **PKCS#7** – Cryptographic message syntax
+- **Certificate bundles** – Multiple certificate formats
+
+### **Certificate Extensions**
+- **Key usage** – Permitted key operations
+- **Extended key usage** – Specific application purposes
+- **Subject alternative names** – Additional identity names
+- **Authority information access** – CA information
+- **Certificate policies** – Usage policies and restrictions
+
+## Security Considerations
+
+### **Certificate Security**
+- **Private key protection** – Secure private key storage
+- **Certificate validation** – Proper certificate validation
+- **Revocation checking** – Regular revocation status checking
+- **Expiration monitoring** – Monitor certificate expiration
+- **Key management** – Proper cryptographic key management
+
+### **Common Vulnerabilities**
+- **Weak algorithms** – Outdated cryptographic algorithms
+- **Key compromise** – Private key exposure
+- **Certificate forgery** – Fake certificate creation
+- **Man-in-the-middle attacks** – Certificate interception
+- **CA compromise** – Certificate authority compromise
+
+### **Best Practices**
+- **Strong algorithms** – Use strong cryptographic algorithms
+- **Key protection** – Protect private keys securely
+- **Regular updates** – Update certificates regularly
+- **Monitoring** – Monitor certificate status
+- **Documentation** – Maintain certificate documentation
+
+## Implementation Examples
+
+### **Web Server Certificate**
+```bash
+# Generate private key
+openssl genrsa -out server.key 2048
+
+# Create certificate signing request
+openssl req -new -key server.key -out server.csr
+
+# Generate self-signed certificate
+openssl x509 -req -in server.csr -signkey server.key -out server.crt
+```
+
+### **Certificate Validation**
+```python
+import ssl
+import socket
+
+def validate_certificate(hostname, port=443):
+    context = ssl.create_default_context()
+    with socket.create_connection((hostname, port)) as sock:
+        with context.wrap_socket(sock, server_hostname=hostname) as ssock:
+            cert = ssock.getpeercert()
+            return cert
+```
+
+## Compliance and Standards
+
+### **Industry Standards**
+- **WebTrust** – CA audit and compliance standards
+- **EIDAS** – EU electronic identification standards
+- **FIPS 140** – Cryptographic module standards
+- **Common Criteria** – Security evaluation standards
+- **ISO 27001** – Information security management
+
+### **Regulatory Compliance**
+- **GDPR** – Data protection requirements
+- **SOX** – Financial reporting requirements
+- **HIPAA** – Healthcare privacy requirements
+- **PCI DSS** – Payment card industry standards
+- **Industry regulations** – Sector-specific requirements
+
+### **Audit Requirements**
+- **Certificate audits** – Regular certificate audits
+- **Compliance monitoring** – Ongoing compliance monitoring
+- **Documentation** – Comprehensive documentation
+- **Evidence collection** – Audit evidence collection
+- **Reporting** – Compliance reporting requirements 

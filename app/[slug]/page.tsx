@@ -233,7 +233,7 @@ export default async function TermPage({ params }: { params: { slug: string } })
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
-                      {frontmatter.relatedTerms.map((term: any, index: number) => (
+                      {frontmatter.relatedTerms.map((term: { slug: string; name: string; description: string }, index: number) => (
                         <Link
                           key={index}
                           href={`/term/${term.slug}`}
@@ -256,7 +256,7 @@ export default async function TermPage({ params }: { params: { slug: string } })
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
-                      {frontmatter.resources.map((resource: any, index: number) => (
+                      {frontmatter.resources.map((resource: { url: string; title: string }, index: number) => (
                         <a
                           key={index}
                           href={resource.url}

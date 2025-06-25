@@ -1,0 +1,128 @@
+---
+title: "Injection Attacks"
+description: "A class of attacks where malicious code or commands are inserted into applications, often targeting databases, operating systems, or web applications"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Web Application Security", "Penetration Testing", "Security Analysis", "Secure Development"]
+jobPath: ["Web Security Specialist", "Penetration Tester", "Security Analyst", "Application Security Engineer"]
+certsPath: ["CEH", "OSCP", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "SQL Injection"
+    slug: "sql-injection"
+    description: "Database injection attacks"
+  - name: "Cross-Site Scripting"
+    slug: "cross-site-scripting"
+    description: "Web application injection attacks"
+  - name: "Command Injection"
+    slug: "command-injection"
+    description: "Operating system command injection"
+resources:
+  - title: "Injection Attack Prevention"
+    url: "#"
+  - title: "Secure Coding Practices"
+    url: "#"
+quickFacts:
+  "Goal": "Execute malicious code or commands"
+  "Types": "SQL, NoSQL, command, LDAP, XPath"
+  "Targets": "Databases, operating systems, web applications"
+  "Prevention": "Input validation, parameterized queries, output encoding"
+---
+
+## What are Injection Attacks?
+
+**Injection attacks** are a class of security vulnerabilities where malicious code or commands are inserted into applications, allowing attackers to execute unauthorized code, access sensitive data, or manipulate system behavior. These attacks target various types of systems including databases, operating systems, and web applications.
+
+## Types of Injection Attacks
+
+### **SQL Injection**
+- **Database manipulation** – Inserting malicious SQL code
+- **Data extraction** – Retrieving sensitive database information
+- **Data modification** – Altering database contents
+- **Authentication bypass** – Bypassing login mechanisms
+- **Privilege escalation** – Gaining elevated database access
+
+### **NoSQL Injection**
+- **Document database attacks** – Targeting MongoDB, CouchDB
+- **JSON injection** – Manipulating JSON queries
+- **Array injection** – Exploiting array-based queries
+- **Object injection** – Manipulating object structures
+- **JavaScript injection** – Exploiting JavaScript-based queries
+
+### **Command Injection**
+- **OS command execution** – Running system commands
+- **Shell injection** – Exploiting shell environments
+- **Process injection** – Injecting into running processes
+- **Service manipulation** – Controlling system services
+- **File system access** – Accessing file system operations
+
+### **LDAP Injection**
+- **Directory service attacks** – Targeting LDAP directories
+- **Authentication bypass** – Bypassing LDAP authentication
+- **Information disclosure** – Extracting directory information
+- **Access control bypass** – Circumventing access controls
+- **Privilege escalation** – Gaining elevated directory access
+
+## Common Injection Techniques
+
+### **Input Manipulation**
+- **String concatenation** – Exploiting string building
+- **Escape sequence injection** – Using escape characters
+- **Comment injection** – Using comment syntax
+- **Union queries** – Combining multiple queries
+- **Boolean-based injection** – Using boolean logic
+
+### **Code Injection**
+- **Dynamic code execution** – Executing dynamic code
+- **Template injection** – Exploiting template engines
+- **Expression injection** – Manipulating expressions
+- **Function injection** – Injecting function calls
+- **Variable injection** – Manipulating variables
+
+## Detection and Prevention
+
+### **Input Validation**
+- **Whitelist validation** – Allow only known good input
+- **Type checking** – Validate data types
+- **Length restrictions** – Limit input size
+- **Character filtering** – Remove dangerous characters
+- **Pattern matching** – Use regex validation
+
+### **Secure Coding Practices**
+- **Parameterized queries** – Use prepared statements
+- **Stored procedures** – Use database stored procedures
+- **Input sanitization** – Clean and validate all input
+- **Output encoding** – Encode all output
+- **Least privilege** – Use minimal necessary permissions
+
+### **Security Testing**
+- **Static analysis** – Code review and analysis
+- **Dynamic testing** – Runtime vulnerability testing
+- **Penetration testing** – Manual security testing
+- **Automated scanning** – Vulnerability scanning tools
+- **Fuzzing** – Input fuzzing techniques
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Isolate affected systems** – Prevent further compromise
+- **Remove malicious code** – Clean injected content
+- **Patch vulnerabilities** – Fix injection vulnerabilities
+- **Monitor for attacks** – Watch for ongoing exploitation
+
+### **Investigation Steps**
+- **Log analysis** – Review application and system logs
+- **Code review** – Examine application code
+- **Impact assessment** – Determine scope of compromise
+- **Forensic analysis** – Collect evidence of attacks
+
+## Best Practices
+
+- **Use parameterized queries** – Prevent SQL injection
+- **Validate all input** – Check all user input
+- **Encode all output** – Properly encode dynamic content
+- **Use security frameworks** – Leverage secure development frameworks
+- **Regular security testing** – Conduct injection testing
+- **Security training** – Educate developers 

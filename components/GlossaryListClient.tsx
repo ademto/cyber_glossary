@@ -195,7 +195,7 @@ export default function GlossaryListClient({ terms, alphabetArray }: GlossaryLis
               <div className="flex flex-wrap gap-2">
                 {searchTerm && (
                   <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs">
-                    Search: "{searchTerm}"
+                    Search: &quot;{searchTerm}&quot;
                   </span>
                 )}
                 {selectedCategory && (
@@ -296,14 +296,10 @@ export default function GlossaryListClient({ terms, alphabetArray }: GlossaryLis
 
         {/* No results message */}
         {filteredTerms.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground mb-4">No terms found matching your criteria.</p>
-            <button
-              onClick={clearFilters}
-              className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              Clear Filters
-            </button>
+          <div className="text-center py-8">
+            <p className="text-muted-foreground">
+              No terms found matching &quot;{searchTerm}&quot;
+            </p>
           </div>
         )}
       </div>

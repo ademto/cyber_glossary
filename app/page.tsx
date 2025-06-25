@@ -1,12 +1,11 @@
 import GlossaryList from "@/components/GlossaryList";
 import Hero from "@/components/Hero";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       <Hero />
       <GlossaryList />
-    </main>
+    </div>
   );
 }

@@ -1,0 +1,75 @@
+---
+title: "Rootkit"
+description: "Malware designed to hide its presence and provide privileged access to attackers by modifying the operating system or software"
+category: "Threats & Attacks"
+riskLevel: "Critical"
+severity: 10
+lastUpdated: "June 2025"
+threatLevel: "Critical"
+skillPath: ["Malware Analysis", "Digital Forensics", "Incident Response", "Operating System Security"]
+jobPath: ["Malware Analyst", "Digital Forensics Examiner", "Incident Responder", "Security Analyst"]
+certsPath: ["GIAC GREM", "SANS FOR508", "GCFA", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Backdoor"
+    slug: "backdoor"
+    description: "Rootkits often install or maintain backdoors"
+  - name: "Privilege Escalation"
+    slug: "privilege-escalation"
+    description: "Rootkits are used to gain or maintain elevated privileges"
+resources:
+  - title: "Rootkit Detection and Removal"
+    url: "#"
+  - title: "Understanding Rootkits"
+    url: "#"
+quickFacts:
+  "Goal": "Hide malware and provide privileged access"
+  "Types": "User-mode, kernel-mode, firmware, bootkit"
+  "Detection": "Memory analysis, integrity checking, behavioral monitoring"
+  "Impact": "System compromise, persistent access"
+---
+
+## What is a Rootkit?
+
+A **rootkit** is a type of malware designed to hide its presence and provide privileged access to attackers by modifying the operating system, firmware, or application software. Rootkits are used to maintain persistent, stealthy access to compromised systems.
+
+## How Rootkits Work
+
+### **Types of Rootkits**
+- **User-mode rootkits** – Operate at the application level
+- **Kernel-mode rootkits** – Modify the operating system kernel
+- **Firmware rootkits** – Infect device firmware (BIOS, UEFI)
+- **Bootkits** – Infect the boot process
+
+### **Techniques**
+- **Code injection** – Inject malicious code into processes
+- **API hooking** – Intercept system calls
+- **File hiding** – Conceal files and processes
+- **Log manipulation** – Erase evidence of compromise
+- **Backdoor installation** – Maintain persistent access
+
+## Detection and Prevention
+
+- **Memory analysis** – Examine system memory for anomalies
+- **Integrity checking** – Compare system files to known-good versions
+- **Behavioral monitoring** – Watch for suspicious activity
+- **Firmware scanning** – Check for firmware modifications
+- **Patch management** – Keep systems updated
+
+## Removal and Response
+
+- **Isolate infected systems** – Prevent further compromise
+- **Use specialized tools** – Rootkit removal utilities
+- **Reinstall operating system** – Clean installation if necessary
+- **Firmware re-flashing** – Restore clean firmware
+- **Forensic analysis** – Investigate the extent of compromise
+
+## Best Practices
+
+- **Regularly update software and firmware** – Patch vulnerabilities
+- **Monitor for unusual activity** – Early detection
+- **Use integrity checking tools** – Verify system files
+- **Educate users** – Raise awareness of rootkit risks
+- **Implement incident response plans** – Prepare for rootkit incidents 

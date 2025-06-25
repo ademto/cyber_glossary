@@ -1,0 +1,112 @@
+---
+title: "Trojan"
+description: "Malicious software disguised as legitimate programs to trick users into installing and executing harmful code"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Threat Intelligence", "Digital Forensics", "Security Fundamentals"]
+jobPath: ["Malware Analyst", "Threat Intelligence Analyst", "Security Analyst", "Digital Forensics Examiner"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CEH", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Remote Access Trojan"
+    slug: "rat"
+    description: "Trojan that provides remote control capabilities"
+  - name: "Social Engineering"
+    slug: "social-engineering"
+    description: "Technique used to trick users into installing Trojans"
+resources:
+  - title: "Trojan Detection and Analysis"
+    url: "#"
+  - title: "Preventing Trojan Infections"
+    url: "#"
+quickFacts:
+  "Goal": "Gain unauthorized access or steal data"
+  "Delivery": "Disguised as legitimate software"
+  "Behavior": "Often provides backdoor access"
+  "Detection": "Behavioral analysis, sandboxing"
+---
+
+## What is a Trojan?
+
+A **Trojan** (or Trojan Horse) is malicious software that disguises itself as legitimate, useful software to trick users into downloading and executing it. Unlike viruses and worms, Trojans don't self-replicate but rely on social engineering to spread.
+
+## How Trojans Work
+
+### **Infection Process**
+- **Disguise** – Masquerades as legitimate software (games, utilities, documents)
+- **Distribution** – Spread through email attachments, downloads, USB drives
+- **Execution** – User unknowingly runs the malicious code
+- **Installation** – Establishes persistence and hides from detection
+
+### **Common Disguises**
+- **Fake software updates** – Mimics legitimate update notifications
+- **Cracked software** – Promises free versions of paid software
+- **Document files** – Malicious macros in Word/Excel files
+- **Mobile apps** – Fake versions of popular applications
+
+## Types of Trojans
+
+### **Remote Access Trojans (RATs)**
+- **Backdoor access** – Provides remote control of infected systems
+- **Keylogging** – Captures keystrokes and passwords
+- **Screen capture** – Records user activity
+- **File manipulation** – Upload, download, delete files
+
+### **Banking Trojans**
+- **Form grabbing** – Captures banking credentials
+- **Web injection** – Modifies banking websites
+- **Session hijacking** – Steals active banking sessions
+- **SMS interception** – Captures 2FA codes
+
+### **Downloader Trojans**
+- **Secondary payload** – Downloads additional malware
+- **Update mechanism** – Receives new malicious code
+- **Modular design** – Can add new capabilities remotely
+
+### **DDoS Trojans**
+- **Botnet recruitment** – Enlists systems in attack networks
+- **Traffic generation** – Floods targets with requests
+- **Distributed attacks** – Coordinates multiple infected systems
+
+## Detection and Prevention
+
+### **Technical Detection**
+- **Behavioral analysis** – Monitor for suspicious activities
+- **Sandboxing** – Execute in isolated environments
+- **Signature detection** – Known malware patterns
+- **Heuristic analysis** – Suspicious code patterns
+
+### **Prevention Strategies**
+- **User education** – Security awareness training
+- **Email filtering** – Block malicious attachments
+- **Web filtering** – Prevent access to malicious sites
+- **Application whitelisting** – Only allow approved software
+- **Regular updates** – Keep systems and software patched
+
+## Analysis and Response
+
+### **Static Analysis**
+- **File examination** – Analyze without execution
+- **String analysis** – Extract readable text and URLs
+- **PE analysis** – Examine executable structure
+- **Hash comparison** – Check against known malware databases
+
+### **Dynamic Analysis**
+- **Sandbox execution** – Monitor behavior in safe environment
+- **Network monitoring** – Track communication attempts
+- **Registry monitoring** – Watch for persistence mechanisms
+- **File system monitoring** – Track file creation and modification
+
+## Best Practices
+
+- **Verify software sources** – Download from official websites
+- **Use antivirus software** – Keep definitions updated
+- **Enable UAC** – User Account Control on Windows
+- **Regular backups** – Protect against data loss
+- **Network monitoring** – Detect unusual traffic patterns
+- **Incident response plan** – Prepare for infections 

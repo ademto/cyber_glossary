@@ -1,0 +1,117 @@
+---
+title: "Privilege Escalation"
+description: "A security attack where an attacker gains elevated access privileges beyond what they were originally granted, often to access sensitive data or perform unauthorized actions"
+category: "Threats & Attacks"
+riskLevel: "Critical"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "Critical"
+skillPath: ["Penetration Testing", "Security Analysis", "Incident Response", "System Administration"]
+jobPath: ["Penetration Tester", "Security Analyst", "Incident Responder", "System Administrator"]
+certsPath: ["CEH", "OSCP", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Access Control"
+    slug: "access-control"
+    description: "Managing user permissions and privileges"
+  - name: "Least Privilege"
+    slug: "least-privilege"
+    description: "Principle of minimal user permissions"
+  - name: "Root Access"
+    slug: "root-access"
+    description: "Highest level of system privileges"
+resources:
+  - title: "Privilege Escalation Techniques"
+    url: "#"
+  - title: "Access Control Best Practices"
+    url: "#"
+quickFacts:
+  "Goal": "Gain elevated system privileges"
+  "Types": "Vertical (higher privileges), horizontal (same level)"
+  "Methods": "Exploits, misconfigurations, social engineering"
+  "Impact": "Data breach, system compromise, lateral movement"
+---
+
+## What is Privilege Escalation?
+
+**Privilege escalation** is a security attack where an attacker gains elevated access privileges beyond what they were originally granted. This can occur through exploiting vulnerabilities, misconfigurations, or using legitimate tools in unintended ways to access sensitive data or perform unauthorized actions.
+
+## Types of Privilege Escalation
+
+### **Vertical Privilege Escalation**
+- **Gaining higher privileges** – Moving from user to administrator access
+- **Root/administrator access** – Obtaining highest system privileges
+- **Domain admin access** – Gaining domain controller privileges
+- **Service account compromise** – Exploiting service account privileges
+
+### **Horizontal Privilege Escalation**
+- **Accessing other user accounts** – Moving between users at same privilege level
+- **Session hijacking** – Taking over another user's session
+- **Token manipulation** – Modifying access tokens
+- **Credential theft** – Stealing other users' credentials
+
+## Common Privilege Escalation Techniques
+
+### **Exploitation Methods**
+- **Buffer overflows** – Exploiting memory vulnerabilities
+- **Race conditions** – Timing-based privilege escalation
+- **DLL hijacking** – Replacing legitimate DLLs with malicious ones
+- **Service exploitation** – Exploiting vulnerable system services
+- **Kernel exploits** – Exploiting operating system kernel vulnerabilities
+
+### **Misconfiguration Exploitation**
+- **Weak file permissions** – Exploiting overly permissive file access
+- **Service misconfigurations** – Exploiting incorrectly configured services
+- **Registry vulnerabilities** – Exploiting Windows registry misconfigurations
+- **Scheduled task abuse** – Using scheduled tasks for privilege escalation
+- **Environment variable manipulation** – Exploiting PATH or other environment variables
+
+### **Social Engineering**
+- **Credential harvesting** – Stealing administrator credentials
+- **Phishing attacks** – Tricking users into revealing credentials
+- **Shoulder surfing** – Observing password entry
+- **Insider assistance** – Compromising authorized personnel
+
+## Detection and Prevention
+
+### **Technical Controls**
+- **Access monitoring** – Monitor for unusual privilege usage
+- **Privilege auditing** – Regular review of user privileges
+- **Least privilege principle** – Grant minimal necessary permissions
+- **Multi-factor authentication** – Additional verification for privileged access
+- **Session monitoring** – Track user sessions and activities
+
+### **System Hardening**
+- **Regular patching** – Keep systems updated
+- **Security configuration** – Implement secure default settings
+- **Service hardening** – Configure services with minimal privileges
+- **File system security** – Implement proper file permissions
+- **Registry security** – Secure Windows registry settings
+
+### **Organizational Measures**
+- **Privilege management** – Implement formal privilege management processes
+- **Regular audits** – Review user access and privileges
+- **Incident response** – Prepare for privilege escalation incidents
+- **Security training** – Educate users about privilege escalation risks
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Isolate compromised systems** – Prevent further access
+- **Revoke elevated privileges** – Remove unauthorized access
+- **Monitor for persistence** – Check for backdoors or persistence mechanisms
+- **Document incident** – Record all details of the escalation
+
+### **Investigation Steps**
+- **Forensic analysis** – Examine systems for evidence
+- **Privilege audit** – Review all user privileges
+- **Root cause analysis** – Identify how escalation occurred
+- **Corrective actions** – Implement measures to prevent recurrence
+
+## Best Practices
+
+- **Implement least privilege** – Grant minimal necessary permissions
+- **Regular privilege reviews** – Audit user access regularly
+- **Use privileged access management** – Control elevated access
+- **Monitor for anomalies** – Watch for unusual privilege usage
+- **Keep systems patched** – Regular security updates
+- **Security awareness training** – Educate users about risks 

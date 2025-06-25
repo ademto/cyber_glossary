@@ -1,0 +1,243 @@
+---
+title: "File Integrity Monitoring (FIM)"
+description: "A security technology that monitors and detects unauthorized changes to critical files and system configurations"
+category: "Threat Detection"
+riskLevel: "Medium"
+severity: 6
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+skillPath: ["Threat Detection", "System Security", "Incident Response", "Security Analysis"]
+jobPath: ["Security Analyst", "System Administrator", "Incident Responder", "Security Engineer"]
+certsPath: ["CISSP", "CompTIA Security+", "GIAC GCIH", "SANS SEC504"]
+relatedTerms:
+  - name: "Threat Detection"
+    slug: "threat-detection"
+    description: "Identifying security threats and attacks"
+  - name: "Incident Response"
+    slug: "incident-response"
+    description: "Responding to security incidents"
+  - name: "System Security"
+    slug: "system-security"
+    description: "Protecting system integrity and security"
+resources:
+  - title: "FIM Implementation Guide"
+    url: "#"
+  - title: "System Integrity Monitoring"
+    url: "#"
+quickFacts:
+  "Purpose": "Detect unauthorized file and system changes"
+  "Methods": "Hash comparison, change detection, baseline monitoring"
+  "Benefits": "Early threat detection, compliance, audit trails"
+  "Applications": "Critical systems, compliance monitoring, incident response"
+---
+
+## What is File Integrity Monitoring?
+
+**File Integrity Monitoring (FIM)** is a security technology that continuously monitors and detects unauthorized changes to critical files, system configurations, and application binaries. FIM provides early warning of potential security breaches by establishing baselines and alerting when files are modified, created, or deleted.
+
+## FIM Core Concepts
+
+### **Integrity Monitoring**
+- **File integrity** – Ensuring files remain unchanged from baseline
+- **System integrity** – Maintaining system configuration integrity
+- **Application integrity** – Protecting application binaries and libraries
+- **Configuration integrity** – Monitoring configuration file changes
+- **Registry integrity** – Windows registry monitoring
+
+### **Baseline Establishment**
+- **Initial baseline** – Establish initial file state baseline
+- **Hash calculation** – Calculate cryptographic hashes of files
+- **Metadata capture** – Capture file metadata and attributes
+- **Configuration baseline** – Establish system configuration baseline
+- **Regular updates** – Update baselines as needed
+
+### **Change Detection**
+- **Hash comparison** – Compare current hashes with baseline
+- **Metadata comparison** – Compare file metadata changes
+- **Size monitoring** – Monitor file size changes
+- **Timestamp monitoring** – Monitor modification timestamps
+- **Permission monitoring** – Monitor file permission changes
+
+## FIM Implementation Methods
+
+### **Hash-Based Monitoring**
+- **Cryptographic hashes** – SHA-256, SHA-3, MD5 (legacy)
+- **Hash calculation** – Calculate hashes of monitored files
+- **Hash comparison** – Compare current vs. baseline hashes
+- **Hash storage** – Secure storage of baseline hashes
+- **Hash verification** – Regular hash verification
+
+### **Real-Time Monitoring**
+- **File system events** – Monitor file system events
+- **Change notifications** – Real-time change notifications
+- **Event correlation** – Correlate related file events
+- **Alert generation** – Generate alerts for suspicious changes
+- **Response automation** – Automated response actions
+
+### **Periodic Scanning**
+- **Scheduled scans** – Regular scheduled integrity checks
+- **Full system scans** – Complete system integrity verification
+- **Incremental scans** – Scan only changed files
+- **Differential analysis** – Analyze differences from baseline
+- **Report generation** – Generate integrity reports
+
+## FIM Deployment Strategies
+
+### **Critical File Monitoring**
+- **System files** – Monitor critical system files
+- **Configuration files** – Monitor configuration files
+- **Application binaries** – Monitor application executables
+- **Library files** – Monitor shared libraries and DLLs
+- **Boot files** – Monitor boot and startup files
+
+### **Data File Monitoring**
+- **Database files** – Monitor database files and logs
+- **Document files** – Monitor important documents
+- **Log files** – Monitor system and application logs
+- **Backup files** – Monitor backup file integrity
+- **Archive files** – Monitor archive and compressed files
+
+### **Directory Monitoring**
+- **System directories** – Monitor system directories
+- **Application directories** – Monitor application directories
+- **User directories** – Monitor user home directories
+- **Temporary directories** – Monitor temporary file directories
+- **Network shares** – Monitor network file shares
+
+## FIM Tools and Technologies
+
+### **Commercial Solutions**
+- **Tripwire** – Enterprise file integrity monitoring
+- **OSSEC** – Open source host-based intrusion detection
+- **AIDE** – Advanced Intrusion Detection Environment
+- **Samhain** – File integrity and host-based intrusion detection
+- **Integrity monitoring platforms** – Comprehensive FIM platforms
+
+### **Operating System Tools**
+- **Windows SFC** – System File Checker
+- **Linux AIDE** – Advanced Intrusion Detection Environment
+- **macOS Gatekeeper** – Application integrity checking
+- **System integrity protection** – OS-level integrity protection
+- **Built-in monitoring** – Native OS monitoring capabilities
+
+### **Custom Solutions**
+- **Script-based monitoring** – Custom monitoring scripts
+- **API integration** – Integration with security APIs
+- **Database monitoring** – Database-specific integrity monitoring
+- **Cloud monitoring** – Cloud-based file integrity monitoring
+- **Container monitoring** – Container and virtualization monitoring
+
+## FIM Use Cases
+
+### **Security Monitoring**
+- **Malware detection** – Detect malware file modifications
+- **Rootkit detection** – Detect rootkit installations
+- **Backdoor detection** – Detect backdoor installations
+- **Privilege escalation** – Detect privilege escalation attempts
+- **Data exfiltration** – Detect data theft attempts
+
+### **Compliance Monitoring**
+- **PCI DSS compliance** – Payment card industry compliance
+- **SOX compliance** – Sarbanes-Oxley compliance
+- **HIPAA compliance** – Healthcare privacy compliance
+- **FISMA compliance** – Federal information security compliance
+- **Industry regulations** – Sector-specific compliance requirements
+
+### **Incident Response**
+- **Forensic analysis** – Support digital forensic investigations
+- **Attack reconstruction** – Reconstruct attack timelines
+- **Evidence preservation** – Preserve evidence for investigations
+- **Recovery validation** – Validate system recovery
+- **Post-incident analysis** – Post-incident analysis and lessons learned
+
+## FIM Best Practices
+
+### **Implementation**
+- **Strategic file selection** – Select critical files for monitoring
+- **Baseline establishment** – Establish comprehensive baselines
+- **Hash algorithm selection** – Use strong cryptographic hashes
+- **Monitoring frequency** – Appropriate monitoring frequency
+- **Alert configuration** – Configure meaningful alerts
+
+### **Operational Management**
+- **Regular maintenance** – Regular system maintenance
+- **Baseline updates** – Update baselines as needed
+- **Performance monitoring** – Monitor system performance impact
+- **Storage management** – Manage hash storage efficiently
+- **Backup procedures** – Secure backup of baseline data
+
+### **Security Measures**
+- **Access controls** – Restrict access to FIM systems
+- **Encryption** – Encrypt baseline and monitoring data
+- **Authentication** – Strong authentication for FIM access
+- **Audit logging** – Comprehensive audit logging
+- **Incident response** – Prepared incident response procedures
+
+## Advanced FIM Techniques
+
+### **Machine Learning Integration**
+- **Behavioral analysis** – ML-based behavioral analysis
+- **Anomaly detection** – Automated anomaly detection
+- **Pattern recognition** – Pattern recognition in file changes
+- **Predictive analysis** – Predictive threat analysis
+- **False positive reduction** – Reduce false positive alerts
+
+### **Cloud and Virtualization**
+- **Cloud monitoring** – Cloud-based file integrity monitoring
+- **Virtual machine monitoring** – VM-specific monitoring
+- **Container monitoring** – Container integrity monitoring
+- **Microservices monitoring** – Microservices architecture monitoring
+- **API monitoring** – API and service monitoring
+
+### **Integration and Automation**
+- **SIEM integration** – Security information and event management
+- **SOAR integration** – Security orchestration and response
+- **Automated response** – Automated response actions
+- **Workflow automation** – Automated workflow processes
+- **API integration** – Integration with security APIs
+
+## Challenges and Limitations
+
+### **Technical Challenges**
+- **Performance impact** – System performance considerations
+- **Storage requirements** – Hash storage requirements
+- **Scalability** – Scaling to large environments
+- **False positives** – Managing false positive alerts
+- **Encryption impact** – Impact of file encryption
+
+### **Operational Challenges**
+- **Maintenance overhead** – Ongoing maintenance requirements
+- **Baseline management** – Complex baseline management
+- **Alert fatigue** – Managing excessive alerts
+- **Resource requirements** – Resource and expertise requirements
+- **Integration complexity** – Complex system integration
+
+### **Security Limitations**
+- **Encrypted files** – Limited monitoring of encrypted files
+- **Memory-based attacks** – Limited detection of memory attacks
+- **Network attacks** – Limited network attack detection
+- **Social engineering** – Limited social engineering detection
+- **Advanced threats** – Limited advanced threat detection
+
+## Compliance and Standards
+
+### **Regulatory Requirements**
+- **PCI DSS** – Payment card industry requirements
+- **SOX** – Sarbanes-Oxley requirements
+- **HIPAA** – Healthcare privacy requirements
+- **FISMA** – Federal information security requirements
+- **Industry standards** – Sector-specific standards
+
+### **Best Practice Frameworks**
+- **NIST Cybersecurity Framework** – NIST security framework
+- **ISO 27001** – Information security management
+- **CIS Controls** – Center for Internet Security controls
+- **COBIT** – IT governance framework
+- **ITIL** – IT service management framework
+
+### **Audit and Reporting**
+- **Compliance audits** – Regular compliance audits
+- **Security assessments** – Security assessment requirements
+- **Reporting requirements** – Regulatory reporting requirements
+- **Documentation** – Comprehensive documentation
+- **Evidence collection** – Audit evidence collection 

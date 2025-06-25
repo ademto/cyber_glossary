@@ -1,0 +1,71 @@
+---
+title: "Logic Bomb"
+description: "Malicious code that is triggered by a specific event or condition, often causing harm or disruption"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Digital Forensics", "Incident Response", "Security Fundamentals"]
+jobPath: ["Malware Analyst", "Digital Forensics Examiner", "Incident Responder", "Security Analyst"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CEH", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Insider Threat"
+    slug: "insider-threat"
+    description: "Logic bombs are often planted by insiders"
+  - name: "Backdoor"
+    slug: "backdoor"
+    description: "Logic bombs may be used to trigger backdoors"
+resources:
+  - title: "Logic Bomb Detection and Response"
+    url: "#"
+  - title: "Preventing Insider Logic Bombs"
+    url: "#"
+quickFacts:
+  "Goal": "Cause harm or disruption when triggered"
+  "Trigger": "Specific event, date, or condition"
+  "Detection": "Code review, behavioral monitoring"
+  "Common targets": "Corporate networks, critical systems"
+---
+
+## What is a Logic Bomb?
+
+A **logic bomb** is a piece of malicious code that is intentionally inserted into a software system and set to execute when certain conditions are met, such as a specific date, the deletion of a user account, or the launch of a particular program. Logic bombs are often used to cause harm, disrupt operations, or delete data.
+
+## How Logic Bombs Work
+
+### **Trigger Mechanisms**
+- **Date/time** – Executes on a specific date or time
+- **User action** – Triggered by a particular user activity
+- **System event** – Activated by system changes or failures
+- **File modification** – Runs when a file is changed or deleted
+
+### **Common Payloads**
+- **Data deletion** – Erases files or databases
+- **System corruption** – Damages operating systems or applications
+- **Disabling security** – Turns off security controls
+- **Launching other malware** – Triggers additional attacks
+
+## Detection and Prevention
+
+- **Code review** – Regularly review source code for suspicious logic
+- **Behavioral monitoring** – Watch for unusual system activity
+- **Access controls** – Limit permissions to critical systems
+- **Separation of duties** – Prevent single-user sabotage
+- **Incident response** – Prepare for insider threats
+
+## Famous Examples
+
+- **Tim Lloyd (Omega Engineering, 1996)** – Logic bomb deleted critical files, causing $10 million in damages
+- **Sony BMG (2005)** – Rootkit logic bomb disabled CD copying
+
+## Best Practices
+
+- **Enforce least privilege** – Limit user access
+- **Monitor for changes** – Track modifications to critical systems
+- **Conduct regular audits** – Review code and system activity
+- **Educate employees** – Raise awareness of insider threats
+- **Implement incident response plans** – Prepare for logic bomb incidents 

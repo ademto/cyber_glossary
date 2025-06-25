@@ -1,0 +1,117 @@
+---
+title: "Evil Twin"
+description: "A wireless network attack where an attacker creates a fake Wi-Fi access point that mimics a legitimate network to intercept user traffic and steal sensitive information"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Wireless Security", "Network Security", "Penetration Testing", "Security Analysis"]
+jobPath: ["Wireless Security Specialist", "Network Security Engineer", "Penetration Tester", "Security Analyst"]
+certsPath: ["CEH", "OSCP", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Rogue Access Point"
+    slug: "rogue-access-point"
+    description: "Unauthorized wireless access point"
+  - name: "Man-in-the-Middle"
+    slug: "mitm"
+    description: "Intercepting communications between parties"
+  - name: "Wireless Security"
+    slug: "wireless-security"
+    description: "Protection of wireless networks"
+resources:
+  - title: "Evil Twin Attack Prevention"
+    url: "#"
+  - title: "Wireless Security Best Practices"
+    url: "#"
+quickFacts:
+  "Goal": "Intercept wireless traffic and steal data"
+  "Method": "Fake Wi-Fi access point with stronger signal"
+  "Targets": "Public Wi-Fi users, corporate networks"
+  "Prevention": "VPN, certificate validation, network monitoring"
+---
+
+## What is an Evil Twin Attack?
+
+An **Evil Twin** is a wireless network attack where an attacker creates a fake Wi-Fi access point that appears to be a legitimate network. The fake access point typically has a stronger signal than the legitimate one, causing users to connect to it instead, allowing the attacker to intercept and monitor all network traffic.
+
+## How Evil Twin Attacks Work
+
+### **Attack Setup**
+- **Network reconnaissance** – Identify target networks and their characteristics
+- **Fake AP creation** – Set up malicious access point with same SSID
+- **Signal amplification** – Use stronger signal to attract users
+- **Traffic interception** – Monitor and capture all network traffic
+- **Data extraction** – Extract sensitive information from captured traffic
+
+### **Common Techniques**
+- **SSID spoofing** – Use identical network name
+- **Signal jamming** – Disrupt legitimate network signal
+- **Deauthentication attacks** – Force users to disconnect and reconnect
+- **Captive portal** – Create fake login page
+- **SSL stripping** – Remove encryption from HTTPS traffic
+
+## Types of Evil Twin Attacks
+
+### **Passive Monitoring**
+- **Traffic analysis** – Monitor network traffic without modification
+- **Packet capture** – Capture and analyze data packets
+- **Session hijacking** – Steal active sessions
+- **Credential harvesting** – Collect login credentials
+
+### **Active Interference**
+- **Traffic modification** – Alter network traffic
+- **DNS poisoning** – Redirect DNS queries
+- **ARP spoofing** – Manipulate ARP tables
+- **SSL certificate spoofing** – Present fake certificates
+
+### **Advanced Techniques**
+- **KARMA attacks** – Respond to probe requests
+- **MANA attacks** – Manipulate network announcements
+- **Known beacon attacks** – Exploit saved network preferences
+- **Wi-Fi Pineapple** – Use specialized hardware for attacks
+
+## Detection and Prevention
+
+### **Technical Controls**
+- **VPN usage** – Encrypt all traffic through VPN
+- **Certificate validation** – Verify SSL certificates
+- **Network monitoring** – Monitor for duplicate SSIDs
+- **Signal strength analysis** – Detect unusual signal patterns
+- **MAC address filtering** – Restrict access to known devices
+
+### **User Education**
+- **Security awareness** – Educate users about risks
+- **Connection verification** – Verify network authenticity
+- **Avoid public Wi-Fi** – Use mobile hotspots when possible
+- **Disable auto-connect** – Prevent automatic connections
+- **Network preferences** – Remove saved public networks
+
+### **Organizational Measures**
+- **Wireless security policies** – Clear guidelines for wireless usage
+- **Network monitoring** – Monitor for rogue access points
+- **Incident response** – Prepare for evil twin incidents
+- **Regular audits** – Review wireless security measures
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Disconnect immediately** – Remove device from network
+- **Change passwords** – Update all account credentials
+- **Monitor accounts** – Watch for unauthorized activity
+- **Report incident** – Notify security teams
+
+### **Investigation Steps**
+- **Network analysis** – Examine network traffic logs
+- **Device forensics** – Analyze affected devices
+- **Impact assessment** – Determine scope of compromise
+- **Corrective actions** – Implement improved security measures
+
+## Best Practices
+
+- **Use VPN connections** – Encrypt all wireless traffic
+- **Verify network authenticity** – Confirm legitimate networks
+- **Avoid sensitive transactions** – Don't use public Wi-Fi for banking
+- **Keep devices updated** – Regular security updates
+- **Use mobile hotspots** – Personal hotspots when possible
+- **Monitor for suspicious activity** – Watch for unusual network behavior 

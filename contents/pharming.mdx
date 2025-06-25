@@ -1,0 +1,114 @@
+---
+title: "Pharming"
+description: "A cyber attack that redirects users from legitimate websites to fake ones by manipulating DNS or host files, often for credential theft"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Network Security", "DNS Security", "Threat Intelligence", "Incident Response"]
+jobPath: ["Network Security Engineer", "Threat Intelligence Analyst", "Incident Responder", "Security Analyst"]
+certsPath: ["CompTIA Security+", "CEH", "CISSP", "SANS SEC301"]
+relatedTerms:
+  - name: "Phishing"
+    slug: "phishing"
+    description: "Social engineering attack using fake websites"
+  - name: "DNS Poisoning"
+    slug: "dns-poisoning"
+    description: "Manipulating DNS records to redirect traffic"
+  - name: "Man-in-the-Middle"
+    slug: "mitm"
+    description: "Intercepting and modifying communications"
+resources:
+  - title: "Pharming Detection and Prevention"
+    url: "#"
+  - title: "DNS Security Best Practices"
+    url: "#"
+quickFacts:
+  "Goal": "Redirect users to fake websites for credential theft"
+  "Method": "DNS manipulation, host file modification"
+  "Detection": "DNS monitoring, certificate validation, URL verification"
+  "Prevention": "DNS security, HTTPS, certificate pinning"
+---
+
+## What is Pharming?
+
+**Pharming** is a cyber attack that redirects users from legitimate websites to fake ones by manipulating DNS (Domain Name System) records or host files. Unlike phishing, which relies on users clicking malicious links, pharming automatically redirects users even when they type the correct URL.
+
+## How Pharming Works
+
+### **DNS-Based Pharming**
+- **DNS cache poisoning** – Corrupt DNS cache with fake records
+- **DNS hijacking** – Compromise DNS servers or registrars
+- **DNS tunneling** – Use DNS protocol for malicious redirects
+- **DNS amplification** – Use DNS servers to redirect traffic
+
+### **Host File Modification**
+- **Local host file editing** – Modify system host files
+- **Malware infection** – Use malware to change host files
+- **Administrative access** – Use elevated privileges to modify files
+- **Persistence mechanisms** – Ensure changes survive reboots
+
+## Types of Pharming Attacks
+
+### **DNS Cache Poisoning**
+- **Corrupt DNS cache** – Insert fake DNS records
+- **Target popular sites** – Redirect high-traffic websites
+- **Mass redirection** – Affect multiple users simultaneously
+- **Persistent redirection** – Maintain fake records over time
+
+### **DNS Hijacking**
+- **Compromise DNS servers** – Gain control of DNS infrastructure
+- **Registrar attacks** – Compromise domain registrars
+- **ISP-level attacks** – Target internet service providers
+- **Router compromise** – Modify router DNS settings
+
+### **Local Host File Attacks**
+- **Malware modification** – Use malicious software to change files
+- **Manual modification** – Direct editing of host files
+- **Privilege escalation** – Use elevated access to modify files
+- **Persistence techniques** – Ensure changes remain after reboot
+
+## Detection and Prevention
+
+### **Technical Controls**
+- **DNS monitoring** – Monitor DNS queries and responses
+- **Certificate validation** – Verify SSL/TLS certificates
+- **URL verification** – Check website authenticity
+- **DNS security extensions** – Use DNSSEC for DNS security
+- **Secure DNS servers** – Use trusted DNS providers
+
+### **User Education**
+- **Security awareness training** – Educate users about pharming
+- **URL verification** – Check website addresses carefully
+- **Certificate awareness** – Understand SSL certificate warnings
+- **Reporting procedures** – Report suspicious redirects
+
+### **Organizational Measures**
+- **DNS security policies** – Implement DNS security measures
+- **Incident response plans** – Prepare for pharming incidents
+- **Regular monitoring** – Monitor for DNS anomalies
+- **Threat intelligence** – Stay informed about new tactics
+
+## Response and Recovery
+
+### **Immediate Actions**
+- **Isolate affected systems** – Prevent further compromise
+- **Flush DNS cache** – Clear corrupted DNS records
+- **Restore host files** – Remove malicious modifications
+- **Update DNS settings** – Use secure DNS servers
+
+### **Investigation Steps**
+- **DNS analysis** – Examine DNS queries and responses
+- **Host file analysis** – Check for malicious modifications
+- **Network monitoring** – Track traffic patterns
+- **Impact assessment** – Determine scope of compromise
+
+## Best Practices
+
+- **Use secure DNS servers** – Trusted DNS providers
+- **Enable DNSSEC** – DNS security extensions
+- **Verify website certificates** – Check SSL/TLS certificates
+- **Monitor DNS traffic** – Watch for anomalies
+- **Regular security updates** – Keep systems patched
+- **User education** – Train users to recognize pharming 

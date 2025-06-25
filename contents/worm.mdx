@@ -1,0 +1,140 @@
+---
+title: "Worm"
+description: "Self-replicating malware that spreads across networks by exploiting vulnerabilities without user interaction"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 9
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Network Security", "Threat Intelligence", "Incident Response"]
+jobPath: ["Malware Analyst", "Network Security Engineer", "Threat Intelligence Analyst", "Incident Responder"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "General category of malicious software"
+  - name: "Network Segmentation"
+    slug: "network-segmentation"
+    description: "Defense strategy against worm propagation"
+  - name: "Patch Management"
+    slug: "patch-management"
+    description: "Critical prevention against worm exploits"
+resources:
+  - title: "Worm Analysis and Containment"
+    url: "#"
+  - title: "Network Worm Prevention"
+    url: "#"
+quickFacts:
+  "Goal": "Rapid network-wide infection"
+  "Spread": "Self-replicating across networks"
+  "Trigger": "Exploits vulnerabilities automatically"
+  "Impact": "Network congestion, data theft, system damage"
+---
+
+## What is a Worm?
+
+A **worm** is self-replicating malicious software that spreads across computer networks by exploiting security vulnerabilities. Unlike viruses, worms don't require user interaction to spread and can propagate rapidly across interconnected systems.
+
+## How Worms Work
+
+### **Propagation Mechanisms**
+- **Network scanning** – Discovers vulnerable systems
+- **Exploit execution** – Uses known vulnerabilities to gain access
+- **Self-replication** – Copies itself to new systems
+- **Payload delivery** – Carries additional malicious code
+
+### **Common Infection Vectors**
+- **Email attachments** – Self-propagating through email systems
+- **Network shares** – Exploits file sharing vulnerabilities
+- **Web servers** – Targets web application vulnerabilities
+- **USB drives** – Spreads through removable media
+- **Instant messaging** – Uses chat applications to spread
+
+## Types of Worms
+
+### **Email Worms**
+- **Mass mailing** – Sends copies to all contacts
+- **Social engineering** – Uses convincing subject lines
+- **Attachment-based** – Spreads through malicious files
+- **Link-based** – Contains links to infected websites
+
+### **Network Worms**
+- **Port scanning** – Discovers vulnerable services
+- **Service exploitation** – Targets specific network services
+- **Password guessing** – Attempts brute force attacks
+- **Default credentials** – Uses common login combinations
+
+### **Internet Worms**
+- **Web crawlers** – Scans for vulnerable web servers
+- **Search engine manipulation** – Uses SEO techniques
+- **Social media propagation** – Spreads through social networks
+- **P2P networks** – Uses file sharing networks
+
+## Famous Worm Examples
+
+### **Morris Worm (1988)**
+- **First major worm** – Infected thousands of systems
+- **UNIX systems** – Targeted VAX and Sun systems
+- **Buffer overflow** – Exploited finger daemon vulnerability
+- **Accidental damage** – Caused unintended system crashes
+
+### **Code Red (2001)**
+- **IIS vulnerability** – Targeted Microsoft web servers
+- **Buffer overflow** – Exploited Index Server ISAPI
+- **DDoS attacks** – Launched attacks against White House
+- **Memory resident** – Stayed in memory without files
+
+### **SQL Slammer (2003)**
+- **SQL Server** – Targeted Microsoft SQL Server
+- **Buffer overflow** – Exploited SQL Server vulnerability
+- **UDP packets** – Spread through UDP port 1434
+- **Rapid spread** – Infected 75,000 systems in 10 minutes
+
+### **Conficker (2008)**
+- **Windows systems** – Targeted Windows vulnerabilities
+- **Multiple vectors** – Email, network shares, USB drives
+- **Domain generation** – Created random domain names
+- **Botnet formation** – Created massive botnet
+
+## Detection and Prevention
+
+### **Network Monitoring**
+- **Traffic analysis** – Monitor for unusual network patterns
+- **Port scanning detection** – Identify worm scanning activity
+- **Bandwidth monitoring** – Detect unusual traffic volumes
+- **IDS/IPS systems** – Intrusion detection and prevention
+
+### **System Protection**
+- **Regular patching** – Keep systems updated
+- **Antivirus software** – Real-time protection
+- **Firewall configuration** – Block unnecessary ports
+- **Network segmentation** – Isolate critical systems
+
+### **Email Security**
+- **Spam filtering** – Block malicious emails
+- **Attachment scanning** – Scan all email attachments
+- **URL filtering** – Block malicious links
+- **User education** – Security awareness training
+
+## Response and Containment
+
+### **Immediate Actions**
+- **Isolate infected systems** – Prevent further spread
+- **Disconnect from network** – Stop propagation
+- **Identify infection vector** – Determine how worm entered
+- **Assess scope** – Determine all affected systems
+
+### **Recovery Steps**
+- **Remove worm code** – Clean infected systems
+- **Patch vulnerabilities** – Prevent reinfection
+- **Restore from backups** – If data was corrupted
+- **Monitor for reinfection** – Ensure complete removal
+
+## Best Practices
+
+- **Keep systems patched** – Regular security updates
+- **Use network segmentation** – Limit worm spread
+- **Implement strong passwords** – Prevent brute force attacks
+- **Monitor network traffic** – Early detection systems
+- **Backup critical data** – Protect against data loss
+- **Incident response plan** – Prepare for worm outbreaks 

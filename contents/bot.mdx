@@ -1,0 +1,87 @@
+---
+title: "Bot (Malware)"
+description: "A compromised device that is remotely controlled by an attacker, often as part of a botnet for malicious activities"
+category: "Threats & Attacks"
+riskLevel: "High"
+severity: 8
+lastUpdated: "June 2025"
+threatLevel: "High"
+skillPath: ["Malware Analysis", "Network Security", "Threat Intelligence", "Incident Response"]
+jobPath: ["Malware Analyst", "Threat Intelligence Analyst", "Network Security Engineer", "Incident Responder"]
+certsPath: ["GIAC GREM", "SANS FOR508", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Botnet"
+    slug: "botnet"
+    description: "A network of bots under a single attacker's control"
+  - name: "Command and Control (C2)"
+    slug: "command-and-control"
+    description: "Infrastructure used to control bots remotely"
+  - name: "DDoS Attack"
+    slug: "ddos-attack"
+    description: "Common use of botnets to overwhelm targets"
+resources:
+  - title: "Botnet Detection and Mitigation"
+    url: "#"
+  - title: "Understanding Bots in Cybersecurity"
+    url: "#"
+quickFacts:
+  "Goal": "Automate attacks, data theft, or spam distribution"
+  "Control": "Remotely managed via C2 servers"
+  "Spread": "Malware infection, vulnerabilities, phishing"
+  "Detection": "Network monitoring, endpoint protection"
+---
+
+## What is a Bot (Malware)?
+
+A **bot** is a device or system that has been compromised by malware and is remotely controlled by an attacker. Bots are typically used as part of a larger network, known as a botnet, to perform coordinated malicious activities such as DDoS attacks, spamming, or data theft.
+
+## How Bots Work
+
+### **Infection and Recruitment**
+- **Malware infection** – Device is compromised by malicious software
+- **C2 connection** – Establishes communication with a command and control server
+- **Botnet enrollment** – Joins a network of other compromised devices
+
+### **Common Bot Activities**
+- **DDoS attacks** – Overwhelm targets with traffic
+- **Spam distribution** – Send large volumes of unsolicited emails
+- **Credential theft** – Steal usernames and passwords
+- **Click fraud** – Generate fake ad clicks for revenue
+- **Data exfiltration** – Steal sensitive information
+
+## Botnet Architectures
+
+### **Centralized Botnets**
+- **Single C2 server** – All bots connect to one server
+- **Easier to control** – Simple management for attackers
+- **Single point of failure** – Easier to disrupt
+
+### **Decentralized (P2P) Botnets**
+- **Peer-to-peer communication** – Bots communicate with each other
+- **Resilient** – Harder to take down
+- **Complex management** – More difficult for attackers to control
+
+## Detection and Prevention
+
+### **Network Monitoring**
+- **Traffic analysis** – Look for unusual outbound connections
+- **Beaconing detection** – Identify regular check-ins to C2
+- **Anomaly detection** – Spot abnormal device behavior
+
+### **Endpoint Protection**
+- **Antivirus software** – Detect and remove bot malware
+- **EDR solutions** – Monitor for suspicious activities
+- **Patch management** – Fix vulnerabilities to prevent infection
+
+### **Organizational Measures**
+- **User education** – Train users to avoid phishing and suspicious downloads
+- **Incident response** – Plan for botnet infections
+- **Threat intelligence** – Use feeds to identify botnet indicators
+
+## Best Practices
+
+- **Keep systems patched** – Regularly update software
+- **Monitor network traffic** – Watch for unusual activity
+- **Use strong authentication** – Prevent unauthorized access
+- **Educate users** – Raise awareness of botnet threats
+- **Implement incident response plans** – Prepare for botnet outbreaks 

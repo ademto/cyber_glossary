@@ -1,0 +1,175 @@
+---
+title: "Command and Control (C2)"
+description: "Infrastructure used by attackers to communicate with and control compromised systems remotely"
+category: "Threats & Attacks"
+riskLevel: "Critical"
+severity: 10
+lastUpdated: "June 2025"
+threatLevel: "Critical"
+skillPath: ["Threat Intelligence", "Network Security", "Malware Analysis", "Incident Response"]
+jobPath: ["Threat Intelligence Analyst", "Network Security Engineer", "Malware Analyst", "Incident Responder"]
+certsPath: ["GIAC GCTI", "SANS FOR508", "CISSP", "CompTIA Security+"]
+relatedTerms:
+  - name: "Malware"
+    slug: "malware"
+    description: "Software that uses C2 for remote control"
+  - name: "Botnet"
+    slug: "botnet"
+    description: "Network of compromised systems controlled via C2"
+  - name: "Threat Intelligence"
+    slug: "threat-intelligence"
+    description: "Analysis of C2 infrastructure and patterns"
+resources:
+  - title: "C2 Infrastructure Analysis"
+    url: "#"
+  - title: "Detecting C2 Communications"
+    url: "#"
+quickFacts:
+  "Goal": "Remote control of compromised systems"
+  "Communication": "Encrypted channels, covert protocols"
+  "Detection": "Network monitoring, traffic analysis"
+  "Infrastructure": "Servers, domains, cloud services"
+---
+
+## What is Command and Control (C2)?
+
+**Command and Control (C2)** refers to the infrastructure and communication channels that attackers use to remotely control compromised systems. C2 servers act as central command centers that send instructions to malware-infected devices and receive stolen data or status updates.
+
+## How C2 Works
+
+### **Communication Flow**
+- **Infection** – Malware establishes connection to C2 server
+- **Beaconing** – Regular check-ins for new commands
+- **Command execution** – Receives and executes instructions
+- **Data exfiltration** – Sends stolen data back to C2
+- **Persistence** – Maintains long-term control
+
+### **C2 Architecture**
+- **Primary servers** – Main command centers
+- **Fallback servers** – Backup communication channels
+- **Proxy servers** – Intermediate communication nodes
+- **Domain generation** – Dynamic domain creation
+- **Fast flux** – Rapid IP address changes
+
+## C2 Communication Protocols
+
+### **HTTP/HTTPS**
+- **Web traffic** – Blends with normal web traffic
+- **API calls** – Uses RESTful API endpoints
+- **Websockets** – Real-time bidirectional communication
+- **Custom headers** – Encoded commands in headers
+
+### **DNS**
+- **DNS tunneling** – Encodes data in DNS queries
+- **Subdomain generation** – Creates dynamic subdomains
+- **TXT records** – Stores commands in DNS records
+- **CNAME chains** – Complex domain resolution
+
+### **Other Protocols**
+- **IRC** – Internet Relay Chat channels
+- **Email** – SMTP/IMAP communication
+- **Social media** – Uses social platforms
+- **Cloud services** – Leverages legitimate cloud APIs
+
+## C2 Infrastructure Types
+
+### **Centralized C2**
+- **Single server** – One primary command center
+- **Hierarchical** – Multiple levels of control
+- **Star topology** – All bots connect to central server
+- **Simple management** – Easy to control and monitor
+
+### **Decentralized C2**
+- **Peer-to-peer** – Bots communicate with each other
+- **Distributed** – Multiple C2 servers
+- **Resilient** – Harder to take down
+- **Complex routing** – Multiple communication paths
+
+### **Cloud-Based C2**
+- **Cloud services** – Uses AWS, Azure, Google Cloud
+- **Legitimate services** – GitHub, Pastebin, social media
+- **CDN abuse** – Content delivery networks
+- **API abuse** – Legitimate API endpoints
+
+## Detection Methods
+
+### **Network Monitoring**
+- **Traffic analysis** – Monitor for unusual patterns
+- **Protocol analysis** – Examine communication protocols
+- **DNS monitoring** – Watch for suspicious DNS queries
+- **SSL/TLS inspection** – Decrypt and inspect traffic
+
+### **Behavioral Analysis**
+- **Beaconing detection** – Regular check-in patterns
+- **Data exfiltration** – Large data transfers
+- **Command patterns** – Suspicious command sequences
+- **Timing analysis** – Unusual communication timing
+
+### **Signature Detection**
+- **Known C2 domains** – Block known malicious domains
+- **IP reputation** – Known malicious IP addresses
+- **User-agent strings** – Suspicious user agents
+- **Certificate analysis** – SSL certificate patterns
+
+## C2 Infrastructure Analysis
+
+### **Infrastructure Mapping**
+- **Domain analysis** – WHOIS, DNS records
+- **IP geolocation** – Geographic distribution
+- **ASN analysis** – Autonomous system numbers
+- **Hosting providers** – Cloud and hosting services
+
+### **Malware Analysis**
+- **Static analysis** – Extract C2 addresses from code
+- **Dynamic analysis** – Monitor network communication
+- **String analysis** – Find hardcoded URLs and IPs
+- **Configuration extraction** – Decode malware configs
+
+### **Threat Intelligence**
+- **IOC sharing** – Share indicators of compromise
+- **Campaign tracking** – Monitor attack campaigns
+- **Attribution** – Identify threat actors
+- **Trend analysis** – Track C2 evolution
+
+## Prevention and Mitigation
+
+### **Network Security**
+- **Firewall rules** – Block known C2 domains
+- **DNS filtering** – Block malicious DNS queries
+- **Proxy servers** – Monitor and filter traffic
+- **Network segmentation** – Isolate critical systems
+
+### **Endpoint Protection**
+- **Antivirus software** – Detect and block malware
+- **EDR solutions** – Endpoint detection and response
+- **Application whitelisting** – Only allow approved apps
+- **Privilege management** – Limit user privileges
+
+### **Monitoring and Response**
+- **SIEM systems** – Security information and event management
+- **Threat hunting** – Proactive threat detection
+- **Incident response** – Rapid response to C2 detection
+- **Forensic analysis** – Investigate C2 incidents
+
+## Advanced C2 Techniques
+
+### **Evasion Methods**
+- **Domain generation algorithms** – Dynamic domain creation
+- **Encryption** – Encrypt C2 communications
+- **Obfuscation** – Hide C2 traffic in legitimate protocols
+- **Anti-analysis** – Detect analysis environments
+
+### **Resilience Strategies**
+- **Redundancy** – Multiple C2 servers
+- **Failover mechanisms** – Automatic server switching
+- **Geographic distribution** – Servers in multiple countries
+- **Legal protection** – Use bulletproof hosting
+
+## Best Practices
+
+- **Monitor network traffic** – Continuous network monitoring
+- **Block known C2 domains** – Maintain updated blocklists
+- **Use threat intelligence** – Subscribe to threat feeds
+- **Implement zero trust** – Verify all network access
+- **Regular training** – Security awareness programs
+- **Incident response plan** – Prepare for C2 incidents 

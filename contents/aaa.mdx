@@ -1,0 +1,151 @@
+---
+title: "Authentication, Authorization, and Accounting (AAA)"
+description: "A security framework that provides three essential security services: verifying user identity, controlling access to resources, and tracking user activities"
+category: "Access Control"
+riskLevel: "Medium"
+severity: 6
+lastUpdated: "June 2025"
+threatLevel: "Medium"
+skillPath: ["Access Control", "Identity Management", "Security Analysis", "System Administration"]
+jobPath: ["Identity Management Specialist", "Security Analyst", "System Administrator", "Access Control Manager"]
+certsPath: ["CISSP", "CompTIA Security+", "SANS SEC301", "GIAC GSEC"]
+relatedTerms:
+  - name: "Access Control"
+    slug: "access-control"
+    description: "Managing who can access resources"
+  - name: "Multi-Factor Authentication"
+    slug: "mfa"
+    description: "Multiple authentication factors for security"
+  - name: "Identity Management"
+    slug: "identity-management"
+    description: "Managing user identities and access"
+resources:
+  - title: "AAA Framework Implementation"
+    url: "#"
+  - title: "Access Control Best Practices"
+    url: "#"
+quickFacts:
+  "Components": "Authentication, Authorization, Accounting"
+  "Purpose": "Secure access control and user management"
+  "Implementation": "RADIUS, TACACS+, LDAP, Active Directory"
+  "Benefits": "Security, compliance, audit trails"
+---
+
+## What is AAA?
+
+**Authentication, Authorization, and Accounting (AAA)** is a security framework that provides three essential security services for controlling access to network resources and tracking user activities. AAA is fundamental to network security and is implemented in various protocols and systems.
+
+## The Three Components
+
+### **Authentication**
+- **Identity verification** – Confirming who the user is
+- **Credential validation** – Verifying passwords, tokens, or biometrics
+- **Multi-factor authentication** – Using multiple verification methods
+- **Session management** – Managing user sessions and timeouts
+- **Single sign-on (SSO)** – Centralized authentication across systems
+
+### **Authorization**
+- **Access control** – Determining what resources users can access
+- **Permission management** – Granting specific permissions to users
+- **Role-based access control (RBAC)** – Access based on user roles
+- **Resource protection** – Protecting sensitive data and systems
+- **Privilege management** – Managing elevated access privileges
+
+### **Accounting**
+- **Activity logging** – Recording user actions and system events
+- **Audit trails** – Maintaining detailed logs for compliance
+- **Usage monitoring** – Tracking resource usage and access patterns
+- **Billing and chargeback** – Cost allocation for resource usage
+- **Security monitoring** – Detecting suspicious activities
+
+## AAA Protocols and Standards
+
+### **RADIUS (Remote Authentication Dial-In User Service)**
+- **Network access** – Authentication for network access
+- **Centralized management** – Central authentication server
+- **Extensible protocol** – Support for various authentication methods
+- **Widely supported** – Industry standard for network access
+- **Accounting support** – Built-in accounting capabilities
+
+### **TACACS+ (Terminal Access Controller Access Control System Plus)**
+- **Device administration** – Authentication for network devices
+- **Command authorization** – Granular command-level access control
+- **Separate protocols** – Separate authentication, authorization, and accounting
+- **Cisco proprietary** – Originally developed by Cisco
+- **Enhanced security** – More secure than RADIUS
+
+### **LDAP (Lightweight Directory Access Protocol)**
+- **Directory services** – Access to directory information
+- **User management** – Centralized user directory
+- **Hierarchical structure** – Tree-like directory structure
+- **Standard protocol** – Open standard for directory access
+- **Integration support** – Integrates with various systems
+
+## Implementation Considerations
+
+### **Authentication Methods**
+- **Password-based** – Traditional username/password
+- **Token-based** – Hardware or software tokens
+- **Biometric** – Fingerprint, facial recognition, etc.
+- **Certificate-based** – Digital certificates and PKI
+- **Social login** – OAuth, OpenID Connect
+
+### **Authorization Models**
+- **Discretionary Access Control (DAC)** – Owner-controlled access
+- **Mandatory Access Control (MAC)** – System-enforced access
+- **Role-Based Access Control (RBAC)** – Role-based permissions
+- **Attribute-Based Access Control (ABAC)** – Attribute-based decisions
+- **Policy-Based Access Control (PBAC)** – Policy-driven access
+
+### **Accounting Features**
+- **Event logging** – Comprehensive event recording
+- **Real-time monitoring** – Live activity monitoring
+- **Report generation** – Automated report creation
+- **Data retention** – Long-term log storage
+- **Compliance support** – Meeting regulatory requirements
+
+## Security Benefits
+
+### **Access Control**
+- **Prevent unauthorized access** – Block unauthorized users
+- **Limit user privileges** – Grant minimal necessary access
+- **Session management** – Control active sessions
+- **Resource protection** – Protect sensitive resources
+- **Privilege escalation prevention** – Prevent unauthorized privilege increases
+
+### **Compliance and Auditing**
+- **Regulatory compliance** – Meet industry regulations
+- **Audit trails** – Maintain detailed activity records
+- **Incident investigation** – Support security incident response
+- **Forensic analysis** – Provide evidence for investigations
+- **Risk assessment** – Support security risk evaluations
+
+### **Operational Benefits**
+- **Centralized management** – Single point of control
+- **Scalability** – Support for large user populations
+- **Integration** – Work with existing systems
+- **Automation** – Automated access management
+- **Cost reduction** – Reduce administrative overhead
+
+## Best Practices
+
+### **Implementation**
+- **Multi-factor authentication** – Use multiple authentication factors
+- **Least privilege principle** – Grant minimal necessary access
+- **Regular access reviews** – Periodically review user access
+- **Strong password policies** – Implement robust password requirements
+- **Session management** – Proper session timeout and management
+
+### **Monitoring and Maintenance**
+- **Regular audits** – Conduct periodic security audits
+- **Log analysis** – Analyze authentication and access logs
+- **Incident response** – Prepare for security incidents
+- **Backup and recovery** – Maintain AAA system backups
+- **Performance monitoring** – Monitor system performance
+
+### **Security Measures**
+- **Encryption** – Encrypt sensitive authentication data
+- **Network security** – Secure AAA protocol communications
+- **Physical security** – Protect AAA infrastructure
+- **Vendor management** – Assess and manage vendor security
+- **Training and awareness** – Educate users on security practices 
