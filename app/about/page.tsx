@@ -64,7 +64,7 @@ export default function AboutPage() {
                   </div>
                   
                   <p className="text-muted-foreground leading-relaxed">
-                    Hi! I'm Emmanuel Adetoro, a cybersecurity professional with hands-on experience 
+                    Hi! I&apos;m Emmanuel Adetoro, a cybersecurity professional with hands-on experience 
                     in penetration testing, cloud security, and software development. I created 
                     Cyber Glossary to share my knowledge and help bridge the gap between complex 
                     security concepts and practical understanding.
@@ -249,7 +249,7 @@ export default function AboutPage() {
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted-foreground">
                     Have suggestions, found an error, or want to discuss cybersecurity topics? 
-                    I'd love to hear from you!
+                    I&apos;d love to hear from you!
                   </p>
                   <a 
                     href="mailto:emmanueladetoro@proton.me" 
