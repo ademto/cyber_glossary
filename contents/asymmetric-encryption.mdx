@@ -1,0 +1,177 @@
+---
+title: "Asymmetric Encryption"
+description: "A cryptographic method that uses different keys for encryption and decryption, enabling secure key exchange and digital signatures."
+category: "Cryptography"
+severity: 8
+riskLevel: "High"
+skillPath: ["Cryptography", "PKI", "Digital Signatures"]
+jobPath: ["Cryptographer", "PKI Specialist", "Security Engineer"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH"]
+quickFacts:
+  "Key Characteristic": "Different keys for encryption and decryption"
+  "Applications": "Key exchange, digital signatures, authentication"
+  "Performance": "Slower than symmetric encryption"
+relatedTerms:
+  - slug: "symmetric-encryption"
+    name: "Symmetric Encryption"
+    description: "Uses same key for encryption and decryption"
+  - slug: "digital-signature"
+    name: "Digital Signature"
+    description: "Cryptographic proof of authenticity and integrity"
+  - slug: "pki"
+    name: "Public Key Infrastructure"
+    description: "Framework for managing digital certificates"
+resources:
+  - url: "https://www.nist.gov/publications/public-key-cryptography"
+    title: "NIST: Public Key Cryptography"
+  - url: "https://www.cryptography.org/learn/asymmetric-encryption/"
+    title: "Cryptography.org: Asymmetric Encryption"
+---
+
+# Asymmetric Encryption
+
+Asymmetric encryption, also known as public key cryptography, is a cryptographic method that uses a pair of mathematically related keys: a public key for encryption and a private key for decryption. This approach enables secure key exchange, digital signatures, and authentication without requiring a shared secret.
+
+## How Asymmetric Encryption Works
+
+### Key Pair Generation
+1. **Mathematical Relationship**: Generate two mathematically related keys
+2. **Public Key**: Can be freely shared and used for encryption
+3. **Private Key**: Must be kept secret and used for decryption
+4. **One-Way Function**: Easy to compute in one direction, difficult to reverse
+
+### Basic Process
+- **Encryption**: Use recipient's public key to encrypt data
+- **Transmission**: Send encrypted data over insecure channels
+- **Decryption**: Recipient uses their private key to decrypt data
+- **Security**: Only the private key holder can decrypt the message
+
+## Common Asymmetric Algorithms
+
+### RSA (Rivest-Shamir-Adleman)
+- **Key Sizes**: 2048, 3072, 4096 bits (minimum 2048 recommended)
+- **Security**: Based on difficulty of factoring large numbers
+- **Performance**: Slower than elliptic curve algorithms
+- **Usage**: Digital signatures, key exchange, encryption
+
+### Elliptic Curve Cryptography (ECC)
+- **Key Sizes**: 256, 384, 521 bits (equivalent to larger RSA keys)
+- **Security**: Based on elliptic curve discrete logarithm problem
+- **Performance**: Faster than RSA for equivalent security
+- **Usage**: Digital signatures, key exchange, TLS
+
+### Diffie-Hellman Key Exchange
+- **Purpose**: Secure key exchange over insecure channels
+- **Security**: Based on discrete logarithm problem
+- **Usage**: Establishing shared secrets for symmetric encryption
+- **Perfect Forward Secrecy**: Provides forward secrecy when properly implemented
+
+## Applications of Asymmetric Encryption
+
+### Key Exchange
+- **TLS/SSL**: Secure establishment of symmetric keys
+- **SSH**: Secure shell key exchange
+- **VPN**: Secure VPN key establishment
+- **Email**: PGP/GPG key exchange
+
+### Digital Signatures
+- **Document Signing**: Prove authenticity and integrity
+- **Code Signing**: Verify software authenticity
+- **Email Signing**: S/MIME email signatures
+- **Certificate Signing**: PKI certificate validation
+
+### Authentication
+- **Client Authentication**: Prove identity to servers
+- **Server Authentication**: Prove server identity to clients
+- **Multi-Factor Authentication**: Part of MFA systems
+- **Smart Cards**: Physical token authentication
+
+### Encryption
+- **Hybrid Encryption**: Combine with symmetric encryption
+- **Email Encryption**: PGP/GPG email encryption
+- **File Encryption**: Encrypting files for specific recipients
+- **Database Encryption**: Encrypting sensitive database fields
+
+## Public Key Infrastructure (PKI)
+
+### Components
+- **Certificate Authority (CA)**: Issues and manages digital certificates
+- **Registration Authority (RA)**: Validates certificate requests
+- **Certificate Repository**: Stores and distributes certificates
+- **Certificate Revocation**: Manages certificate revocation
+
+### Digital Certificates
+- **X.509 Standard**: Standard format for digital certificates
+- **Certificate Content**: Public key, identity, validity period, CA signature
+- **Certificate Chain**: Hierarchy of trusted certificates
+- **Certificate Validation**: Process of verifying certificate authenticity
+
+## Hybrid Encryption Systems
+
+### Why Hybrid?
+- **Performance**: Asymmetric encryption is slow for large data
+- **Efficiency**: Use asymmetric for key exchange, symmetric for data
+- **Security**: Combine benefits of both approaches
+
+### Process
+1. **Key Exchange**: Use asymmetric encryption to establish shared key
+2. **Data Encryption**: Use symmetric encryption with shared key
+3. **Transmission**: Send encrypted data and encrypted key
+4. **Decryption**: Recipient decrypts key, then decrypts data
+
+## Best Practices
+
+### Key Management
+1. **Key Generation**: Use cryptographically secure random number generators
+2. **Key Storage**: Secure storage of private keys
+3. **Key Rotation**: Regular key replacement
+4. **Key Backup**: Secure backup of key material
+
+### Algorithm Selection
+1. **RSA**: Use minimum 2048-bit keys, prefer 3072 or 4096
+2. **ECC**: Use curves like P-256, P-384, or P-521
+3. **Avoid Weak Algorithms**: MD5, SHA-1, small key sizes
+4. **Stay Updated**: Monitor for new vulnerabilities
+
+### Implementation
+1. **Secure Libraries**: Use well-tested cryptographic libraries
+2. **Random Number Generation**: Use cryptographically secure RNGs
+3. **Padding**: Use secure padding schemes (OAEP for RSA)
+4. **Testing**: Thoroughly test cryptographic implementations
+
+## Security Considerations
+
+### Threats
+- **Key Compromise**: Unauthorized access to private keys
+- **Algorithm Weaknesses**: Mathematical attacks on algorithms
+- **Implementation Flaws**: Bugs in cryptographic implementations
+- **Quantum Computing**: Future threat to current algorithms
+
+### Mitigation
+- **Strong Keys**: Use sufficiently long keys
+- **Secure Implementation**: Follow cryptographic best practices
+- **Key Protection**: Secure storage and transmission of private keys
+- **Algorithm Updates**: Stay current with cryptographic recommendations
+
+## Performance Considerations
+
+### Computational Cost
+- **Slower than Symmetric**: Asymmetric operations are computationally expensive
+- **Key Size Impact**: Larger keys require more computation
+- **Optimization**: Use efficient algorithms and implementations
+- **Hardware Acceleration**: Use specialized cryptographic hardware
+
+### Scalability
+- **Key Distribution**: Easier than symmetric key distribution
+- **Certificate Management**: Centralized certificate management
+- **Revocation**: Efficient certificate revocation mechanisms
+- **Interoperability**: Standard protocols and formats
+
+## Related Concepts
+- **Symmetric Encryption**: Fast encryption for bulk data
+- **Digital Signatures**: Cryptographic proof of authenticity
+- **PKI**: Framework for managing digital certificates
+
+## Conclusion
+
+Asymmetric encryption is essential for modern cryptography, enabling secure key exchange, digital signatures, and authentication. While slower than symmetric encryption, it provides unique capabilities that are fundamental to secure communications and digital trust. 

@@ -1,0 +1,148 @@
+---
+title: "Split Tunneling"
+description: "A VPN configuration that allows some traffic to go through the VPN tunnel while other traffic goes directly to the internet, bypassing the VPN."
+category: "Network Security"
+severity: 6
+riskLevel: "Medium"
+skillPath: ["Network Security", "VPN", "Network Administration"]
+jobPath: ["Network Security Engineer", "Network Administrator", "Security Engineer"]
+certsPath: ["CCNA Security", "CISSP", "CompTIA Security+"]
+quickFacts:
+  "Purpose": "Optimize network performance while maintaining security"
+  "Traffic Routing": "Selective routing based on destination"
+  "Security Trade-off": "Balance between security and performance"
+relatedTerms:
+  - slug: "vpn"
+    name: "VPN"
+    description: "Virtual Private Network for secure remote access"
+  - slug: "network-segmentation"
+    name: "Network Segmentation"
+    description: "Dividing networks into smaller, isolated segments"
+  - slug: "zero-trust"
+    name: "Zero Trust"
+    description: "Security model that assumes no trust"
+resources:
+  - url: "https://www.cisa.gov/resources-tools/resources/remote-access-security"
+    title: "CISA: Remote Access Security"
+  - url: "https://www.cisco.com/c/en/us/support/docs/security/anyconnect-secure-mobility-client/118141-configure-anyconnect-00.html"
+    title: "Cisco: Split Tunneling Configuration"
+---
+
+# Split Tunneling
+
+Split tunneling is a VPN configuration that allows some network traffic to go through the VPN tunnel while other traffic goes directly to the internet, bypassing the VPN. This approach balances security requirements with network performance and user experience.
+
+## How Split Tunneling Works
+
+### Traffic Routing
+- **VPN Traffic**: Sensitive traffic (e.g., corporate resources) goes through VPN
+- **Direct Traffic**: Non-sensitive traffic (e.g., internet browsing) goes directly to internet
+- **Routing Decisions**: Based on destination addresses, protocols, or applications
+- **Policy Enforcement**: Network policies determine which traffic uses which path
+
+### Configuration Methods
+- **Route-Based**: Configure specific routes for VPN vs. direct access
+- **Application-Based**: Route traffic based on specific applications
+- **Domain-Based**: Route traffic based on destination domains
+- **Protocol-Based**: Route traffic based on network protocols
+
+## Benefits of Split Tunneling
+
+### Performance
+- **Reduced Latency**: Direct internet access for non-sensitive traffic
+- **Bandwidth Optimization**: Avoid VPN bandwidth bottlenecks
+- **User Experience**: Faster access to internet resources
+- **Server Load**: Reduce load on VPN servers
+
+### Cost
+- **Bandwidth Savings**: Reduce VPN bandwidth usage
+- **Infrastructure**: Lower VPN infrastructure requirements
+- **Scalability**: Support more users with existing resources
+
+### Flexibility
+- **User Choice**: Users can access local resources directly
+- **Application Support**: Support applications that require direct internet access
+- **Geographic Access**: Access location-specific content and services
+
+## Security Considerations
+
+### Risks
+- **Bypass Security**: Some traffic bypasses corporate security controls
+- **Data Leakage**: Sensitive data might be transmitted outside VPN
+- **Malware**: Direct internet access increases malware risk
+- **Compliance**: May violate regulatory or organizational policies
+
+### Mitigation Strategies
+- **Traffic Classification**: Carefully define which traffic uses which path
+- **Endpoint Security**: Implement strong endpoint protection
+- **Monitoring**: Monitor both VPN and direct traffic
+- **Policy Enforcement**: Enforce security policies on all traffic
+
+## Implementation Considerations
+
+### Traffic Classification
+- **Corporate Resources**: Route to VPN (file servers, databases, applications)
+- **Internet Traffic**: Route directly (web browsing, streaming, downloads)
+- **Sensitive Applications**: Route to VPN (email, collaboration tools)
+- **Local Resources**: Route directly (printers, local network devices)
+
+### Policy Configuration
+- **Inclusive Split Tunneling**: Define traffic that goes through VPN
+- **Exclusive Split Tunneling**: Define traffic that bypasses VPN
+- **Dynamic Routing**: Adjust routing based on network conditions
+- **Fallback Options**: Provide alternative routing when VPN is unavailable
+
+## Best Practices
+
+### Security
+1. **Risk Assessment**: Evaluate security implications for your organization
+2. **Traffic Analysis**: Understand what traffic should be protected
+3. **Endpoint Protection**: Ensure strong endpoint security measures
+4. **Monitoring**: Implement comprehensive traffic monitoring
+
+### Configuration
+1. **Documentation**: Maintain detailed configuration documentation
+2. **Testing**: Test split tunneling configuration thoroughly
+3. **User Training**: Educate users on security implications
+4. **Regular Review**: Periodically review and update policies
+
+### Compliance
+1. **Policy Alignment**: Ensure configuration aligns with security policies
+2. **Regulatory Requirements**: Consider compliance implications
+3. **Audit Trail**: Maintain logs for compliance and audit purposes
+4. **Incident Response**: Plan for security incidents involving split tunneling
+
+## Common Use Cases
+
+### Remote Work
+- **Corporate Access**: VPN for accessing company resources
+- **Internet Access**: Direct access for personal internet use
+- **Performance**: Optimize performance for remote workers
+- **User Experience**: Improve user experience and productivity
+
+### BYOD (Bring Your Own Device)
+- **Device Flexibility**: Support personal devices in corporate environment
+- **Resource Access**: Provide secure access to corporate resources
+- **Personal Use**: Allow personal internet use on corporate devices
+- **Policy Enforcement**: Enforce corporate policies while respecting privacy
+
+### Cloud Services
+- **Hybrid Access**: Access both on-premises and cloud resources
+- **Performance**: Optimize access to cloud services
+- **Cost Management**: Reduce VPN bandwidth costs
+- **Scalability**: Support growing cloud adoption
+
+## Challenges
+- **Security Complexity**: Balancing security and usability
+- **Configuration Management**: Managing complex routing policies
+- **User Education**: Ensuring users understand security implications
+- **Monitoring**: Tracking traffic across multiple paths
+
+## Related Concepts
+- **VPN**: Virtual Private Network technology
+- **Network Segmentation**: Dividing networks for security
+- **Zero Trust**: Security model for modern networks
+
+## Conclusion
+
+Split tunneling offers a practical solution for balancing security and performance in VPN deployments. Organizations must carefully consider their security requirements and implement appropriate controls to mitigate risks while realizing the benefits of this approach. 

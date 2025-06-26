@@ -1,0 +1,224 @@
+---
+title: "Checksum"
+description: "Mathematical value calculated from data to detect errors in transmission or storage, used to verify data integrity."
+category: "Data Integrity"
+severity: 4
+riskLevel: "Low"
+skillPath: ["Data Integrity", "Cryptography", "System Administration"]
+jobPath: ["System Administrator", "Security Engineer", "Data Analyst"]
+certsPath: ["CompTIA Security+", "CISSP", "Linux+"]
+quickFacts:
+  "Purpose": "Detect data corruption and transmission errors"
+  "Types": "Simple checksums, cryptographic hashes, CRC"
+  "Applications": "File verification, network protocols, storage"
+relatedTerms:
+  - slug: "hashing"
+    name: "Hashing"
+    description: "Cryptographic hash functions for data integrity"
+  - slug: "data-integrity"
+    name: "Data Integrity"
+    description: "Ensuring data accuracy and consistency"
+  - slug: "file-integrity-monitoring"
+    name: "File Integrity Monitoring"
+    description: "Monitoring files for unauthorized changes"
+resources:
+  - url: "https://www.nist.gov/publications/secure-hash-standard"
+    title: "NIST: Secure Hash Standard"
+  - url: "https://tools.ietf.org/html/rfc1321"
+    title: "RFC 1321: MD5 Message-Digest Algorithm"
+---
+
+# Checksum
+
+A checksum is a mathematical value calculated from data to detect errors in transmission or storage. It serves as a simple way to verify data integrity by providing a fingerprint that can be used to detect corruption, transmission errors, or unauthorized modifications.
+
+## How Checksums Work
+
+### Basic Process
+1. **Data Input**: Take the original data as input
+2. **Algorithm Application**: Apply checksum algorithm to data
+3. **Checksum Generation**: Generate fixed-length checksum value
+4. **Verification**: Compare checksum with expected value
+
+### Error Detection
+- **Transmission Errors**: Detect bit errors during data transmission
+- **Storage Corruption**: Identify data corruption in storage
+- **Tampering Detection**: Detect unauthorized modifications
+- **Data Validation**: Validate data integrity
+
+## Types of Checksums
+
+### Simple Checksums
+- **Parity Bits**: Single bit for basic error detection
+- **Modular Sum**: Sum of data values modulo a number
+- **Fletcher Checksum**: Two's complement sum of data
+- **Adler-32**: Fast checksum algorithm for error detection
+
+### Cyclic Redundancy Check (CRC)
+- **Polynomial Division**: Uses polynomial division for calculation
+- **Error Detection**: Detects burst errors and random bit errors
+- **Standards**: CRC-16, CRC-32, CRC-64
+- **Applications**: Network protocols, storage systems, file formats
+
+### Cryptographic Hash Functions
+- **MD5**: 128-bit hash function (deprecated for security)
+- **SHA-1**: 160-bit hash function (deprecated for security)
+- **SHA-256**: 256-bit secure hash algorithm
+- **SHA-512**: 512-bit secure hash algorithm
+
+## Checksum Algorithms
+
+### MD5 (Message Digest Algorithm 5)
+- **Output Size**: 128 bits (16 bytes)
+- **Security**: Cryptographically broken, not secure
+- **Speed**: Fast calculation
+- **Use Cases**: File integrity (non-security critical)
+
+### SHA-1 (Secure Hash Algorithm 1)
+- **Output Size**: 160 bits (20 bytes)
+- **Security**: Cryptographically broken, not secure
+- **Speed**: Fast calculation
+- **Use Cases**: Legacy systems, non-security critical
+
+### SHA-256 (Secure Hash Algorithm 256)
+- **Output Size**: 256 bits (32 bytes)
+- **Security**: Cryptographically secure
+- **Speed**: Moderate calculation speed
+- **Use Cases**: Digital signatures, file verification, blockchain
+
+### SHA-512 (Secure Hash Algorithm 512)
+- **Output Size**: 512 bits (64 bytes)
+- **Security**: Cryptographically secure
+- **Speed**: Slower than SHA-256
+- **Use Cases**: High-security applications, password hashing
+
+## Applications
+
+### File Integrity Verification
+- **Download Verification**: Verify downloaded files
+- **Software Distribution**: Verify software packages
+- **Backup Validation**: Validate backup integrity
+- **Forensic Analysis**: Verify evidence integrity
+
+### Network Protocols
+- **TCP Checksum**: Error detection in TCP packets
+- **UDP Checksum**: Error detection in UDP packets
+- **Ethernet FCS**: Frame check sequence in Ethernet
+- **IP Checksum**: Error detection in IP headers
+
+### Storage Systems
+- **RAID Systems**: Error detection in RAID arrays
+- **File Systems**: File system integrity checking
+- **Database Systems**: Database integrity verification
+- **Cloud Storage**: Cloud storage integrity validation
+
+### Security Applications
+- **Password Hashing**: Secure password storage
+- **Digital Signatures**: Message authentication
+- **Certificate Validation**: Certificate integrity verification
+- **Malware Detection**: File hash-based detection
+
+## Checksum Calculation
+
+### Command Line Tools
+```bash
+# MD5 checksum
+md5sum filename
+
+# SHA-256 checksum
+sha256sum filename
+
+# SHA-512 checksum
+sha512sum filename
+
+# CRC32 checksum
+cksum filename
+```
+
+### Programming Examples
+```python
+import hashlib
+
+# Calculate MD5
+with open('file.txt', 'rb') as f:
+    md5_hash = hashlib.md5(f.read()).hexdigest()
+
+# Calculate SHA-256
+with open('file.txt', 'rb') as f:
+    sha256_hash = hashlib.sha256(f.read()).hexdigest()
+```
+
+### Online Tools
+- **Hash Calculators**: Web-based checksum calculators
+- **File Verification**: Online file verification services
+- **Hash Databases**: Databases of known file hashes
+- **Malware Analysis**: Hash-based malware analysis
+
+## Error Detection Capabilities
+
+### Single Bit Errors
+- **Detection**: Most checksums detect single bit errors
+- **Reliability**: High reliability for single bit errors
+- **Coverage**: Comprehensive coverage across data
+- **Limitations**: Some algorithms may miss certain patterns
+
+### Burst Errors
+- **Detection**: CRC algorithms excel at burst error detection
+- **Pattern Recognition**: Recognize error patterns
+- **Length Limits**: Effectiveness depends on burst length
+- **Algorithm Selection**: Choose appropriate algorithm
+
+### Multiple Bit Errors
+- **Detection**: Cryptographic hashes detect multiple bit errors
+- **Collision Resistance**: Resistance to intentional collisions
+- **Avalanche Effect**: Small changes cause large hash changes
+- **Security**: Provide security against tampering
+
+## Security Considerations
+
+### Collision Resistance
+- **Hash Collisions**: Different inputs producing same output
+- **Birthday Attack**: Probability-based collision attacks
+- **Algorithm Strength**: Use cryptographically strong algorithms
+- **Key Length**: Longer keys provide better security
+
+### Preimage Resistance
+- **Preimage Attack**: Finding input for given output
+- **Second Preimage**: Finding different input with same output
+- **Algorithm Selection**: Choose algorithms resistant to attacks
+- **Key Management**: Proper key management practices
+
+### Rainbow Tables
+- **Precomputed Tables**: Tables of hash values
+- **Password Cracking**: Used in password cracking attacks
+- **Salt Usage**: Use salt to prevent rainbow table attacks
+- **Key Stretching**: Use key stretching techniques
+
+## Best Practices
+
+### Algorithm Selection
+1. **Security Requirements**: Choose based on security needs
+2. **Performance Requirements**: Consider performance constraints
+3. **Compatibility**: Ensure compatibility with systems
+4. **Standards Compliance**: Follow industry standards
+
+### Implementation
+1. **Secure Implementation**: Implement algorithms correctly
+2. **Error Handling**: Handle checksum calculation errors
+3. **Validation**: Validate checksum results
+4. **Documentation**: Document checksum procedures
+
+### Operational
+1. **Regular Verification**: Regularly verify file integrity
+2. **Automated Checking**: Automate integrity checking
+3. **Monitoring**: Monitor for integrity violations
+4. **Incident Response**: Plan for integrity incidents
+
+## Related Concepts
+- **Hashing**: Cryptographic hash functions for data integrity
+- **Data Integrity**: Ensuring data accuracy and consistency
+- **File Integrity Monitoring**: Monitoring files for unauthorized changes
+
+## Conclusion
+
+Checksums are essential tools for data integrity verification and error detection. Understanding different checksum types, their applications, and security considerations is crucial for effective data protection and verification. 

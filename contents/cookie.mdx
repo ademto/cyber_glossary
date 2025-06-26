@@ -1,0 +1,210 @@
+---
+title: "Cookie"
+description: "Small text files stored on user devices by websites to remember user preferences, login status, and browsing behavior."
+category: "Web Security"
+severity: 4
+riskLevel: "Low"
+skillPath: ["Web Security", "Privacy", "Application Security"]
+jobPath: ["Web Developer", "Security Engineer", "Privacy Officer"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH"]
+quickFacts:
+  "Purpose": "Store user preferences and session data"
+  "Types": "Session, persistent, third-party, secure"
+  "Privacy": "Subject to privacy regulations (GDPR, CCPA)"
+relatedTerms:
+  - slug: "web-security"
+    name: "Web Security"
+    description: "Security measures for web applications"
+  - slug: "privacy"
+    name: "Privacy"
+    description: "Protection of personal information"
+  - slug: "session-management"
+    name: "Session Management"
+    description: "Managing user sessions and authentication"
+resources:
+  - url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
+    title: "MDN: HTTP Cookies"
+  - url: "https://www.owasp.org/index.php/Testing_for_cookies_attributes"
+    title: "OWASP: Cookie Security Testing"
+---
+
+# Cookie
+
+Cookies are small text files stored on user devices by websites to remember user preferences, login status, and browsing behavior. While essential for modern web functionality, cookies can pose privacy and security risks if not properly managed.
+
+## How Cookies Work
+
+### Basic Functionality
+- **Storage**: Small text files stored in browser
+- **Transmission**: Automatically sent with HTTP requests
+- **Domain Binding**: Cookies are domain-specific
+- **Expiration**: Can be session-based or persistent
+
+### Cookie Components
+- **Name**: Identifier for the cookie
+- **Value**: Data stored in the cookie
+- **Domain**: Domain that can access the cookie
+- **Path**: URL path where cookie is valid
+- **Expiration**: When the cookie expires
+- **Security Flags**: HttpOnly, Secure, SameSite attributes
+
+## Types of Cookies
+
+### Session Cookies
+- **Purpose**: Maintain user session during browsing
+- **Storage**: Stored in memory, deleted when browser closes
+- **Use Cases**: Shopping carts, login sessions, temporary preferences
+- **Security**: Generally more secure than persistent cookies
+
+### Persistent Cookies
+- **Purpose**: Remember user preferences across sessions
+- **Storage**: Stored on disk, persist after browser closes
+- **Use Cases**: Login preferences, language settings, analytics
+- **Expiration**: Set expiration date or max-age
+
+### First-Party Cookies
+- **Domain**: Set by the website being visited
+- **Purpose**: Essential website functionality
+- **Privacy**: Generally less privacy-invasive
+- **Control**: Website has direct control over these cookies
+
+### Third-Party Cookies
+- **Domain**: Set by domains other than the visited website
+- **Purpose**: Advertising, analytics, social media integration
+- **Privacy**: More privacy-invasive, subject to restrictions
+- **Control**: External domains control these cookies
+
+## Cookie Security Attributes
+
+### HttpOnly Flag
+- **Purpose**: Prevent JavaScript access to cookies
+- **Protection**: Mitigates XSS attacks
+- **Usage**: Essential for session cookies
+- **Limitation**: Cannot be accessed by client-side scripts
+
+### Secure Flag
+- **Purpose**: Only transmit cookies over HTTPS
+- **Protection**: Prevents man-in-the-middle attacks
+- **Usage**: Required for sensitive data
+- **Requirement**: Website must use HTTPS
+
+### SameSite Attribute
+- **Strict**: Cookies only sent in same-site requests
+- **Lax**: Cookies sent in cross-site requests with user interaction
+- **None**: Cookies sent in all cross-site requests
+- **Protection**: Mitigates CSRF attacks
+
+### Domain and Path Attributes
+- **Domain**: Controls which domains can access the cookie
+- **Path**: Controls which URL paths can access the cookie
+- **Security**: Prevents unauthorized access to cookies
+- **Configuration**: Must be properly configured for security
+
+## Privacy and Regulations
+
+### GDPR Compliance
+- **Consent**: Explicit consent required for non-essential cookies
+- **Transparency**: Clear information about cookie usage
+- **Purpose**: Specific purpose for each cookie type
+- **Duration**: Reasonable retention periods
+
+### CCPA Compliance
+- **Disclosure**: Information about data collection and use
+- **Opt-out**: Right to opt-out of data sale
+- **Access**: Right to access personal information
+- **Deletion**: Right to delete personal information
+
+### Cookie Consent
+- **Banner**: Clear cookie consent banners
+- **Granular Control**: Allow users to choose cookie types
+- **Easy Opt-out**: Simple process to withdraw consent
+- **Regular Review**: Periodic consent renewal
+
+## Security Risks
+
+### Cross-Site Scripting (XSS)
+- **Risk**: Attackers access cookies via JavaScript
+- **Mitigation**: Use HttpOnly flag for sensitive cookies
+- **Prevention**: Input validation and output encoding
+- **Detection**: XSS protection and monitoring
+
+### Cross-Site Request Forgery (CSRF)
+- **Risk**: Unauthorized actions using user's session
+- **Mitigation**: Use SameSite attribute
+- **Prevention**: CSRF tokens and validation
+- **Detection**: Anomaly detection and monitoring
+
+### Man-in-the-Middle Attacks
+- **Risk**: Intercepting cookies in transit
+- **Mitigation**: Use Secure flag and HTTPS
+- **Prevention**: Certificate validation and encryption
+- **Detection**: SSL/TLS monitoring
+
+### Cookie Theft
+- **Risk**: Physical access to user devices
+- **Mitigation**: Proper device security
+- **Prevention**: User education and device management
+- **Detection**: Unusual access patterns
+
+## Best Practices
+
+### Cookie Management
+1. **Minimize Usage**: Only use cookies when necessary
+2. **Secure Configuration**: Use appropriate security attributes
+3. **Regular Review**: Periodically review cookie usage
+4. **Cleanup**: Remove unused or expired cookies
+
+### Privacy Protection
+1. **Data Minimization**: Collect only necessary data
+2. **Transparency**: Clear privacy policies and notices
+3. **User Control**: Provide user control over cookies
+4. **Compliance**: Follow applicable privacy regulations
+
+### Security Implementation
+1. **Encryption**: Encrypt sensitive cookie data
+2. **Validation**: Validate cookie data on server
+3. **Monitoring**: Monitor for suspicious cookie activity
+4. **Incident Response**: Plan for cookie-related incidents
+
+## Cookie Analytics and Tracking
+
+### Web Analytics
+- **User Behavior**: Track user interactions and preferences
+- **Performance**: Monitor website performance and usage
+- **Personalization**: Customize user experience
+- **Marketing**: Target advertising and campaigns
+
+### Privacy-Preserving Analytics
+- **Anonymization**: Remove personally identifiable information
+- **Aggregation**: Use aggregated data instead of individual data
+- **Consent**: Obtain explicit consent for tracking
+- **Transparency**: Clear information about data collection
+
+## Related Technologies
+
+### Local Storage
+- **Purpose**: Store larger amounts of data locally
+- **Access**: JavaScript can access local storage
+- **Persistence**: Data persists until explicitly removed
+- **Security**: Similar security considerations to cookies
+
+### Session Storage
+- **Purpose**: Store data for current session only
+- **Access**: JavaScript can access session storage
+- **Persistence**: Data lost when tab/window closes
+- **Security**: More secure than persistent storage
+
+### Web Storage API
+- **localStorage**: Persistent storage across sessions
+- **sessionStorage**: Storage for current session only
+- **Security**: Similar security considerations to cookies
+- **Usage**: Alternative to cookies for larger data
+
+## Related Concepts
+- **Web Security**: Security measures for web applications
+- **Privacy**: Protection of personal information
+- **Session Management**: Managing user sessions
+
+## Conclusion
+
+Cookies are essential for modern web functionality but require careful management to balance functionality with privacy and security. Proper implementation, security configuration, and compliance with privacy regulations are crucial for responsible cookie usage. 

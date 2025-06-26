@@ -1,0 +1,169 @@
+---
+title: "Symmetric Encryption"
+description: "A cryptographic method where the same key is used for both encryption and decryption of data, providing fast and efficient data protection."
+category: "Cryptography"
+severity: 7
+riskLevel: "High"
+skillPath: ["Cryptography", "Data Security", "Application Security"]
+jobPath: ["Cryptographer", "Security Engineer", "Application Security Engineer"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH"]
+quickFacts:
+  "Key Characteristic": "Same key for encryption and decryption"
+  "Speed": "Faster than asymmetric encryption"
+  "Key Management": "Secure key distribution is critical"
+relatedTerms:
+  - slug: "asymmetric-encryption"
+    name: "Asymmetric Encryption"
+    description: "Uses different keys for encryption and decryption"
+  - slug: "encryption"
+    name: "Encryption"
+    description: "Protecting data through cryptographic methods"
+  - slug: "key-management"
+    name: "Key Management"
+    description: "Managing cryptographic keys securely"
+resources:
+  - url: "https://www.nist.gov/publications/advanced-encryption-standard-aes"
+    title: "NIST: Advanced Encryption Standard (AES)"
+  - url: "https://www.cryptography.org/learn/symmetric-encryption/"
+    title: "Cryptography.org: Symmetric Encryption"
+---
+
+# Symmetric Encryption
+
+Symmetric encryption is a cryptographic method where the same secret key is used for both encrypting and decrypting data. It provides fast and efficient data protection and is widely used for bulk data encryption, secure communications, and data storage.
+
+## How Symmetric Encryption Works
+
+### Basic Process
+1. **Key Generation**: Create a secret key shared between parties
+2. **Encryption**: Use the key to transform plaintext into ciphertext
+3. **Transmission**: Send encrypted data over insecure channels
+4. **Decryption**: Use the same key to transform ciphertext back to plaintext
+
+### Key Characteristics
+- **Single Key**: Same key used for encryption and decryption
+- **Speed**: Generally faster than asymmetric encryption
+- **Efficiency**: Suitable for large amounts of data
+- **Key Management**: Critical challenge of secure key distribution
+
+## Common Symmetric Algorithms
+
+### Advanced Encryption Standard (AES)
+- **Key Sizes**: 128, 192, and 256 bits
+- **Block Size**: 128 bits
+- **Security**: Considered highly secure when properly implemented
+- **Performance**: Fast and efficient on modern hardware
+- **Standardization**: NIST standard, widely adopted globally
+
+### Triple DES (3DES)
+- **Key Size**: 168 bits (effectively 112 bits due to meet-in-the-middle attacks)
+- **Block Size**: 64 bits
+- **Security**: Legacy algorithm, being phased out
+- **Performance**: Slower than AES due to triple encryption
+- **Compatibility**: Still used in legacy systems
+
+### ChaCha20
+- **Key Size**: 256 bits
+- **Nonce Size**: 96 bits
+- **Security**: Modern stream cipher, highly secure
+- **Performance**: Fast on software implementations
+- **Usage**: Used in TLS 1.3 and other modern protocols
+
+## Symmetric Encryption Modes
+
+### Electronic Codebook (ECB)
+- **Operation**: Each block encrypted independently
+- **Security**: Weak - identical plaintext blocks produce identical ciphertext
+- **Usage**: Not recommended for secure applications
+
+### Cipher Block Chaining (CBC)
+- **Operation**: Each block XORed with previous ciphertext before encryption
+- **Security**: Better than ECB, requires initialization vector (IV)
+- **Usage**: Widely used, but requires careful IV management
+
+### Counter (CTR)
+- **Operation**: Encrypts a counter value and XORs with plaintext
+- **Security**: Good security, allows parallel processing
+- **Usage**: Efficient for high-performance applications
+
+### Galois/Counter Mode (GCM)
+- **Operation**: Combines CTR mode with authentication
+- **Security**: Provides both confidentiality and authenticity
+- **Usage**: Recommended for modern applications
+
+## Key Management Challenges
+
+### Key Distribution
+- **Secure Channel**: Need secure method to share keys
+- **Scalability**: Challenge of managing keys for many users
+- **Key Exchange**: Secure key exchange protocols required
+- **Key Storage**: Secure storage of keys
+
+### Key Lifecycle
+- **Generation**: Secure random key generation
+- **Distribution**: Secure key distribution to authorized parties
+- **Storage**: Secure key storage and protection
+- **Rotation**: Regular key replacement for security
+- **Destruction**: Secure key disposal when no longer needed
+
+## Applications of Symmetric Encryption
+
+### Data at Rest
+- **File Encryption**: Encrypting files and databases
+- **Disk Encryption**: Full disk encryption (BitLocker, FileVault)
+- **Backup Encryption**: Protecting backup data
+- **Database Encryption**: Encrypting sensitive database fields
+
+### Data in Transit
+- **TLS/SSL**: Secure web communications
+- **VPN**: Virtual private network encryption
+- **Email**: Encrypting email messages
+- **File Transfer**: Secure file transfer protocols
+
+### Data in Use
+- **Memory Protection**: Encrypting data in memory
+- **Application Security**: Protecting application data
+- **Session Management**: Securing user sessions
+
+## Best Practices
+
+### Algorithm Selection
+1. **Use Strong Algorithms**: AES-256, ChaCha20 for new implementations
+2. **Avoid Weak Algorithms**: DES, 3DES, RC4
+3. **Stay Updated**: Monitor for new vulnerabilities and recommendations
+4. **Compliance**: Ensure algorithms meet regulatory requirements
+
+### Implementation
+1. **Secure Random Generation**: Use cryptographically secure random number generators
+2. **Proper Modes**: Use authenticated encryption modes (GCM, CCM)
+3. **Key Management**: Implement robust key management procedures
+4. **Testing**: Thoroughly test encryption implementations
+
+### Key Management
+1. **Key Rotation**: Regularly rotate encryption keys
+2. **Access Control**: Limit access to encryption keys
+3. **Monitoring**: Monitor key usage and access
+4. **Backup**: Secure backup of key material
+
+## Security Considerations
+
+### Threats
+- **Key Compromise**: Unauthorized access to encryption keys
+- **Brute Force**: Attempting to guess encryption keys
+- **Side-Channel Attacks**: Exploiting implementation weaknesses
+- **Quantum Computing**: Future threat to current algorithms
+
+### Mitigation
+- **Strong Keys**: Use sufficiently long, random keys
+- **Secure Implementation**: Follow cryptographic best practices
+- **Key Protection**: Secure storage and transmission of keys
+- **Algorithm Updates**: Stay current with cryptographic recommendations
+
+## Related Concepts
+- **Asymmetric Encryption**: Public key cryptography
+- **Key Management**: Secure key lifecycle management
+- **Hash Functions**: Cryptographic hash functions
+
+## Conclusion
+
+Symmetric encryption is a fundamental cryptographic technique that provides fast and efficient data protection. Proper implementation and key management are essential for effective security. Organizations should use strong algorithms, implement secure key management, and stay current with cryptographic best practices. 

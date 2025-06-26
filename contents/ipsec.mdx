@@ -1,0 +1,146 @@
+---
+title: "IPsec"
+description: "Internet Protocol Security (IPsec) is a suite of protocols for securing IP communications by authenticating and encrypting each IP packet in a data stream."
+category: "Network Security"
+severity: 7
+riskLevel: "High"
+skillPath: ["Network Security", "VPN", "Cryptography"]
+jobPath: ["Network Security Engineer", "Network Administrator", "Security Engineer"]
+certsPath: ["CCNA Security", "CISSP", "CompTIA Security+"]
+quickFacts:
+  "Purpose": "Secure IP communications through encryption and authentication"
+  "Modes": "Transport mode and tunnel mode"
+  "Protocols": "AH, ESP, IKE"
+relatedTerms:
+  - slug: "vpn"
+    name: "VPN"
+    description: "Virtual Private Network for secure remote access"
+  - slug: "encryption"
+    name: "Encryption"
+    description: "Protecting data through cryptographic methods"
+  - slug: "tls"
+    name: "TLS"
+    description: "Transport Layer Security for secure communications"
+resources:
+  - url: "https://tools.ietf.org/html/rfc4301"
+    title: "RFC 4301: Security Architecture for IP"
+  - url: "https://www.cisco.com/c/en/us/support/docs/security-vpn/ipsec-negotiation-ike-protocols/16439-ipsec.html"
+    title: "Cisco: IPsec Overview"
+---
+
+# IPsec (Internet Protocol Security)
+
+IPsec is a suite of protocols designed to secure IP communications by authenticating and encrypting each IP packet in a data stream. It operates at the network layer (Layer 3) and provides end-to-end security for IP traffic.
+
+## IPsec Components
+
+### Authentication Header (AH)
+- **Purpose**: Provides authentication and integrity for IP packets
+- **Function**: Prevents replay attacks and ensures data integrity
+- **Encryption**: Does not provide confidentiality (no encryption)
+- **Header**: Adds AH header to IP packets
+
+### Encapsulating Security Payload (ESP)
+- **Purpose**: Provides confidentiality, authentication, and integrity
+- **Function**: Encrypts packet payload and provides authentication
+- **Encryption**: Supports various encryption algorithms
+- **Header**: Adds ESP header and trailer to IP packets
+
+### Internet Key Exchange (IKE)
+- **Purpose**: Establishes and manages security associations (SAs)
+- **Function**: Negotiates encryption keys and security parameters
+- **Phases**: IKE Phase 1 (establish secure channel) and Phase 2 (establish IPsec SAs)
+- **Authentication**: Supports various authentication methods
+
+## IPsec Modes
+
+### Transport Mode
+- **Use Case**: End-to-end communication between hosts
+- **Encryption**: Encrypts only the payload (data portion)
+- **Header**: Original IP header remains unchanged
+- **Performance**: Lower overhead than tunnel mode
+
+### Tunnel Mode
+- **Use Case**: Site-to-site VPNs and gateway-to-gateway communication
+- **Encryption**: Encrypts entire IP packet (header and payload)
+- **Header**: New IP header is added for routing
+- **Security**: Provides better security by hiding original IP addresses
+
+## IPsec Security Features
+
+### Confidentiality
+- **Encryption**: Protects data from unauthorized disclosure
+- **Algorithms**: AES, 3DES, ChaCha20
+- **Key Management**: Secure key generation and distribution
+
+### Integrity
+- **Authentication**: Ensures data has not been modified
+- **Hash Functions**: SHA-256, SHA-384, SHA-512
+- **Replay Protection**: Prevents replay attacks
+
+### Authentication
+- **Peer Authentication**: Verifies identity of communicating parties
+- **Methods**: Pre-shared keys, digital certificates, RSA signatures
+- **Mutual Authentication**: Both parties authenticate each other
+
+## IPsec Implementation
+
+### Security Associations (SAs)
+- **Definition**: Agreement between peers on security parameters
+- **Parameters**: Encryption algorithms, keys, authentication methods
+- **Lifetime**: Time duration for which SA is valid
+- **Management**: Automatic SA establishment and rekeying
+
+### Security Policy Database (SPD)
+- **Purpose**: Defines which traffic should be protected
+- **Rules**: Source/destination addresses, protocols, ports
+- **Actions**: Bypass, discard, or protect traffic
+- **Configuration**: Manual or automated policy configuration
+
+### Security Association Database (SAD)
+- **Purpose**: Stores active security associations
+- **Information**: Keys, algorithms, sequence numbers
+- **Management**: Automatic SA creation and deletion
+- **Monitoring**: Track SA status and performance
+
+## Common Use Cases
+
+### Site-to-Site VPNs
+- **Purpose**: Connect multiple office locations securely
+- **Implementation**: Gateway-to-gateway IPsec tunnels
+- **Benefits**: Cost-effective alternative to leased lines
+- **Management**: Centralized configuration and monitoring
+
+### Remote Access VPNs
+- **Purpose**: Allow remote users to access corporate resources
+- **Implementation**: Client-to-gateway IPsec connections
+- **Authentication**: User authentication and authorization
+- **Security**: Encrypt all traffic between client and gateway
+
+### Host-to-Host Security
+- **Purpose**: Secure communication between specific hosts
+- **Implementation**: Transport mode IPsec
+- **Use Cases**: Database connections, file transfers
+- **Performance**: Minimal overhead for direct connections
+
+## Best Practices
+1. **Strong Algorithms**: Use modern encryption and hash algorithms
+2. **Key Management**: Implement secure key generation and rotation
+3. **Monitoring**: Monitor IPsec connections and performance
+4. **Backup Plans**: Have alternative connectivity options
+5. **Documentation**: Maintain detailed configuration documentation
+
+## Challenges
+- **Complexity**: IPsec configuration can be complex
+- **Performance**: Encryption overhead may impact performance
+- **Interoperability**: Different vendor implementations may not be compatible
+- **Troubleshooting**: Debugging IPsec issues can be difficult
+
+## Related Concepts
+- **VPN**: Virtual Private Network using IPsec
+- **Encryption**: Cryptographic protection of data
+- **TLS**: Application-layer security protocol
+
+## Conclusion
+
+IPsec provides robust security for IP communications and is widely used in VPN implementations. Proper configuration and management are essential for effective IPsec deployment and operation. 

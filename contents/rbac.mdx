@@ -1,0 +1,154 @@
+---
+title: "Role-Based Access Control"
+acronym: "RBAC"
+description: "A security model that restricts system access based on the roles of individual users within an organization."
+category: "Access Control"
+severity: 7
+riskLevel: "High"
+skillPath: ["Access Control", "Identity Management", "Security Architecture"]
+jobPath: ["Security Engineer", "Identity & Access Management Specialist", "Security Architect"]
+certsPath: ["CISSP", "CISM", "CompTIA Security+"]
+quickFacts:
+  "Primary Purpose": "Manage user permissions based on organizational roles"
+  "Implementation": "Role assignment and permission mapping"
+  "Benefits": "Reduced administrative overhead, improved security"
+relatedTerms:
+  - slug: "abac"
+    name: "Attribute-Based Access Control"
+    description: "Access control based on attributes rather than roles"
+  - slug: "least-privilege"
+    name: "Least Privilege"
+    description: "Principle of minimal access rights"
+  - slug: "access-review"
+    name: "Access Review"
+    description: "Regular assessment of user permissions"
+resources:
+  - url: "https://csrc.nist.gov/projects/role-based-access-control"
+    title: "NIST RBAC Standard"
+  - url: "https://www.microsoft.com/en-us/security/business/identity-access/role-based-access-control"
+    title: "Microsoft RBAC Guide"
+---
+
+# Role-Based Access Control (RBAC)
+
+Role-Based Access Control (RBAC) is a security model that restricts system access based on the roles of individual users within an organization. Instead of assigning permissions directly to users, RBAC assigns users to roles, and roles are then assigned permissions.
+
+## How RBAC Works
+
+RBAC operates on the principle of **role assignment** rather than direct permission assignment. The process typically involves:
+
+1. **Role Definition**: Creating roles that represent job functions or responsibilities
+2. **Permission Assignment**: Assigning specific permissions to each role
+3. **User Assignment**: Assigning users to appropriate roles
+4. **Access Control**: Enforcing access based on role membership
+
+## Core RBAC Models
+
+### Basic RBAC
+- Users are assigned to roles
+- Roles are assigned permissions
+- Users inherit permissions through their roles
+
+### Hierarchical RBAC
+- Roles can inherit permissions from other roles
+- Supports role hierarchies and inheritance
+- Reduces administrative overhead
+
+### Constrained RBAC
+- Adds separation of duties constraints
+- Prevents conflicts of interest
+- Enforces business rules and policies
+
+## Benefits of RBAC
+
+### Security Improvements
+- **Reduced Attack Surface**: Users only have necessary permissions
+- **Consistent Access Control**: Standardized permission management
+- **Audit Trail**: Clear visibility into who has what access
+
+### Operational Efficiency
+- **Simplified Administration**: Manage roles instead of individual permissions
+- **Scalability**: Easy to add new users or modify access patterns
+- **Compliance**: Easier to demonstrate compliance with regulations
+
+### Business Alignment
+- **Role-Based Structure**: Aligns with organizational structure
+- **Flexibility**: Adapts to changing business needs
+- **User Experience**: Intuitive access based on job functions
+
+## Implementation Considerations
+
+### Role Design
+- **Granularity**: Balance between too many roles (complexity) and too few (over-privileging)
+- **Naming Conventions**: Clear, descriptive role names
+- **Documentation**: Maintain role descriptions and responsibilities
+
+### Integration
+- **Identity Providers**: Integrate with existing identity systems
+- **Applications**: Ensure applications support RBAC
+- **Monitoring**: Implement role usage monitoring and analytics
+
+### Maintenance
+- **Regular Reviews**: Periodic access reviews and role audits
+- **Lifecycle Management**: Handle role changes during organizational changes
+- **Cleanup**: Remove unused roles and permissions
+
+## Common RBAC Roles
+
+### IT Roles
+- **System Administrator**: Full system access
+- **Network Administrator**: Network infrastructure access
+- **Database Administrator**: Database management access
+- **Security Analyst**: Security monitoring and incident response
+
+### Business Roles
+- **Manager**: Team management and reporting access
+- **Employee**: Standard business application access
+- **Contractor**: Limited, time-bound access
+- **Guest**: Minimal, read-only access
+
+## Best Practices
+
+### Role Design
+1. **Start Simple**: Begin with basic roles and refine over time
+2. **Document Everything**: Maintain clear role definitions and responsibilities
+3. **Regular Reviews**: Conduct periodic access reviews
+4. **Separation of Duties**: Implement constraints to prevent conflicts
+
+### Implementation
+1. **Phased Approach**: Implement RBAC gradually across systems
+2. **User Training**: Educate users on role-based access
+3. **Monitoring**: Track role usage and access patterns
+4. **Automation**: Automate role provisioning and deprovisioning
+
+### Maintenance
+1. **Access Reviews**: Regular assessment of role assignments
+2. **Role Optimization**: Continuously improve role definitions
+3. **Compliance Monitoring**: Ensure adherence to policies and regulations
+4. **Incident Response**: Have procedures for emergency access
+
+## Challenges and Limitations
+
+### Common Challenges
+- **Role Explosion**: Too many roles can become unmanageable
+- **Dynamic Organizations**: Rapid organizational changes can strain RBAC
+- **Legacy Systems**: Older systems may not support RBAC
+- **User Resistance**: Users may resist role-based restrictions
+
+### Limitations
+- **Static Nature**: RBAC may not handle dynamic access requirements
+- **Context Awareness**: Limited ability to consider context in access decisions
+- **Scalability**: Large organizations may face role management challenges
+
+## Related Concepts
+
+RBAC is closely related to other access control models and security concepts:
+
+- **Attribute-Based Access Control (ABAC)**: More flexible, context-aware access control
+- **Identity and Access Management (IAM)**: Broader discipline encompassing RBAC
+- **Least Privilege**: Principle that RBAC helps implement
+- **Access Reviews**: Regular assessment of role assignments and permissions
+
+## Conclusion
+
+Role-Based Access Control is a fundamental security model that provides structured, manageable access control for organizations. When properly implemented, RBAC enhances security, improves operational efficiency, and supports compliance requirements. However, successful RBAC implementation requires careful planning, ongoing maintenance, and organizational commitment to the role-based approach. 

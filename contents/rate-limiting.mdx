@@ -1,0 +1,77 @@
+---
+title: "Rate Limiting"
+description: "A security technique that controls the rate of requests a user can make to a system, preventing abuse and protecting against attacks."
+category: "Security Controls"
+severity: 6
+riskLevel: "Medium"
+skillPath: ["Network Security", "Application Security", "DDoS Protection"]
+jobPath: ["Security Engineer", "DevOps Engineer", "Network Administrator"]
+certsPath: ["CISSP", "CompTIA Security+", "CCNA Security"]
+quickFacts:
+  "Purpose": "Prevent abuse and protect against attacks"
+  "Implementation": "API gateways, web servers, firewalls"
+  "Benefits": "DDoS protection, resource conservation, abuse prevention"
+relatedTerms:
+  - slug: "ddos-attack"
+    name: "DDoS Attack"
+    description: "Distributed denial-of-service attack"
+  - slug: "brute-force-attack"
+    name: "Brute Force Attack"
+    description: "Attack that tries multiple combinations rapidly"
+  - slug: "api-security"
+    name: "API Security"
+    description: "Protecting application programming interfaces"
+resources:
+  - url: "https://www.cloudflare.com/learning/bots/what-is-rate-limiting/"
+    title: "Cloudflare: What is Rate Limiting?"
+  - url: "https://www.imperva.com/learn/application-security/rate-limiting/"
+    title: "Imperva: Rate Limiting"
+---
+
+# Rate Limiting
+
+Rate limiting is a security technique that controls the number of requests a user, IP address, or application can make to a system within a specified time period. It helps prevent abuse, protect against attacks, and ensure fair resource allocation.
+
+## How Rate Limiting Works
+- **Request Counting**: Track the number of requests from each source
+- **Time Windows**: Define time periods (e.g., per minute, per hour)
+- **Threshold Enforcement**: Block or throttle requests that exceed limits
+- **Response Handling**: Return appropriate error codes or delays
+
+## Common Rate Limiting Strategies
+- **Fixed Window**: Count requests in fixed time periods
+- **Sliding Window**: Use rolling time windows for more accurate counting
+- **Token Bucket**: Allow burst traffic up to a maximum capacity
+- **Leaky Bucket**: Smooth out traffic by limiting burst rates
+
+## Use Cases
+- **API Protection**: Prevent API abuse and ensure fair usage
+- **DDoS Mitigation**: Reduce the impact of distributed attacks
+- **Brute Force Prevention**: Limit login attempts and password guesses
+- **Resource Protection**: Prevent server overload and ensure availability
+
+## Implementation
+- **Web Servers**: Apache, Nginx rate limiting modules
+- **API Gateways**: Kong, AWS API Gateway, Azure API Management
+- **Load Balancers**: F5, HAProxy rate limiting features
+- **Application Code**: Custom rate limiting logic
+
+## Best Practices
+1. **Set Appropriate Limits**: Balance security with usability
+2. **Monitor and Adjust**: Track effectiveness and adjust limits as needed
+3. **Graceful Degradation**: Provide clear error messages when limits are exceeded
+4. **Whitelist Management**: Allow legitimate high-volume users
+
+## Challenges
+- **False Positives**: Legitimate users may be blocked
+- **Distributed Attacks**: Attackers using multiple sources
+- **Configuration Complexity**: Finding the right balance of limits
+
+## Related Concepts
+- **DDoS Attack**: Rate limiting helps mitigate these attacks
+- **Brute Force Attack**: Rate limiting prevents rapid password attempts
+- **API Security**: Rate limiting is a key component of API protection
+
+## Conclusion
+
+Rate limiting is an essential security control that helps protect systems from abuse and attacks. When properly implemented, it provides a balance between security and usability while ensuring system availability. 

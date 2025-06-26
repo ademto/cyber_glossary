@@ -1,0 +1,58 @@
+---
+title: "Dictionary Attack"
+description: "A password-cracking technique that systematically tests words from a predefined list (dictionary) to guess passwords."
+category: "Attack Techniques"
+severity: 7
+riskLevel: "High"
+skillPath: ["Penetration Testing", "Password Security", "Incident Response"]
+jobPath: ["Penetration Tester", "SOC Analyst", "Security Engineer"]
+certsPath: ["OSCP", "CEH", "CompTIA Security+"]
+quickFacts:
+  "Method": "Tries common words and phrases as passwords"
+  "Tools": "John the Ripper, Hydra, Hashcat"
+  "Prevention": "Use strong, complex passwords"
+relatedTerms:
+  - slug: "brute-force-attack"
+    name: "Brute Force Attack"
+    description: "Tries all possible combinations to guess passwords"
+  - slug: "password-cracking"
+    name: "Password Cracking"
+    description: "General term for breaking password security"
+  - slug: "salting"
+    name: "Salting"
+    description: "Adding random data to passwords before hashing"
+resources:
+  - url: "https://www.kaspersky.com/resource-center/definitions/dictionary-attack"
+    title: "Kaspersky: What is a Dictionary Attack?"
+  - url: "https://www.imperva.com/learn/application-security/dictionary-attack/"
+    title: "Imperva: Dictionary Attack"
+---
+
+# Dictionary Attack
+
+A dictionary attack is a password-cracking technique that systematically tests words from a predefined list (dictionary) to guess passwords. Attackers use dictionaries of common passwords, phrases, and variations to speed up the process compared to brute force attacks.
+
+## How Dictionary Attacks Work
+- **Wordlist Selection**: Use of dictionaries containing common passwords
+- **Automated Tools**: Tools like John the Ripper, Hydra, and Hashcat automate the process
+- **Password Guessing**: Each word is tried as a password until access is gained or the list is exhausted
+
+## Prevention
+1. **Use Strong Passwords**: Avoid common words and phrases
+2. **Password Complexity**: Require a mix of letters, numbers, and symbols
+3. **Salting and Hashing**: Store passwords securely
+4. **Account Lockout**: Limit login attempts to prevent automated attacks
+
+## Detection
+- Monitor for repeated failed login attempts
+- Use intrusion detection systems (IDS)
+- Analyze authentication logs for patterns
+
+## Related Concepts
+- **Brute Force Attack**: Tries all possible combinations
+- **Password Cracking**: General term for breaking passwords
+- **Salting**: Enhances password security
+
+## Conclusion
+
+Dictionary attacks are a common and effective method for cracking weak passwords. Strong password policies and monitoring are essential to defend against these attacks. 

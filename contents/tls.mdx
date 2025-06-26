@@ -1,0 +1,177 @@
+---
+title: "Transport Layer Security"
+acronym: "TLS"
+description: "A cryptographic protocol that provides secure communication over computer networks, commonly used to secure web browsing, email, and other applications."
+category: "Network Security"
+severity: 8
+riskLevel: "High"
+skillPath: ["Network Security", "Cryptography", "Web Security"]
+jobPath: ["Network Security Engineer", "Web Security Specialist", "Security Engineer"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH"]
+quickFacts:
+  "Purpose": "Secure communications over insecure networks"
+  "Versions": "TLS 1.0, 1.1, 1.2, 1.3 (1.3 is current standard)"
+  "Applications": "HTTPS, email, VPN, file transfer"
+relatedTerms:
+  - slug: "ssl"
+    name: "SSL"
+    description: "Secure Sockets Layer, predecessor to TLS"
+  - slug: "https"
+    name: "HTTPS"
+    description: "HTTP over TLS for secure web communications"
+  - slug: "certificates"
+    name: "Digital Certificates"
+    description: "Used for TLS authentication"
+resources:
+  - url: "https://tools.ietf.org/html/rfc8446"
+    title: "RFC 8446: TLS 1.3"
+  - url: "https://www.ssl.com/guide/tls-transport-layer-security/"
+    title: "SSL.com: TLS Guide"
+---
+
+# Transport Layer Security (TLS)
+
+Transport Layer Security (TLS) is a cryptographic protocol that provides secure communication over computer networks. It is the successor to SSL (Secure Sockets Layer) and is widely used to secure web browsing, email, file transfer, and other network communications.
+
+## How TLS Works
+
+### Handshake Process
+1. **Client Hello**: Client initiates connection with supported protocols and ciphers
+2. **Server Hello**: Server responds with chosen protocol and cipher suite
+3. **Certificate Exchange**: Server provides digital certificate for authentication
+4. **Key Exchange**: Establish shared secret key using asymmetric encryption
+5. **Finished**: Both parties confirm handshake completion
+6. **Secure Communication**: Encrypted data exchange begins
+
+### Key Features
+- **Confidentiality**: Encrypts data to prevent eavesdropping
+- **Integrity**: Ensures data hasn't been tampered with
+- **Authentication**: Verifies the identity of communicating parties
+- **Forward Secrecy**: Protects past communications if keys are compromised
+
+## TLS Versions
+
+### TLS 1.0 and 1.1
+- **Status**: Deprecated due to security vulnerabilities
+- **Security Issues**: Known attacks (BEAST, CRIME, Lucky 13)
+- **Recommendation**: Disable in favor of newer versions
+
+### TLS 1.2
+- **Status**: Widely supported, still secure when properly configured
+- **Features**: Strong cipher suites, improved security
+- **Cipher Suites**: AES, ChaCha20, SHA-256, SHA-384
+- **Key Exchange**: RSA, DHE, ECDHE
+
+### TLS 1.3
+- **Status**: Current standard, recommended for new deployments
+- **Features**: Improved performance, enhanced security
+- **Cipher Suites**: Only strong, modern algorithms
+- **Key Exchange**: ECDHE only (perfect forward secrecy)
+- **Performance**: Faster handshake, reduced latency
+
+## TLS Components
+
+### Cipher Suites
+- **Key Exchange**: Method for establishing shared secret (RSA, DHE, ECDHE)
+- **Authentication**: Method for verifying identity (RSA, ECDSA)
+- **Encryption**: Algorithm for data confidentiality (AES, ChaCha20)
+- **Integrity**: Hash function for data integrity (SHA-256, SHA-384)
+
+### Digital Certificates
+- **X.509 Format**: Standard certificate format
+- **Certificate Chain**: Hierarchy of trusted certificates
+- **Certificate Validation**: Process of verifying certificate authenticity
+- **Certificate Revocation**: Checking if certificates are still valid
+
+### Session Management
+- **Session Resumption**: Reuse previous session parameters
+- **Session Tickets**: Stateless session resumption
+- **Session IDs**: Stateful session resumption
+- **Performance**: Reduces handshake overhead for repeated connections
+
+## Common Applications
+
+### HTTPS (HTTP over TLS)
+- **Web Security**: Secure web browsing and transactions
+- **E-commerce**: Protect payment and personal information
+- **Web Applications**: Secure access to web-based services
+- **API Security**: Protect REST APIs and web services
+
+### Email Security
+- **SMTP over TLS**: Secure email transmission
+- **IMAP over TLS**: Secure email retrieval
+- **POP3 over TLS**: Secure email download
+- **S/MIME**: End-to-end email encryption
+
+### File Transfer
+- **FTPS**: FTP over TLS
+- **SFTP**: SSH File Transfer Protocol
+- **Secure File Sharing**: Encrypted file transfer services
+
+### VPN and Remote Access
+- **SSL VPN**: Web-based VPN access
+- **Remote Desktop**: Secure remote desktop connections
+- **Cloud Services**: Secure access to cloud resources
+
+## Security Best Practices
+
+### Configuration
+1. **Use Latest Version**: Prefer TLS 1.3, minimum TLS 1.2
+2. **Strong Cipher Suites**: Use only strong, modern algorithms
+3. **Certificate Management**: Proper certificate lifecycle management
+4. **Perfect Forward Secrecy**: Use ECDHE for key exchange
+
+### Implementation
+1. **Secure Defaults**: Configure secure defaults
+2. **Regular Updates**: Keep TLS libraries updated
+3. **Certificate Validation**: Proper certificate validation
+4. **Monitoring**: Monitor TLS connections and errors
+
+### Testing
+1. **Vulnerability Scanning**: Regular TLS vulnerability assessments
+2. **Configuration Testing**: Test TLS configuration security
+3. **Compliance Checking**: Verify compliance with security standards
+4. **Performance Testing**: Ensure TLS doesn't impact performance
+
+## Common Vulnerabilities
+
+### Protocol Vulnerabilities
+- **BEAST**: Browser Exploit Against SSL/TLS
+- **CRIME**: Compression Ratio Info-leak Made Easy
+- **Lucky 13**: Timing attack against CBC mode
+- **POODLE**: Padding Oracle On Downgraded Legacy Encryption
+
+### Implementation Vulnerabilities
+- **Heartbleed**: OpenSSL vulnerability exposing memory
+- **FREAK**: Factoring RSA Export Keys
+- **Logjam**: Attack against Diffie-Hellman key exchange
+- **DROWN**: Decrypting RSA with Obsolete and Weakened eNcryption
+
+### Mitigation
+- **Disable Weak Protocols**: Disable SSL 3.0, TLS 1.0, TLS 1.1
+- **Strong Cipher Suites**: Use only strong, modern algorithms
+- **Regular Updates**: Keep TLS implementations updated
+- **Security Monitoring**: Monitor for TLS-related attacks
+
+## Performance Considerations
+
+### Optimization
+- **Session Resumption**: Reduce handshake overhead
+- **OCSP Stapling**: Reduce certificate validation overhead
+- **HTTP/2**: Multiplexing over single TLS connection
+- **Hardware Acceleration**: Use cryptographic hardware
+
+### Monitoring
+- **Connection Metrics**: Monitor TLS connection performance
+- **Error Rates**: Track TLS handshake failures
+- **Certificate Expiry**: Monitor certificate expiration dates
+- **Security Events**: Monitor for security-related events
+
+## Related Concepts
+- **SSL**: Predecessor to TLS
+- **HTTPS**: HTTP over TLS
+- **Digital Certificates**: Used for TLS authentication
+
+## Conclusion
+
+TLS is essential for securing communications over insecure networks. Organizations should use the latest TLS versions, implement strong configurations, and maintain proper certificate management to ensure secure communications. 

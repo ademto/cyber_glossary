@@ -1,0 +1,86 @@
+---
+title: "Attribute-Based Access Control"
+acronym: "ABAC"
+description: "A dynamic access control model that grants or denies access based on attributes of users, resources, and the environment."
+category: "Access Control"
+severity: 8
+riskLevel: "High"
+skillPath: ["Access Control", "Identity Management", "Security Architecture"]
+jobPath: ["Security Engineer", "IAM Specialist", "Cloud Security Engineer"]
+certsPath: ["CISSP", "CCSP", "CompTIA Security+"]
+quickFacts:
+  "Primary Purpose": "Dynamic, context-aware access control"
+  "Implementation": "Policies based on user, resource, and environmental attributes"
+  "Benefits": "Fine-grained, flexible, and scalable access management"
+relatedTerms:
+  - slug: "rbac"
+    name: "Role-Based Access Control"
+    description: "Access control based on user roles"
+  - slug: "iam"
+    name: "Identity and Access Management"
+    description: "Framework for managing digital identities and access"
+  - slug: "least-privilege"
+    name: "Least Privilege"
+    description: "Principle of minimal access rights"
+resources:
+  - url: "https://csrc.nist.gov/glossary/term/attribute-based_access_control"
+    title: "NIST ABAC Definition"
+  - url: "https://www.ibm.com/topics/abac"
+    title: "IBM ABAC Overview"
+---
+
+# Attribute-Based Access Control (ABAC)
+
+Attribute-Based Access Control (ABAC) is a dynamic and flexible access control model that grants or denies access to resources based on attributes associated with users, resources, actions, and the environment. Unlike RBAC, which relies on static roles, ABAC evaluates policies using a wide range of attributes, enabling context-aware and fine-grained access decisions.
+
+## How ABAC Works
+
+ABAC policies are defined using attributes such as:
+- **User Attributes**: Department, job title, clearance level
+- **Resource Attributes**: File type, classification, owner
+- **Action Attributes**: Read, write, delete, modify
+- **Environmental Attributes**: Time of day, location, device type
+
+Access is granted or denied by evaluating these attributes against policy rules, allowing for highly granular and dynamic access control.
+
+## Key Features
+- **Fine-Grained Control**: Policies can be as specific as needed
+- **Context Awareness**: Considers environmental and situational factors
+- **Scalability**: Easily adapts to large, complex organizations
+- **Policy-Based**: Centralized management of access policies
+
+## ABAC vs. RBAC
+- **RBAC**: Access based on static roles
+- **ABAC**: Access based on dynamic attributes and policies
+- **Hybrid**: Many organizations use a combination of both
+
+## Use Cases
+- **Cloud Security**: Granting access based on user location or device
+- **Healthcare**: Restricting access to patient data based on job function and clearance
+- **Financial Services**: Enforcing regulatory compliance with attribute-based rules
+
+## Implementation Considerations
+- **Attribute Management**: Accurate and up-to-date attribute data is critical
+- **Policy Complexity**: Policies can become complex and require careful management
+- **Performance**: Real-time evaluation of attributes may impact performance
+- **Integration**: Must integrate with identity providers and resource management systems
+
+## Best Practices
+1. **Define Clear Policies**: Use clear, understandable policy language
+2. **Automate Attribute Updates**: Sync attributes with HR and directory systems
+3. **Monitor and Audit**: Regularly review policy effectiveness and access logs
+4. **Start Simple**: Begin with basic policies and increase complexity as needed
+
+## Challenges
+- **Attribute Explosion**: Too many attributes can complicate management
+- **Policy Overlap**: Conflicting policies may arise
+- **User Understanding**: Users may not understand why access is denied
+
+## Related Concepts
+- **RBAC**: Often used together with ABAC for layered security
+- **IAM**: ABAC is a key component of modern IAM systems
+- **Zero Trust**: ABAC supports zero trust by enforcing least privilege dynamically
+
+## Conclusion
+
+ABAC provides organizations with a powerful, flexible, and context-aware access control model. When implemented effectively, it enhances security, supports compliance, and enables business agility in dynamic environments. 

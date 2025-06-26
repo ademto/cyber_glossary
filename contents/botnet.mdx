@@ -1,0 +1,80 @@
+---
+title: "Botnet"
+description: "A network of compromised computers (bots) controlled by an attacker to perform malicious activities such as DDoS attacks, spam distribution, and data theft."
+category: "Malware"
+severity: 9
+riskLevel: "Critical"
+skillPath: ["Malware Analysis", "Network Security", "Incident Response"]
+jobPath: ["Malware Analyst", "SOC Analyst", "Security Engineer"]
+certsPath: ["GREM", "CISSP", "CompTIA Security+"]
+quickFacts:
+  "Composition": "Network of compromised devices (bots)"
+  "Control": "Centralized command and control (C&C) server"
+  "Activities": "DDoS, spam, data theft, cryptocurrency mining"
+relatedTerms:
+  - slug: "ddos-attack"
+    name: "DDoS Attack"
+    description: "Distributed denial-of-service attack"
+  - slug: "command-and-control"
+    name: "Command and Control"
+    description: "Infrastructure used to control botnets"
+  - slug: "malware"
+    name: "Malware"
+    description: "Malicious software that infects systems"
+resources:
+  - url: "https://www.cisa.gov/news-events/news/botnet-threats-and-recommendations"
+    title: "CISA: Botnet Threats and Recommendations"
+  - url: "https://www.kaspersky.com/resource-center/threats/botnet"
+    title: "Kaspersky: What is a Botnet?"
+---
+
+# Botnet
+
+A botnet is a network of compromised computers, servers, or IoT devices (called "bots" or "zombies") that are controlled by an attacker through a command and control (C&C) infrastructure. Botnets are used to perform various malicious activities while remaining hidden from the device owners.
+
+## How Botnets Work
+1. **Infection**: Malware infects devices through various vectors (phishing, vulnerabilities, etc.)
+2. **Establishment**: Infected devices connect to C&C servers
+3. **Control**: Attacker sends commands to the botnet
+4. **Execution**: Bots perform malicious activities as directed
+
+## Common Botnet Activities
+- **DDoS Attacks**: Overwhelm target systems with traffic
+- **Spam Distribution**: Send massive amounts of unwanted emails
+- **Data Theft**: Steal sensitive information from infected devices
+- **Cryptocurrency Mining**: Use device resources for mining operations
+- **Click Fraud**: Generate fake clicks for advertising revenue
+
+## Botnet Architecture
+- **Centralized**: Single C&C server controls all bots
+- **Decentralized**: Multiple C&C servers for redundancy
+- **P2P**: Bots communicate directly with each other
+- **Hybrid**: Combination of different architectures
+
+## Detection and Prevention
+1. **Network Monitoring**: Detect unusual traffic patterns
+2. **Endpoint Protection**: Use antivirus and EDR solutions
+3. **Patch Management**: Keep systems updated
+4. **User Education**: Prevent initial infections
+5. **C&C Blocking**: Block known command and control servers
+
+## Notable Botnets
+- **Mirai**: Targeted IoT devices for DDoS attacks
+- **Conficker**: One of the largest botnets in history
+- **Zeus**: Banking trojan botnet
+- **Emotet**: Advanced banking trojan and botnet
+
+## Incident Response
+- Identify and isolate infected devices
+- Remove malware and restore systems
+- Block C&C communications
+- Monitor for reinfection
+
+## Related Concepts
+- **DDoS Attack**: Common botnet activity
+- **Command and Control**: Infrastructure for botnet control
+- **Malware**: Software that creates botnets
+
+## Conclusion
+
+Botnets represent a significant threat to individuals and organizations. Prevention through security awareness, system updates, and monitoring is essential to avoid becoming part of a botnet. 

@@ -1,46 +1,220 @@
 ---
 title: "Digital Signature"
-description: "A cryptographic technique used to verify the authenticity and integrity of digital messages or documents"
+description: "Cryptographic technique that provides authentication, integrity, and non-repudiation for digital documents and messages."
 category: "Cryptography"
-riskLevel: "Medium"
 severity: 7
-lastUpdated: "June 2025"
-threatLevel: "Medium"
-relatedTerms:
-  - name: "Public Key Infrastructure (PKI)"
-    slug: "pki"
-    description: "System for managing keys and certificates"
-  - name: "Hashing"
-    slug: "hashing"
-    description: "Used in creating digital signatures"
-  - name: "Non-Repudiation"
-    slug: "non-repudiation"
-    description: "Proof that a message was sent by a specific party"
-resources:
-  - title: "How Digital Signatures Work"
-    url: "#"
-  - title: "Benefits of Using Digital Signatures"
-    url: "#"
+riskLevel: "High"
+skillPath: ["Cryptography", "PKI", "Digital Forensics"]
+jobPath: ["Cryptographer", "Security Engineer", "Digital Forensics Analyst"]
+certsPath: ["CISSP", "CompTIA Security+", "CEH"]
 quickFacts:
-  "Purpose": "Authenticate sender and ensure message integrity"
-  "Key Tools": "Private and public key pairs"
-  "Example": "Signing PDF contracts"
-  "Used In": "Email, code signing, documents"
+  "Purpose": "Authentication, integrity, and non-repudiation"
+  "Technology": "Public key cryptography"
+  "Applications": "Email, documents, software, blockchain"
+relatedTerms:
+  - slug: "cryptography"
+    name: "Cryptography"
+    description: "Techniques for secure communication"
+  - slug: "public-key-infrastructure"
+    name: "Public Key Infrastructure"
+    description: "Framework for managing digital certificates"
+  - slug: "non-repudiation"
+    name: "Non-repudiation"
+    description: "Preventing denial of actions or communications"
+resources:
+  - url: "https://www.nist.gov/publications/digital-signature-standard"
+    title: "NIST: Digital Signature Standard"
+  - url: "https://www.ietf.org/rfc/rfc3447.txt"
+    title: "RFC 3447: PKCS #1 v2.1"
 ---
 
-## What is a Digital Signature?
+# Digital Signature
 
-A **Digital Signature** is a mathematical scheme based on public key cryptography that ensures the recipient knows a message or file came from a specific sender and was not altered in transit.
+Digital signatures are cryptographic techniques that provide authentication, integrity, and non-repudiation for digital documents and messages. They use public key cryptography to create a mathematical proof that a message was created by a specific sender and has not been altered.
 
-## How It Works
+## How Digital Signatures Work
 
-- Sender hashes the message
-- Hash is encrypted with sender's private key
-- Recipient decrypts with sender’s public key and compares hashes
+### Key Components
+- **Private Key**: Used by the signer to create signatures
+- **Public Key**: Used by verifiers to verify signatures
+- **Hash Function**: Creates a unique fingerprint of the message
+- **Signature Algorithm**: Mathematical process to create signatures
+
+### Signature Process
+1. **Message Hashing**: Create hash of the original message
+2. **Private Key Encryption**: Encrypt hash with signer's private key
+3. **Signature Creation**: The encrypted hash becomes the signature
+4. **Message Transmission**: Send message with signature
+
+### Verification Process
+1. **Message Reception**: Receive message and signature
+2. **Hash Calculation**: Calculate hash of received message
+3. **Public Key Decryption**: Decrypt signature with signer's public key
+4. **Hash Comparison**: Compare calculated and decrypted hashes
+
+## Digital Signature Properties
+
+### Authentication
+- **Identity Verification**: Confirms the identity of the signer
+- **Public Key Binding**: Links signature to specific public key
+- **Certificate Validation**: Verifies signer's digital certificate
+- **Trust Chain**: Establishes trust through certificate authorities
+
+### Integrity
+- **Message Integrity**: Ensures message has not been altered
+- **Hash Verification**: Detects any changes to the message
+- **Tamper Detection**: Identifies unauthorized modifications
+- **Data Consistency**: Maintains data consistency
+
+### Non-repudiation
+- **Proof of Origin**: Provides proof of message origin
+- **Legal Evidence**: Admissible as legal evidence
+- **Binding Commitment**: Creates binding commitment by signer
+- **Audit Trail**: Creates verifiable audit trail
+
+## Digital Signature Algorithms
+
+### RSA Digital Signatures
+- **Algorithm**: RSA-PSS, RSA-PKCS#1 v1.5
+- **Key Size**: 2048 bits minimum, 4096 bits recommended
+- **Security**: Based on integer factorization problem
+- **Performance**: Slower than elliptic curve algorithms
+
+### DSA (Digital Signature Algorithm)
+- **Algorithm**: FIPS 186-4 standard
+- **Key Size**: 2048 bits minimum
+- **Security**: Based on discrete logarithm problem
+- **Performance**: Efficient signature generation and verification
+
+### ECDSA (Elliptic Curve Digital Signature Algorithm)
+- **Algorithm**: Elliptic curve variant of DSA
+- **Key Size**: 256 bits (equivalent to 3072-bit RSA)
+- **Security**: Based on elliptic curve discrete logarithm
+- **Performance**: Faster than RSA with smaller key sizes
+
+### EdDSA (Edwards-curve Digital Signature Algorithm)
+- **Algorithm**: Ed25519, Ed448
+- **Key Size**: 256 bits (Ed25519), 448 bits (Ed448)
+- **Security**: High security with small key sizes
+- **Performance**: Very fast signature generation and verification
+
+## Public Key Infrastructure (PKI)
+
+### Certificate Authorities (CAs)
+- **Trust Anchors**: Establish trust in digital certificates
+- **Certificate Issuance**: Issue and manage digital certificates
+- **Certificate Revocation**: Revoke compromised certificates
+- **Trust Validation**: Validate certificate trust chains
+
+### Digital Certificates
+- **Identity Binding**: Bind public keys to identities
+- **Certificate Format**: X.509 standard format
+- **Certificate Fields**: Subject, issuer, validity period, extensions
+- **Certificate Validation**: Verify certificate authenticity and validity
+
+### Certificate Revocation
+- **CRL (Certificate Revocation List)**: List of revoked certificates
+- **OCSP (Online Certificate Status Protocol)**: Real-time certificate validation
+- **Revocation Reasons**: Compromise, key change, affiliation change
+- **Revocation Checking**: Verify certificate revocation status
+
+## Applications
+
+### Email Security
+- **S/MIME**: Secure email with digital signatures
+- **PGP/GPG**: Pretty Good Privacy for email encryption
+- **Email Authentication**: Verify email sender authenticity
+- **Spam Prevention**: Reduce email spoofing and spam
+
+### Document Signing
+- **PDF Signatures**: Digital signatures in PDF documents
+- **Word Documents**: Digital signatures in Microsoft Word
+- **Legal Documents**: Legally binding digital signatures
+- **Contract Management**: Digital contract signing
+
+### Software Security
+- **Code Signing**: Sign software and code
+- **Driver Signing**: Sign device drivers
+- **App Signing**: Sign mobile applications
+- **Update Verification**: Verify software updates
+
+### Blockchain and Cryptocurrency
+- **Transaction Signing**: Sign cryptocurrency transactions
+- **Smart Contracts**: Sign smart contract interactions
+- **Identity Verification**: Verify blockchain identities
+- **Asset Ownership**: Prove ownership of digital assets
+
+## Security Considerations
+
+### Key Management
+- **Private Key Protection**: Secure storage of private keys
+- **Key Generation**: Secure key generation processes
+- **Key Backup**: Secure backup of private keys
+- **Key Recovery**: Key recovery mechanisms
+
+### Algorithm Security
+- **Algorithm Strength**: Use cryptographically strong algorithms
+- **Key Size**: Use appropriate key sizes for security level
+- **Algorithm Updates**: Keep algorithms current
+- **Quantum Resistance**: Consider post-quantum cryptography
+
+### Implementation Security
+- **Secure Implementation**: Implement algorithms correctly
+- **Side-Channel Attacks**: Protect against timing and power analysis
+- **Random Number Generation**: Use cryptographically secure random numbers
+- **Code Audits**: Regular security code audits
+
+### Certificate Management
+- **Certificate Lifecycle**: Manage certificate lifecycle
+- **Certificate Monitoring**: Monitor certificate validity
+- **Certificate Renewal**: Timely certificate renewal
+- **Certificate Backup**: Secure certificate backup
+
+## Legal and Compliance
+
+### Legal Recognition
+- **Electronic Signatures**: Legal recognition of digital signatures
+- **E-SIGN Act**: Electronic Signatures in Global and National Commerce Act
+- **UETA**: Uniform Electronic Transactions Act
+- **International Standards**: International legal frameworks
+
+### Compliance Requirements
+- **Industry Standards**: Industry-specific compliance requirements
+- **Regulatory Compliance**: Regulatory compliance requirements
+- **Audit Requirements**: Audit and compliance requirements
+- **Documentation**: Maintain compliance documentation
+
+### Evidence and Forensics
+- **Legal Evidence**: Admissibility in legal proceedings
+- **Forensic Analysis**: Digital forensics analysis
+- **Chain of Custody**: Maintain chain of custody
+- **Expert Testimony**: Expert witness testimony
 
 ## Best Practices
 
-- Use trusted certificate authorities (CAs)
-- Keep private keys secure
-- Use digital signatures for legal documents, software distribution, and secure emails
-- Verify signature validity before trusting content
+### Implementation
+1. **Strong Algorithms**: Use cryptographically strong algorithms
+2. **Proper Key Management**: Implement proper key management
+3. **Certificate Validation**: Validate certificates properly
+4. **Secure Storage**: Secure storage of private keys
+
+### Operational
+1. **Regular Updates**: Keep systems and algorithms updated
+2. **Monitoring**: Monitor signature operations
+3. **Incident Response**: Plan for signature-related incidents
+4. **Training**: Train users on digital signature procedures
+
+### Compliance
+1. **Legal Requirements**: Understand legal requirements
+2. **Industry Standards**: Follow industry standards
+3. **Documentation**: Maintain proper documentation
+4. **Audit Trail**: Maintain audit trails
+
+## Related Concepts
+- **Cryptography**: Techniques for secure communication
+- **Public Key Infrastructure**: Framework for managing digital certificates
+- **Non-repudiation**: Preventing denial of actions or communications
+
+## Conclusion
+
+Digital signatures provide essential security services for digital communications and transactions. Proper implementation, key management, and compliance with legal and regulatory requirements are crucial for effective digital signature use.

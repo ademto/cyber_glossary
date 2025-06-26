@@ -1,0 +1,108 @@
+---
+title: "Attack Surface"
+description: "The total number of points where an unauthorized user can attempt to enter or extract data from a system, network, or application."
+category: "Security Architecture"
+severity: 8
+riskLevel: "High"
+skillPath: ["Security Architecture", "Threat Modeling", "Risk Assessment"]
+jobPath: ["Security Architect", "Penetration Tester", "Security Engineer"]
+certsPath: ["CISSP", "OSCP", "CompTIA Security+"]
+quickFacts:
+  "Definition": "All potential entry points for attackers"
+  "Reduction": "Minimizing attack surface improves security"
+  "Assessment": "Regular evaluation of vulnerabilities and exposures"
+relatedTerms:
+  - slug: "threat-modeling"
+    name: "Threat Modeling"
+    description: "Systematic approach to identifying security threats"
+  - slug: "vulnerability-assessment"
+    name: "Vulnerability Assessment"
+    description: "Identifying and evaluating security weaknesses"
+  - slug: "network-segmentation"
+    name: "Network Segmentation"
+    description: "Dividing networks into smaller, isolated segments"
+resources:
+  - url: "https://www.cisa.gov/resources-tools/resources/attack-surface-reduction"
+    title: "CISA: Attack Surface Reduction"
+  - url: "https://www.microsoft.com/en-us/security/business/attack-surface-reduction"
+    title: "Microsoft: Attack Surface Reduction"
+---
+
+# Attack Surface
+
+The Attack Surface represents all the points where an unauthorized user can potentially enter or extract data from a system, network, or application. It includes all interfaces, services, protocols, and entry points that could be exploited by attackers.
+
+## Components of Attack Surface
+
+### Network Attack Surface
+- **Open Ports**: Network ports accessible from external networks
+- **Protocols**: Network protocols in use (HTTP, FTP, SSH, etc.)
+- **Services**: Running network services and applications
+- **Interfaces**: Network interfaces and connections
+
+### Application Attack Surface
+- **User Inputs**: Forms, APIs, and data entry points
+- **Authentication**: Login mechanisms and session management
+- **File Uploads**: File upload and processing functionality
+- **Database Connections**: Database interfaces and queries
+
+### Physical Attack Surface
+- **Hardware**: Physical devices and equipment
+- **Access Points**: Physical entry points to facilities
+- **Removable Media**: USB drives, CDs, and other media
+- **Printers**: Network-connected printing devices
+
+## Attack Surface Analysis
+1. **Inventory**: Identify all system components and interfaces
+2. **Classification**: Categorize components by risk level
+3. **Assessment**: Evaluate vulnerabilities and exposure
+4. **Prioritization**: Rank components by attack likelihood and impact
+5. **Remediation**: Implement controls to reduce risk
+
+## Attack Surface Reduction Strategies
+
+### Network Level
+- **Port Management**: Close unnecessary ports and services
+- **Network Segmentation**: Isolate critical systems
+- **Firewall Configuration**: Implement strict access controls
+- **VPN Usage**: Secure remote access
+
+### Application Level
+- **Input Validation**: Validate all user inputs
+- **Authentication**: Implement strong authentication mechanisms
+- **Authorization**: Enforce least privilege access
+- **Secure Coding**: Follow secure development practices
+
+### System Level
+- **Patch Management**: Keep systems updated
+- **Configuration Hardening**: Secure system configurations
+- **Access Controls**: Limit physical and logical access
+- **Monitoring**: Implement comprehensive logging and monitoring
+
+## Best Practices
+1. **Regular Assessment**: Conduct periodic attack surface evaluations
+2. **Minimization**: Reduce attack surface to essential components only
+3. **Documentation**: Maintain detailed attack surface documentation
+4. **Monitoring**: Continuously monitor for new attack vectors
+5. **Incident Response**: Plan for attack surface exploitation
+
+## Tools and Techniques
+- **Network Scanners**: Nmap, Nessus, OpenVAS
+- **Application Scanners**: OWASP ZAP, Burp Suite
+- **Configuration Auditors**: CIS Benchmarks, STIGs
+- **Vulnerability Management**: Qualys, Rapid7, Tenable
+
+## Challenges
+- **Complexity**: Modern systems have large, complex attack surfaces
+- **Dynamic Nature**: Attack surfaces change as systems evolve
+- **Resource Constraints**: Limited time and resources for assessment
+- **False Positives**: Distinguishing real threats from noise
+
+## Related Concepts
+- **Threat Modeling**: Systematic threat identification
+- **Vulnerability Assessment**: Identifying security weaknesses
+- **Network Segmentation**: Reducing network attack surface
+
+## Conclusion
+
+Understanding and managing the attack surface is crucial for effective cybersecurity. Organizations should regularly assess their attack surface and implement strategies to minimize exposure while maintaining functionality. 

@@ -1,0 +1,80 @@
+---
+title: "Virtual Local Area Network"
+acronym: "VLAN"
+description: "A logical network segment that groups devices together regardless of their physical location, providing network segmentation and security."
+category: "Network Security"
+severity: 6
+riskLevel: "Medium"
+skillPath: ["Network Security", "Network Administration", "Security Architecture"]
+jobPath: ["Network Administrator", "Security Engineer", "Network Security Specialist"]
+certsPath: ["CCNA", "CCNP", "CompTIA Network+"]
+quickFacts:
+  "Purpose": "Network segmentation and traffic isolation"
+  "Benefits": "Security, performance, management efficiency"
+  "Implementation": "Switch configuration, trunk ports, tagging"
+relatedTerms:
+  - slug: "network-segmentation"
+    name: "Network Segmentation"
+    description: "Dividing networks into smaller, isolated segments"
+  - slug: "firewall"
+    name: "Firewall"
+    description: "Network security device that filters traffic"
+  - slug: "access-control"
+    name: "Access Control"
+    description: "Controlling access to network resources"
+resources:
+  - url: "https://www.cisco.com/c/en/us/solutions/small-business/resource-center/networking/vlan-basics.html"
+    title: "Cisco: VLAN Basics"
+  - url: "https://www.juniper.net/documentation/en_US/junos/topics/concept/vlan-security-overview.html"
+    title: "Juniper: VLAN Security Overview"
+---
+
+# Virtual Local Area Network (VLAN)
+
+A Virtual Local Area Network (VLAN) is a logical network segment that groups devices together regardless of their physical location. VLANs provide network segmentation, security, and management benefits by isolating traffic between different groups of devices.
+
+## How VLANs Work
+- **Logical Segmentation**: Devices are grouped by function, department, or security level
+- **Traffic Isolation**: VLANs prevent unauthorized communication between segments
+- **Tagging**: IEEE 802.1Q tags identify VLAN membership
+- **Trunk Ports**: Carry traffic from multiple VLANs between switches
+
+## Benefits of VLANs
+- **Security**: Isolate sensitive systems and limit attack surface
+- **Performance**: Reduce broadcast traffic and improve network efficiency
+- **Management**: Simplify network administration and troubleshooting
+- **Flexibility**: Easily reconfigure network topology without physical changes
+
+## Common VLAN Types
+- **Data VLANs**: Regular user traffic
+- **Voice VLANs**: VoIP phone traffic with QoS
+- **Management VLANs**: Network device management traffic
+- **Guest VLANs**: Isolated network for visitors
+- **DMZ VLANs**: Demilitarized zone for public-facing services
+
+## Security Considerations
+1. **VLAN Hopping**: Attackers may attempt to access other VLANs
+2. **Trunk Security**: Secure trunk ports to prevent unauthorized VLAN access
+3. **Access Control**: Use VLAN access control lists (VACLs)
+4. **Monitoring**: Monitor inter-VLAN traffic for anomalies
+
+## Best Practices
+- **Documentation**: Maintain VLAN documentation and diagrams
+- **Naming Conventions**: Use clear, descriptive VLAN names
+- **Security Policies**: Implement consistent security across VLANs
+- **Regular Audits**: Review VLAN configurations and access
+
+## Implementation
+- **Switch Configuration**: Configure VLANs on network switches
+- **Port Assignment**: Assign switch ports to appropriate VLANs
+- **Trunk Configuration**: Set up trunk ports for inter-switch communication
+- **Routing**: Configure inter-VLAN routing if needed
+
+## Related Concepts
+- **Network Segmentation**: Dividing networks for security
+- **Firewall**: Additional security between VLANs
+- **Access Control**: Managing VLAN access permissions
+
+## Conclusion
+
+VLANs are essential for modern network security and management. Proper VLAN design and implementation provide significant security and operational benefits while supporting business requirements. 

@@ -1,0 +1,98 @@
+---
+title: "STRIDE"
+description: "A threat modeling framework that categorizes security threats into six categories: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege."
+category: "Threat Modeling"
+severity: 8
+riskLevel: "High"
+skillPath: ["Threat Modeling", "Application Security", "Security Architecture"]
+jobPath: ["Security Architect", "Application Security Engineer", "Penetration Tester"]
+certsPath: ["CISSP", "CSSLP", "CompTIA Security+"]
+quickFacts:
+  "Framework": "Microsoft's threat modeling methodology"
+  "Categories": "6 threat categories for systematic analysis"
+  "Application": "Software design and security assessment"
+relatedTerms:
+  - slug: "threat-modeling"
+    name: "Threat Modeling"
+    description: "Systematic approach to identifying security threats"
+  - slug: "attack-surface"
+    name: "Attack Surface"
+    description: "Points where an attacker can attempt to enter a system"
+  - slug: "security-architecture"
+    name: "Security Architecture"
+    description: "Design of secure systems and networks"
+resources:
+  - url: "https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+    title: "Microsoft: STRIDE Threat Categories"
+  - url: "https://www.owasp.org/index.php/Application_Threat_Modeling"
+    title: "OWASP: Application Threat Modeling"
+---
+
+# STRIDE
+
+STRIDE is a threat modeling framework developed by Microsoft that categorizes security threats into six distinct categories. It provides a systematic approach to identifying and analyzing potential security threats during the design and development of software applications and systems.
+
+## STRIDE Categories
+
+### S - Spoofing
+- **Definition**: Impersonating another user or system
+- **Examples**: Email spoofing, IP spoofing, session hijacking
+- **Mitigation**: Strong authentication, digital certificates, session management
+
+### T - Tampering
+- **Definition**: Unauthorized modification of data or code
+- **Examples**: Data manipulation, code injection, configuration changes
+- **Mitigation**: Input validation, integrity checks, access controls
+
+### R - Repudiation
+- **Definition**: Denying responsibility for actions
+- **Examples**: Log deletion, transaction denial, audit trail manipulation
+- **Mitigation**: Comprehensive logging, digital signatures, audit trails
+
+### I - Information Disclosure
+- **Definition**: Unauthorized access to sensitive information
+- **Examples**: Data breaches, information leakage, error messages
+- **Mitigation**: Encryption, access controls, secure error handling
+
+### D - Denial of Service
+- **Definition**: Preventing legitimate users from accessing services
+- **Examples**: DDoS attacks, resource exhaustion, service degradation
+- **Mitigation**: Rate limiting, resource monitoring, redundancy
+
+### E - Elevation of Privilege
+- **Definition**: Gaining unauthorized access to higher privileges
+- **Examples**: Privilege escalation, admin access, root compromise
+- **Mitigation**: Least privilege, access controls, privilege separation
+
+## STRIDE Process
+1. **Asset Identification**: Identify valuable assets and data
+2. **Threat Categorization**: Apply STRIDE categories to each component
+3. **Threat Analysis**: Analyze likelihood and impact of each threat
+4. **Mitigation Planning**: Design controls to address identified threats
+5. **Validation**: Verify that mitigations effectively address threats
+
+## Benefits
+- **Systematic Approach**: Structured method for threat identification
+- **Comprehensive Coverage**: Addresses all major threat categories
+- **Early Detection**: Identifies threats during design phase
+- **Cost Effective**: Reduces security issues before implementation
+
+## Best Practices
+1. **Early Integration**: Include STRIDE in design phase
+2. **Regular Updates**: Update threat models as systems evolve
+3. **Team Involvement**: Include security, development, and operations teams
+4. **Documentation**: Maintain detailed threat model documentation
+
+## Tools
+- **Microsoft Threat Modeling Tool**: Official STRIDE implementation
+- **OWASP Threat Dragon**: Open-source threat modeling tool
+- **Custom Templates**: Organization-specific threat modeling templates
+
+## Related Concepts
+- **Threat Modeling**: Systematic threat identification
+- **Attack Surface**: Points of potential attack
+- **Security Architecture**: Secure system design
+
+## Conclusion
+
+STRIDE provides a valuable framework for systematic threat identification and analysis. When properly implemented, it helps organizations build more secure systems by identifying and addressing threats early in the development lifecycle. 
