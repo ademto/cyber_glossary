@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     "cyber threats",
     "security concepts"
   ],
-  authors: [{ name: "Cyber Glossary Team" }],
-  creator: "Cyber Glossary",
-  publisher: "Cyber Glossary",
+  authors: [{ name: "Emmanuel Adetoro" }],
+  creator: "Emmanuel Adetoro",
+  publisher: "Emmanuel Adetoro",
   formatDetection: {
     email: false,
     address: false,
@@ -95,7 +96,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
