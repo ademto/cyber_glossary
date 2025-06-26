@@ -301,7 +301,7 @@ export default async function TermPage({ params }: PageProps) {
                       {frontmatter.relatedTerms.map((term: { slug: string; name: string; description: string }, index: number) => (
                         <Link
                           key={index}
-                          href={`/term/${term.slug}`}
+                          href={`/${term.slug}`}
                           className="block p-2 rounded hover:bg-muted transition-colors"
                         >
                           <span className="text-primary hover:text-primary/80 font-medium">{term.name}</span>
