@@ -1,0 +1,165 @@
+---
+title: "Snort"
+acronym: "N/A"
+description: "An open-source network intrusion detection and prevention system that performs real-time traffic analysis and packet logging."
+category: "Security Tools"
+riskLevel: "Low"
+severity: 2
+skillPath: ["Network Security", "Intrusion Detection", "Security Monitoring"]
+jobPath: ["Security Analyst", "Network Security Engineer", "SOC Analyst"]
+certsPath: ["CompTIA Security+", "Cisco CCNA Security", "GIAC GCIA"]
+quickFacts:
+  "Type": "Network IDS/IPS"
+  "License": "Open Source (GPL)"
+  "Platform": "Cross-platform"
+  "First Release": "1998"
+relatedTerms:
+  - slug: "ids-ips"
+    name: "Intrusion Detection/Prevention Systems"
+    description: "Security systems that monitor network traffic for suspicious activity"
+  - slug: "suricata"
+    name: "Suricata"
+    description: "High-performance network IDS/IPS and network security monitoring engine"
+  - slug: "ossec"
+    name: "OSSEC"
+    description: "Open-source host-based intrusion detection system"
+  - slug: "siem"
+    name: "SIEM"
+    description: "Security Information and Event Management systems"
+resources:
+  - url: "https://www.snort.org/"
+    title: "Official Snort Website"
+  - url: "https://www.snort.org/documents"
+    title: "Snort Documentation"
+  - url: "https://github.com/snort3/snort3"
+    title: "Snort 3 Source Code"
+---
+
+# Snort
+
+Snort is an open-source network intrusion detection and prevention system (IDS/IPS) developed by Sourcefire (now part of Cisco). It performs real-time traffic analysis and packet logging on IP networks, making it one of the most widely used network security tools in the industry.
+
+## What is Snort?
+
+Snort is a lightweight network intrusion detection system that can be deployed inline to act as an intrusion prevention system. It uses a rule-based language to detect various types of attacks and probes, such as buffer overflows, stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and more.
+
+## Key Features
+
+### Packet Sniffer
+- Captures and analyzes network packets in real-time
+- Supports various network protocols and packet types
+- Provides detailed packet inspection and logging
+
+### Network Intrusion Detection System (NIDS)
+- Monitors network traffic for suspicious patterns
+- Uses signature-based detection to identify known threats
+- Provides real-time alerts for potential security incidents
+
+### Network Intrusion Prevention System (NIPS)
+- Can be deployed inline to actively block malicious traffic
+- Prevents attacks before they reach their target
+- Maintains network performance while providing protection
+
+### Packet Logger
+- Logs packets to disk for later analysis
+- Supports various output formats (tcpdump, unified2, etc.)
+- Enables forensic analysis and threat hunting
+
+## Snort Architecture
+
+### Components
+1. **Packet Decoder**: Processes incoming packets from different network interfaces
+2. **Preprocessors**: Normalize and analyze traffic before rule processing
+3. **Detection Engine**: Applies rules to detect malicious activity
+4. **Logging and Alerting System**: Records events and generates alerts
+5. **Output Modules**: Formats and sends data to various destinations
+
+### Operating Modes
+- **Sniffer Mode**: Simply reads packets and displays them
+- **Packet Logger Mode**: Logs packets to disk
+- **Network Intrusion Detection Mode**: Analyzes traffic and generates alerts
+
+## Rule Language
+
+Snort uses a flexible rule language that allows security professionals to create custom detection rules:
+
+```
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SSH brute force attempt"; flow:established; content:"SSH"; nocase; threshold:type threshold, track by_src, count 5, seconds 60; sid:1000001; rev:1;)
+```
+
+### Rule Components
+- **Action**: What to do when rule matches (alert, log, pass, etc.)
+- **Protocol**: Network protocol being analyzed
+- **Source/Destination**: IP addresses and ports
+- **Rule Options**: Specific conditions and content to match
+
+## Deployment Options
+
+### Network-Based Deployment
+- Monitors traffic at network chokepoints
+- Provides visibility into network-wide threats
+- Can be deployed as inline IPS for active protection
+
+### Host-Based Deployment
+- Monitors traffic on individual systems
+- Provides detailed visibility into host-specific threats
+- Useful for critical servers and endpoints
+
+### Cloud Integration
+- Can be integrated with cloud security platforms
+- Supports virtual and containerized deployments
+- Enables cloud-native security monitoring
+
+## Career Applications
+
+### Security Analyst
+- Use Snort to monitor network traffic for threats
+- Analyze alerts and investigate security incidents
+- Tune rules to reduce false positives and improve detection
+
+### Network Security Engineer
+- Deploy and configure Snort across network infrastructure
+- Integrate Snort with other security tools and SIEM platforms
+- Optimize performance and maintain rule sets
+
+### SOC Analyst
+- Monitor Snort alerts in security operations center
+- Correlate events with other security tools
+- Respond to security incidents based on Snort detections
+
+### Security Researcher
+- Develop custom Snort rules for new threats
+- Contribute to the Snort community and rule sets
+- Research emerging attack techniques and detection methods
+
+## Best Practices
+
+### Rule Management
+- Regularly update rule sets with latest threat intelligence
+- Customize rules for your specific environment
+- Test rules in a lab environment before production deployment
+
+### Performance Optimization
+- Tune preprocessors for optimal performance
+- Use hardware acceleration when available
+- Monitor system resources and adjust configuration as needed
+
+### Integration
+- Integrate Snort with SIEM platforms for centralized monitoring
+- Connect with threat intelligence feeds for enhanced detection
+- Implement automated response capabilities
+
+### Maintenance
+- Keep Snort updated with latest versions and patches
+- Regularly review and clean up old rules and logs
+- Monitor system health and performance metrics
+
+## Related Technologies
+
+Snort works well with other security tools and technologies:
+- **SIEM Platforms**: Splunk, QRadar, ELK Stack
+- **Threat Intelligence**: STIX/TAXII feeds, MISP
+- **Network Monitoring**: Wireshark, tcpdump
+- **Security Orchestration**: SOAR platforms for automated response
+
+Snort remains a cornerstone of network security monitoring, providing reliable and effective intrusion detection capabilities for organizations of all sizes. 

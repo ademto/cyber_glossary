@@ -1,0 +1,235 @@
+---
+title: "Port Scanning"
+description: "A technique used to identify open ports and services available on a networked device, commonly used in network reconnaissance and security assessment."
+category: "Network Security"
+severity: 6
+riskLevel: "Medium"
+skillPath: ["Network Security", "Penetration Testing", "Network Administration", "Security Assessment"]
+jobPath: ["Penetration Tester", "Network Security Engineer", "Security Analyst", "Network Administrator"]
+certsPath: ["CEH", "OSCP", "CompTIA Security+", "CISSP"]
+quickFacts:
+  "Purpose": "Identify open ports and services"
+  "Types": "TCP, UDP, SYN, FIN, XMAS scans"
+  "Tools": "Nmap, Nessus, OpenVAS, Masscan"
+relatedTerms:
+  - slug: "network-security"
+    name: "Network Security"
+    description: "Protecting network infrastructure"
+  - slug: "penetration-testing"
+    name: "Penetration Testing"
+    description: "Authorized security testing"
+  - slug: "vulnerability-assessment"
+    name: "Vulnerability Assessment"
+    description: "Systematic evaluation of vulnerabilities"
+resources:
+  - url: "https://nmap.org/book/man-port-scanning-techniques.html"
+    title: "Nmap: Port Scanning Techniques"
+  - url: "https://www.sans.org/white-papers/port-scanning/"
+    title: "SANS: Port Scanning"
+---
+
+# Port Scanning
+
+Port scanning is a technique used to identify open ports and services available on a networked device. It is a fundamental reconnaissance technique used in network security assessment, penetration testing, and network administration.
+
+## Understanding Port Scanning
+
+### Definition
+Port scanning is the process of systematically checking network ports on a target system to determine which ports are open, closed, or filtered. It helps identify available services and potential vulnerabilities.
+
+### Purpose
+- **Network Reconnaissance**: Gather information about target systems
+- **Security Assessment**: Assess network security posture
+- **Service Discovery**: Identify running services
+- **Vulnerability Assessment**: Identify potential vulnerabilities
+- **Network Administration**: Monitor network services
+
+### Legal Considerations
+- **Authorization**: Require proper authorization
+- **Scope**: Define scanning scope clearly
+- **Compliance**: Ensure compliance with laws
+- **Documentation**: Document scanning activities
+
+## Types of Port Scans
+
+### TCP Scans
+- **TCP Connect Scan**: Complete TCP handshake
+- **SYN Scan**: Send SYN packets only
+- **FIN Scan**: Send FIN packets
+- **XMAS Scan**: Send FIN, PSH, and URG flags
+- **NULL Scan**: Send no flags
+- **ACK Scan**: Send ACK packets
+
+### UDP Scans
+- **UDP Scan**: Scan UDP ports
+- **UDP Service Detection**: Detect UDP services
+- **UDP Response Analysis**: Analyze UDP responses
+- **UDP Timing**: Adjust timing for UDP scans
+
+### Advanced Scans
+- **Window Scan**: Analyze TCP window size
+- **Maimon Scan**: FIN/ACK scan variation
+- **Idle Scan**: Use zombie host for scanning
+- **FTP Bounce Scan**: Use FTP bounce attack
+
+## Port Scanning Tools
+
+### Nmap
+- **Comprehensive Scanning**: Comprehensive port scanning
+- **Multiple Protocols**: Support for multiple protocols
+- **Scripting Engine**: NSE scripting engine
+- **Output Formats**: Multiple output formats
+- **OS Detection**: Operating system detection
+
+### Nessus
+- **Vulnerability Scanning**: Comprehensive vulnerability scanning
+- **Port Discovery**: Automatic port discovery
+- **Service Detection**: Service and version detection
+- **Reporting**: Detailed reporting capabilities
+- **Compliance**: Compliance checking
+
+### OpenVAS
+- **Open Source**: Open source vulnerability scanner
+- **Comprehensive**: Comprehensive vulnerability database
+- **Web Interface**: Web-based interface
+- **Scheduling**: Scheduled scanning capabilities
+- **Reporting**: Detailed reporting
+
+### Masscan
+- **High Speed**: High-speed port scanning
+- **Internet Scale**: Internet-scale scanning
+- **Efficiency**: Efficient scanning algorithms
+- **Compatibility**: Nmap-compatible output
+- **Performance**: High-performance scanning
+
+## Port Scanning Techniques
+
+### Stealth Scanning
+- **Slow Scanning**: Slow scanning to avoid detection
+- **Random Ports**: Scan ports in random order
+- **Timing Adjustments**: Adjust timing between scans
+- **Source Spoofing**: Spoof source addresses
+- **Fragmentation**: Fragment packets
+
+### Service Detection
+- **Banner Grabbing**: Grab service banners
+- **Version Detection**: Detect service versions
+- **Service Fingerprinting**: Fingerprint services
+- **Default Credentials**: Test default credentials
+- **Service Enumeration**: Enumerate services
+
+### Advanced Techniques
+- **Idle Scanning**: Use idle hosts for scanning
+- **FTP Bounce**: Use FTP bounce attacks
+- **Proxy Scanning**: Scan through proxies
+- **Distributed Scanning**: Distribute scanning load
+- **Covert Scanning**: Covert scanning techniques
+
+## Port Scanning Methodology
+
+### Planning Phase
+- **Scope Definition**: Define scanning scope
+- **Authorization**: Obtain proper authorization
+- **Tool Selection**: Select appropriate tools
+- **Timing**: Plan scanning timing
+
+### Execution Phase
+- **Initial Reconnaissance**: Conduct initial reconnaissance
+- **Port Discovery**: Discover open ports
+- **Service Detection**: Detect running services
+- **Vulnerability Assessment**: Assess vulnerabilities
+
+### Analysis Phase
+- **Data Analysis**: Analyze scan results
+- **Service Mapping**: Map discovered services
+- **Risk Assessment**: Assess security risks
+- **Report Generation**: Generate detailed reports
+
+## Port Scanning in Security Assessment
+
+### Penetration Testing
+- **Reconnaissance**: Initial reconnaissance phase
+- **Service Enumeration**: Enumerate services
+- **Vulnerability Identification**: Identify vulnerabilities
+- **Exploitation Planning**: Plan exploitation activities
+
+### Vulnerability Assessment
+- **Service Discovery**: Discover network services
+- **Vulnerability Scanning**: Scan for vulnerabilities
+- **Risk Analysis**: Analyze security risks
+- **Remediation Planning**: Plan remediation activities
+
+### Network Security Monitoring
+- **Baseline Establishment**: Establish network baselines
+- **Change Detection**: Detect network changes
+- **Anomaly Detection**: Detect anomalies
+- **Incident Response**: Support incident response
+
+## Port Scanning Detection and Prevention
+
+### Detection Methods
+- **Intrusion Detection**: IDS/IPS detection
+- **Log Analysis**: Analyze system logs
+- **Network Monitoring**: Monitor network traffic
+- **Anomaly Detection**: Detect anomalous activity
+
+### Prevention Strategies
+- **Firewall Rules**: Configure firewall rules
+- **Port Filtering**: Filter unnecessary ports
+- **Service Hardening**: Harden services
+- **Network Segmentation**: Segment networks
+
+### Response Procedures
+- **Alert Investigation**: Investigate scanning alerts
+- **Source Blocking**: Block scanning sources
+- **Incident Response**: Respond to scanning incidents
+- **Documentation**: Document scanning incidents
+
+## Port Scanning Best Practices
+
+### Legal and Ethical
+1. **Authorization**: Always obtain proper authorization
+2. **Scope Definition**: Clearly define scanning scope
+3. **Documentation**: Document all scanning activities
+4. **Compliance**: Ensure compliance with laws
+
+### Technical
+1. **Tool Selection**: Select appropriate tools
+2. **Configuration**: Configure tools properly
+3. **Timing**: Use appropriate timing
+4. **Output Management**: Manage scan outputs
+
+### Security
+1. **Detection Avoidance**: Avoid detection when appropriate
+2. **Stealth Techniques**: Use stealth techniques
+3. **Coverage**: Ensure comprehensive coverage
+4. **Validation**: Validate scan results
+
+## Port Scanning Challenges
+
+### Technical Challenges
+- **Firewall Evasion**: Evading firewall detection
+- **Rate Limiting**: Dealing with rate limiting
+- **Network Complexity**: Complex network environments
+- **Service Detection**: Accurate service detection
+
+### Operational Challenges
+- **False Positives**: Managing false positives
+- **Scan Duration**: Long scan durations
+- **Resource Usage**: High resource usage
+- **Network Impact**: Impact on network performance
+
+### Legal Challenges
+- **Authorization**: Obtaining proper authorization
+- **Scope Management**: Managing scanning scope
+- **Compliance**: Ensuring legal compliance
+- **Documentation**: Maintaining proper documentation
+
+## Related Concepts
+- **Network Security**: Protecting network infrastructure
+- **Penetration Testing**: Authorized security testing
+- **Vulnerability Assessment**: Systematic evaluation of vulnerabilities
+
+## Conclusion
+
+Port scanning is a fundamental technique in network security assessment and penetration testing. When used properly and legally, it provides valuable information about network services and potential vulnerabilities, helping organizations improve their security posture. 

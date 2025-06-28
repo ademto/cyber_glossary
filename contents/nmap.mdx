@@ -1,0 +1,209 @@
+---
+title: "Nmap"
+description: "Network Mapper - a powerful open-source network discovery and security auditing tool used for network exploration, security scanning, and port scanning."
+category: "Security Tools"
+severity: 6
+riskLevel: "Medium"
+skillPath: ["Network Security", "Penetration Testing", "Network Administration", "Security Assessment"]
+jobPath: ["Penetration Tester", "Network Security Engineer", "Security Analyst", "Network Administrator"]
+certsPath: ["CEH", "OSCP", "CompTIA Security+", "CISSP"]
+quickFacts:
+  "Type": "Network discovery and security auditing tool"
+  "License": "Open source (GPL)"
+  "Platforms": "Windows, Linux, macOS, BSD"
+  "Features": "Port scanning, OS detection, service detection"
+relatedTerms:
+  - slug: "port-scanning"
+    name: "Port Scanning"
+    description: "Identifying open ports and services"
+  - slug: "penetration-testing"
+    name: "Penetration Testing"
+    description: "Authorized security testing"
+  - slug: "network-security"
+    name: "Network Security"
+    description: "Protecting network infrastructure"
+resources:
+  - url: "https://nmap.org/"
+    title: "Nmap Official Website"
+  - url: "https://nmap.org/book/"
+    title: "Nmap Network Scanning"
+---
+
+# Nmap
+
+Nmap (Network Mapper) is a powerful open-source network discovery and security auditing tool. It is used for network exploration, security scanning, port scanning, and network inventory management.
+
+## Understanding Nmap
+
+### Definition
+Nmap is a network scanner that discovers hosts and services on a computer network, creating a map of the network. It sends packets to target hosts and analyzes responses to determine network topology and available services.
+
+### Purpose
+- **Network Discovery**: Discover hosts and network topology
+- **Port Scanning**: Identify open ports and services
+- **Security Auditing**: Assess network security posture
+- **Network Inventory**: Maintain network inventory
+- **Vulnerability Assessment**: Identify potential vulnerabilities
+
+### Key Features
+- **Host Discovery**: Discover hosts on networks
+- **Port Scanning**: Scan for open ports
+- **Service Detection**: Detect running services
+- **OS Detection**: Detect operating systems
+- **Scripting Engine**: NSE for advanced scanning
+
+## Nmap Scanning Techniques
+
+### Host Discovery
+- **Ping Scan**: Basic ping sweep
+- **ARP Scan**: ARP-based discovery
+- **ICMP Scan**: ICMP-based discovery
+- **TCP SYN Scan**: TCP SYN-based discovery
+- **UDP Scan**: UDP-based discovery
+
+### Port Scanning
+- **TCP Connect Scan**: Complete TCP handshake
+- **TCP SYN Scan**: SYN packets only
+- **TCP FIN Scan**: FIN packets
+- **TCP XMAS Scan**: FIN, PSH, URG flags
+- **TCP NULL Scan**: No flags
+- **UDP Scan**: UDP port scanning
+
+### Advanced Techniques
+- **Idle Scan**: Use zombie hosts
+- **FTP Bounce Scan**: FTP bounce attack
+- **Window Scan**: Analyze TCP window
+- **ACK Scan**: ACK packet scanning
+- **Version Detection**: Detect service versions
+
+## Nmap Scripting Engine (NSE)
+
+### Script Categories
+- **Auth**: Authentication bypass scripts
+- **Broadcast**: Broadcast discovery scripts
+- **Brute**: Brute force attack scripts
+- **Default**: Default scripts
+- **Discovery**: Service discovery scripts
+- **DoS**: Denial of service scripts
+- **Exploit**: Exploitation scripts
+- **External**: External database queries
+- **Fuzzer**: Fuzzing scripts
+- **Intrusive**: Intrusive scripts
+- **Malware**: Malware detection scripts
+- **Safe**: Safe scripts
+- **Version**: Version detection scripts
+- **Vuln**: Vulnerability detection scripts
+
+### Custom Scripts
+- **Script Development**: Develop custom NSE scripts
+- **Lua Programming**: Write scripts in Lua
+- **Script Libraries**: Use script libraries
+- **Script Sharing**: Share scripts with community
+
+## Nmap Output Formats
+
+### Text Output
+- **Normal Output**: Standard text output
+- **Verbose Output**: Detailed output
+- **Debug Output**: Debug information
+- **Stats Output**: Scanning statistics
+
+### XML Output
+- **Structured Data**: Structured XML output
+- **Machine Readable**: Machine-readable format
+- **Integration**: Easy integration with tools
+- **Parsing**: Easy parsing and analysis
+
+### Other Formats
+- **Grepable Output**: Grep-friendly output
+- **Script Kiddie**: Script kiddie format
+- **Custom Formats**: Custom output formats
+
+## Nmap Use Cases
+
+### Network Administration
+- **Network Inventory**: Maintain network inventory
+- **Service Monitoring**: Monitor network services
+- **Change Detection**: Detect network changes
+- **Troubleshooting**: Troubleshoot network issues
+
+### Security Assessment
+- **Vulnerability Assessment**: Assess network vulnerabilities
+- **Penetration Testing**: Support penetration testing
+- **Security Auditing**: Audit network security
+- **Incident Response**: Support incident response
+
+### Compliance
+- **Policy Compliance**: Ensure policy compliance
+- **Audit Requirements**: Meet audit requirements
+- **Documentation**: Document network topology
+- **Reporting**: Generate compliance reports
+
+## Nmap Best Practices
+
+### Legal and Ethical
+1. **Authorization**: Always obtain proper authorization
+2. **Scope Definition**: Clearly define scanning scope
+3. **Documentation**: Document scanning activities
+4. **Compliance**: Ensure legal compliance
+
+### Technical
+1. **Tool Selection**: Select appropriate scanning techniques
+2. **Timing**: Use appropriate timing options
+3. **Output Management**: Manage scan outputs
+4. **Script Selection**: Select appropriate scripts
+
+### Security
+1. **Detection Avoidance**: Avoid detection when appropriate
+2. **Stealth Techniques**: Use stealth scanning
+3. **Coverage**: Ensure comprehensive coverage
+4. **Validation**: Validate scan results
+
+## Nmap Challenges
+
+### Technical Challenges
+- **Firewall Evasion**: Evading firewall detection
+- **Rate Limiting**: Dealing with rate limiting
+- **Network Complexity**: Complex network environments
+- **False Positives**: Managing false positives
+
+### Operational Challenges
+- **Scan Duration**: Long scan durations
+- **Resource Usage**: High resource usage
+- **Network Impact**: Impact on network performance
+- **Result Analysis**: Analyzing large result sets
+
+### Security Challenges
+- **Detection**: Avoiding detection by security systems
+- **Authorization**: Obtaining proper authorization
+- **Scope Management**: Managing scanning scope
+- **Documentation**: Maintaining proper documentation
+
+## Nmap Integration
+
+### Security Tools
+- **Vulnerability Scanners**: Integrate with vulnerability scanners
+- **SIEM Systems**: Integrate with SIEM systems
+- **IDS/IPS**: Work with intrusion detection systems
+- **Firewalls**: Integrate with firewall management
+
+### Automation
+- **Scripting**: Automate Nmap scans
+- **Scheduling**: Schedule regular scans
+- **Reporting**: Automated reporting
+- **Alerting**: Automated alerting
+
+### APIs and Libraries
+- **Python Libraries**: Python Nmap libraries
+- **REST APIs**: REST API integration
+- **Database Integration**: Database storage
+- **Web Interfaces**: Web-based interfaces
+
+## Related Concepts
+- **Port Scanning**: Identifying open ports and services
+- **Penetration Testing**: Authorized security testing
+- **Network Security**: Protecting network infrastructure
+
+## Conclusion
+
+Nmap is an essential tool for network security professionals, providing comprehensive network discovery and security assessment capabilities. When used properly and legally, it provides valuable insights into network topology and security posture. 

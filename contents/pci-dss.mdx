@@ -1,0 +1,244 @@
+---
+title: "PCI DSS"
+description: "Payment Card Industry Data Security Standard - a set of security standards designed to ensure that all companies that process, store, or transmit credit card information maintain a secure environment."
+category: "Compliance"
+severity: 9
+riskLevel: "Critical"
+skillPath: ["Payment Security", "Compliance", "Risk Management", "Security Controls"]
+jobPath: ["Payment Security Officer", "Compliance Manager", "Security Engineer", "IT Manager"]
+certsPath: ["PCIP", "CISSP", "CISM", "CompTIA Security+"]
+quickFacts:
+  "Scope": "Payment card data protection"
+  "Compliance Levels": "Four levels based on transaction volume"
+  "Requirements": "12 main requirements across 6 control objectives"
+relatedTerms:
+  - slug: "data-protection"
+    name: "Data Protection"
+    description: "Protecting personal and sensitive data"
+  - slug: "encryption"
+    name: "Encryption"
+    description: "Protecting data through cryptographic methods"
+  - slug: "compliance"
+    name: "Compliance"
+    description: "Adherence to laws and regulations"
+resources:
+  - url: "https://www.pcisecuritystandards.org/"
+    title: "PCI Security Standards Council"
+  - url: "https://www.pcisecuritystandards.org/document_library"
+    title: "PCI DSS Documentation"
+---
+
+# PCI DSS (Payment Card Industry Data Security Standard)
+
+PCI DSS is a set of security standards designed to ensure that all companies that process, store, or transmit credit card information maintain a secure environment. It is mandated by major credit card brands and enforced by payment processors.
+
+## Understanding PCI DSS
+
+### Definition
+PCI DSS is a proprietary information security standard for organizations that handle branded credit cards from major card schemes including Visa, MasterCard, American Express, Discover, and JCB.
+
+### Scope
+- **Cardholder Data**: Primary account numbers, cardholder names
+- **Sensitive Authentication Data**: Full magnetic stripe, CVV, PINs
+- **Processing Systems**: Systems that process payment data
+- **Storage Systems**: Systems that store payment data
+- **Transmission Networks**: Networks that transmit payment data
+
+### Compliance Levels
+- **Level 1**: Over 6 million transactions annually
+- **Level 2**: 1-6 million transactions annually
+- **Level 3**: 20,000-1 million e-commerce transactions
+- **Level 4**: Under 20,000 e-commerce transactions
+
+## PCI DSS Requirements
+
+### Build and Maintain a Secure Network
+- **Requirement 1**: Install and maintain a firewall configuration
+- **Requirement 2**: Do not use vendor-supplied defaults
+
+### Protect Cardholder Data
+- **Requirement 3**: Protect stored cardholder data
+- **Requirement 4**: Encrypt transmission of cardholder data
+
+### Maintain Vulnerability Management Program
+- **Requirement 5**: Use and regularly update anti-virus software
+- **Requirement 6**: Develop and maintain secure systems and applications
+
+### Implement Strong Access Control Measures
+- **Requirement 7**: Restrict access to cardholder data
+- **Requirement 8**: Assign unique ID to each person with computer access
+- **Requirement 9**: Restrict physical access to cardholder data
+
+### Regularly Monitor and Test Networks
+- **Requirement 10**: Track and monitor all access to network resources
+- **Requirement 11**: Regularly test security systems and processes
+
+### Maintain Information Security Policy
+- **Requirement 12**: Maintain a policy that addresses information security
+
+## PCI DSS Implementation
+
+### Assessment Phase
+- **Scope Definition**: Define PCI DSS scope
+- **Gap Analysis**: Identify compliance gaps
+- **Risk Assessment**: Assess security risks
+- **Resource Planning**: Plan required resources
+
+### Implementation Phase
+- **Control Implementation**: Implement security controls
+- **Process Development**: Develop security processes
+- **Policy Creation**: Create security policies
+- **Training**: Train employees on requirements
+
+### Validation Phase
+- **Self-Assessment**: Conduct self-assessment
+- **QSA Assessment**: Qualified Security Assessor review
+- **ASV Scan**: Approved Scanning Vendor scans
+- **Compliance Validation**: Validate compliance status
+
+## PCI DSS Controls
+
+### Network Security
+- **Firewall Configuration**: Proper firewall configuration
+- **Network Segmentation**: Segment networks appropriately
+- **Vulnerability Management**: Manage network vulnerabilities
+- **Intrusion Detection**: Deploy intrusion detection systems
+
+### Data Protection
+- **Encryption**: Encrypt cardholder data
+- **Key Management**: Manage encryption keys
+- **Data Retention**: Limit data retention
+- **Data Disposal**: Secure data disposal
+
+### Access Control
+- **User Management**: Manage user accounts
+- **Authentication**: Strong authentication mechanisms
+- **Authorization**: Role-based access control
+- **Physical Security**: Physical access controls
+
+### Monitoring and Testing
+- **Log Management**: Comprehensive logging
+- **Security Monitoring**: Monitor security events
+- **Vulnerability Scanning**: Regular vulnerability scans
+- **Penetration Testing**: Regular penetration testing
+
+## PCI DSS Compliance
+
+### Self-Assessment Questionnaire (SAQ)
+- **SAQ A**: Card-not-present merchants
+- **SAQ B**: Card-present merchants
+- **SAQ C**: Merchants with payment applications
+- **SAQ D**: Merchants with complex environments
+
+### Qualified Security Assessor (QSA)
+- **Certified Assessors**: PCI SSC certified assessors
+- **Assessment Process**: Formal assessment process
+- **Report on Compliance**: Generate ROC
+- **Attestation**: Provide compliance attestation
+
+### Approved Scanning Vendor (ASV)
+- **External Scanning**: External vulnerability scanning
+- **Quarterly Scans**: Quarterly scanning requirements
+- **Scan Reports**: Generate scan reports
+- **Compliance Validation**: Validate compliance
+
+## PCI DSS Enforcement
+
+### Card Brands
+- **Visa**: Visa compliance requirements
+- **MasterCard**: MasterCard compliance requirements
+- **American Express**: Amex compliance requirements
+- **Discover**: Discover compliance requirements
+
+### Acquirers
+- **Acquirer Requirements**: Acquirer compliance requirements
+- **Validation Requirements**: Validation requirements
+- **Penalty Enforcement**: Penalty enforcement
+- **Compliance Monitoring**: Monitor compliance status
+
+### Penalties
+- **Fines**: Financial penalties for non-compliance
+- **Processing Restrictions**: Restrictions on processing
+- **Termination**: Termination of processing relationships
+- **Reputational Damage**: Damage to reputation
+
+## PCI DSS in Different Contexts
+
+### E-commerce
+- **Online Merchants**: E-commerce merchant compliance
+- **Payment Gateways**: Payment gateway security
+- **Shopping Carts**: Shopping cart security
+- **Mobile Commerce**: Mobile payment security
+
+### Retail
+- **Point of Sale**: POS system security
+- **Card Readers**: Card reader security
+- **Receipt Security**: Receipt data protection
+- **Store Networks**: Store network security
+
+### Hospitality
+- **Hotel Systems**: Hotel payment systems
+- **Restaurant POS**: Restaurant payment systems
+- **Reservation Systems**: Reservation system security
+- **Guest Services**: Guest service security
+
+### Healthcare
+- **Medical Payments**: Medical payment processing
+- **Insurance Payments**: Insurance payment security
+- **Patient Payments**: Patient payment security
+- **Healthcare Networks**: Healthcare network security
+
+## PCI DSS Best Practices
+
+### Governance
+1. **Executive Support**: Executive commitment to compliance
+2. **Compliance Officer**: Designate compliance officer
+3. **Security Team**: Establish security team
+4. **Regular Reviews**: Regular compliance reviews
+
+### Risk Management
+1. **Risk Assessment**: Regular risk assessments
+2. **Vendor Management**: Manage vendor risks
+3. **Incident Response**: Prepare incident response
+4. **Business Continuity**: Plan for business continuity
+
+### Technical Implementation
+1. **Defense in Depth**: Implement defense in depth
+2. **Access Controls**: Strong access controls
+3. **Encryption**: Encrypt sensitive data
+4. **Monitoring**: Comprehensive monitoring
+
+### Training and Awareness
+1. **Employee Training**: Regular employee training
+2. **Role-based Training**: Specific training for roles
+3. **Testing**: Test employee knowledge
+4. **Documentation**: Document training activities
+
+## PCI DSS Challenges
+
+### Implementation Challenges
+- **Complexity**: Complex technical requirements
+- **Resource Requirements**: Significant resource investment
+- **Scope Management**: Managing compliance scope
+- **Technology Integration**: Integrating with existing systems
+
+### Operational Challenges
+- **Ongoing Compliance**: Maintaining ongoing compliance
+- **Change Management**: Managing system changes
+- **Vendor Management**: Managing vendor compliance
+- **Incident Response**: Responding to security incidents
+
+### Cost Challenges
+- **Implementation Costs**: High implementation costs
+- **Maintenance Costs**: Ongoing maintenance costs
+- **Assessment Costs**: Regular assessment costs
+- **Penalty Costs**: Potential penalty costs
+
+## Related Concepts
+- **Data Protection**: Protecting personal and sensitive data
+- **Encryption**: Protecting data through cryptographic methods
+- **Compliance**: Adherence to laws and regulations
+
+## Conclusion
+
+PCI DSS is essential for organizations that handle payment card data, requiring comprehensive security controls and ongoing compliance management. Proper implementation and maintenance of PCI DSS controls are crucial for protecting payment data and maintaining trust in the payment ecosystem. 

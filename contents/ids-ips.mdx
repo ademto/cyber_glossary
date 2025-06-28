@@ -1,0 +1,220 @@
+---
+title: "IDS/IPS"
+description: "Intrusion Detection System (IDS) and Intrusion Prevention System (IPS) that monitor network traffic for suspicious activity and potential threats."
+category: "Network Security"
+severity: 8
+riskLevel: "High"
+skillPath: ["Network Security", "Threat Detection", "Security Monitoring", "Incident Response"]
+jobPath: ["Network Security Engineer", "SOC Analyst", "Security Engineer", "Threat Hunter"]
+certsPath: ["CISSP", "CompTIA Security+", "GIAC GCIA", "SANS SEC503"]
+quickFacts:
+  "Purpose": "Detect and prevent network intrusions"
+  "Types": "Network-based, host-based, signature-based, anomaly-based"
+  "Deployment": "Inline (IPS) or passive (IDS)"
+relatedTerms:
+  - slug: "firewall"
+    name: "Firewall"
+    description: "Network security device that controls traffic"
+  - slug: "network-security"
+    name: "Network Security"
+    description: "Protecting network infrastructure and data"
+  - slug: "threat-detection"
+    name: "Threat Detection"
+    description: "Identifying security threats and attacks"
+resources:
+  - url: "https://www.snort.org/"
+    title: "Snort: Open Source IDS/IPS"
+  - url: "https://suricata.io/"
+    title: "Suricata: High Performance IDS/IPS"
+---
+
+# IDS/IPS (Intrusion Detection System/Intrusion Prevention System)
+
+IDS/IPS systems are security tools that monitor network traffic and system activities to detect and prevent unauthorized access, malicious activities, and security threats. IDS systems detect threats, while IPS systems can actively block them.
+
+## How IDS/IPS Works
+
+### Detection Methods
+- **Signature-based Detection**: Matches traffic against known attack patterns
+- **Anomaly-based Detection**: Identifies unusual behavior patterns
+- **Behavioral Analysis**: Analyzes traffic behavior over time
+- **Heuristic Analysis**: Uses rules and algorithms to detect threats
+
+### Response Actions
+- **Alert Generation**: Generate alerts for detected threats
+- **Logging**: Log suspicious activities for analysis
+- **Blocking**: Block malicious traffic (IPS only)
+- **Rate Limiting**: Limit traffic rates for suspicious sources
+
+### Deployment Modes
+- **Inline Mode**: Traffic passes through the system (IPS)
+- **Passive Mode**: Traffic is monitored without interference (IDS)
+- **Tap Mode**: Traffic is copied for analysis
+- **Span Port**: Traffic is mirrored for monitoring
+
+## Types of IDS/IPS
+
+### Network-based IDS/IPS (NIDS/NIPS)
+- **Network Monitoring**: Monitor network traffic
+- **Protocol Analysis**: Analyze network protocols
+- **Traffic Analysis**: Analyze traffic patterns
+- **Packet Inspection**: Inspect packet contents
+
+### Host-based IDS/IPS (HIDS/HIPS)
+- **System Monitoring**: Monitor system activities
+- **File Integrity**: Monitor file system changes
+- **Process Monitoring**: Monitor running processes
+- **Registry Monitoring**: Monitor registry changes (Windows)
+
+### Wireless IDS/IPS (WIDS/WIPS)
+- **Wireless Monitoring**: Monitor wireless networks
+- **Rogue AP Detection**: Detect unauthorized access points
+- **Wireless Attacks**: Detect wireless-specific attacks
+- **Spectrum Analysis**: Analyze wireless spectrum
+
+## Detection Techniques
+
+### Signature-based Detection
+- **Pattern Matching**: Match traffic against known patterns
+- **String Matching**: Match specific strings in traffic
+- **Regular Expressions**: Use regex for pattern matching
+- **Protocol Analysis**: Analyze protocol-specific patterns
+
+### Anomaly-based Detection
+- **Statistical Analysis**: Use statistical methods
+- **Machine Learning**: Use ML algorithms
+- **Baseline Comparison**: Compare against normal baselines
+- **Threshold Monitoring**: Monitor threshold violations
+
+### Behavioral Analysis
+- **User Behavior**: Analyze user behavior patterns
+- **Network Behavior**: Analyze network behavior patterns
+- **Application Behavior**: Analyze application behavior
+- **System Behavior**: Analyze system behavior patterns
+
+## Popular IDS/IPS Solutions
+
+### Open Source Solutions
+- **Snort**: Most popular open source IDS/IPS
+- **Suricata**: High-performance IDS/IPS
+- **OSSEC**: Host-based intrusion detection
+- **Bro/Zeek**: Network security monitor
+
+### Commercial Solutions
+- **Cisco FirePOWER**: Enterprise IDS/IPS solution
+- **Palo Alto Networks**: Next-generation firewall with IPS
+- **Check Point**: Security gateway with IPS
+- **Fortinet FortiGate**: Unified threat management
+
+### Cloud Solutions
+- **AWS GuardDuty**: AWS threat detection
+- **Azure Security Center**: Azure security monitoring
+- **Google Cloud Armor**: Google Cloud security
+- **Cloudflare**: Web application firewall and DDoS protection
+
+## IDS/IPS Implementation
+
+### Planning Phase
+1. **Requirements Analysis**: Define security requirements
+2. **Network Assessment**: Assess network architecture
+3. **Threat Assessment**: Assess potential threats
+4. **Resource Planning**: Plan resources and budget
+
+### Deployment Phase
+1. **Hardware/Software Setup**: Set up IDS/IPS systems
+2. **Network Integration**: Integrate with network infrastructure
+3. **Rule Configuration**: Configure detection rules
+4. **Testing**: Test IDS/IPS functionality
+
+### Operational Phase
+1. **Monitoring**: Monitor IDS/IPS performance
+2. **Rule Tuning**: Tune detection rules
+3. **Maintenance**: Regular maintenance and updates
+4. **Optimization**: Optimize performance
+
+## Use Cases
+
+### Network Security
+- **Threat Detection**: Detect network-based threats
+- **Attack Prevention**: Prevent network attacks
+- **Traffic Analysis**: Analyze network traffic
+- **Compliance**: Meet security compliance requirements
+
+### Application Security
+- **Web Application Protection**: Protect web applications
+- **API Security**: Secure API endpoints
+- **Database Protection**: Protect database systems
+- **Email Security**: Secure email systems
+
+### Endpoint Security
+- **Host Protection**: Protect individual hosts
+- **Malware Detection**: Detect malware on hosts
+- **System Monitoring**: Monitor system activities
+- **File Integrity**: Monitor file system integrity
+
+### Cloud Security
+- **Cloud Workload Protection**: Protect cloud workloads
+- **Container Security**: Secure container environments
+- **Serverless Security**: Secure serverless functions
+- **Multi-cloud Security**: Secure multi-cloud environments
+
+## Best Practices
+
+### Rule Management
+1. **Rule Tuning**: Regularly tune detection rules
+2. **False Positive Reduction**: Reduce false positives
+3. **Rule Testing**: Test rules before deployment
+4. **Rule Documentation**: Document detection rules
+
+### Performance Optimization
+1. **Resource Monitoring**: Monitor system resources
+2. **Performance Tuning**: Tune system performance
+3. **Scalability Planning**: Plan for scalability
+4. **Capacity Planning**: Plan for capacity growth
+
+### Security
+1. **Access Control**: Implement strong access controls
+2. **Encryption**: Encrypt sensitive data
+3. **Network Security**: Secure IDS/IPS network access
+4. **Regular Updates**: Keep systems updated
+
+### Monitoring and Response
+1. **Alert Management**: Manage security alerts
+2. **Incident Response**: Integrate with incident response
+3. **Forensics**: Support forensic investigations
+4. **Reporting**: Generate security reports
+
+## Challenges
+
+### False Positives
+- **Alert Fatigue**: Reduce alert fatigue
+- **Rule Tuning**: Continuously tune rules
+- **Context**: Provide context for alerts
+- **Automation**: Automate response to reduce manual work
+
+### Performance Impact
+- **Latency**: Minimize network latency
+- **Throughput**: Maintain network throughput
+- **Resource Usage**: Optimize resource usage
+- **Scalability**: Scale to handle growth
+
+### Evasion Techniques
+- **Fragmentation**: Handle packet fragmentation
+- **Encryption**: Handle encrypted traffic
+- **Obfuscation**: Handle obfuscated attacks
+- **Polymorphic**: Handle polymorphic malware
+
+### Integration
+- **Tool Integration**: Integrate with security tools
+- **SIEM Integration**: Integrate with SIEM systems
+- **API Management**: Manage API integrations
+- **Standardization**: Standardize data formats
+
+## Related Concepts
+- **Firewall**: Network security device that controls traffic
+- **Network Security**: Protecting network infrastructure and data
+- **Threat Detection**: Identifying security threats and attacks
+
+## Conclusion
+
+IDS/IPS systems are critical components of network security, providing detection and prevention capabilities for various threats. Proper implementation, configuration, and maintenance are essential for effective security operations. 

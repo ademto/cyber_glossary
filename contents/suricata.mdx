@@ -1,0 +1,207 @@
+---
+title: "Suricata"
+acronym: "N/A"
+description: "A high-performance network IDS/IPS and network security monitoring engine that provides real-time intrusion detection and prevention."
+category: "Security Tools"
+riskLevel: "Low"
+severity: 2
+skillPath: ["Network Security", "Intrusion Detection", "Security Monitoring", "Threat Hunting"]
+jobPath: ["Security Analyst", "Network Security Engineer", "SOC Analyst", "Threat Hunter"]
+certsPath: ["CompTIA Security+", "Cisco CCNA Security", "GIAC GCIA", "SANS SEC503"]
+quickFacts:
+  "Type": "Network IDS/IPS/NSM"
+  "License": "Open Source (GPLv2)"
+  "Platform": "Linux, FreeBSD, Windows"
+  "First Release": "2009"
+relatedTerms:
+  - slug: "snort"
+    name: "Snort"
+    description: "Open-source network intrusion detection and prevention system"
+  - slug: "ids-ips"
+    name: "Intrusion Detection/Prevention Systems"
+    description: "Security systems that monitor network traffic for suspicious activity"
+  - slug: "threat-hunting"
+    name: "Threat Hunting"
+    description: "Proactive search for cyber threats that evade existing security controls"
+  - slug: "siem"
+    name: "SIEM"
+    description: "Security Information and Event Management systems"
+resources:
+  - url: "https://suricata.io/"
+    title: "Official Suricata Website"
+  - url: "https://suricata.readthedocs.io/"
+    title: "Suricata Documentation"
+  - url: "https://github.com/OISF/suricata"
+    title: "Suricata Source Code"
+---
+
+# Suricata
+
+Suricata is a high-performance, open-source network threat detection engine that provides intrusion detection (IDS), intrusion prevention (IPS), network security monitoring (NSM), and offline pcap processing capabilities. Developed by the Open Information Security Foundation (OISF), Suricata is designed to handle high-speed networks and provide comprehensive security monitoring.
+
+## What is Suricata?
+
+Suricata is a next-generation network security monitoring engine that combines the capabilities of traditional IDS/IPS systems with advanced features for threat hunting and network forensics. It uses multi-threading and hardware acceleration to process network traffic at high speeds while maintaining accuracy and providing detailed analysis.
+
+## Key Features
+
+### High-Performance Engine
+- Multi-threaded architecture for parallel processing
+- Hardware acceleration support (FPGA, GPU, DPDK)
+- Capable of processing traffic at 10+ Gbps speeds
+- Efficient memory usage and resource management
+
+### Network Security Monitoring (NSM)
+- Full packet capture and storage
+- Protocol analysis and anomaly detection
+- File extraction and analysis capabilities
+- Network flow tracking and analysis
+
+### Advanced Detection Capabilities
+- Signature-based detection with custom rules
+- Anomaly-based detection using statistical analysis
+- Protocol anomaly detection
+- File type identification and analysis
+
+### File Analysis
+- Automatic file extraction from network traffic
+- File type identification and validation
+- Integration with antivirus and sandbox solutions
+- File hash calculation and reputation checking
+
+## Suricata Architecture
+
+### Core Components
+1. **Capture Engine**: Handles packet capture from various interfaces
+2. **Decode Engine**: Parses and normalizes network protocols
+3. **Detection Engine**: Applies rules and performs analysis
+4. **Output Engine**: Handles logging, alerting, and data export
+5. **Management Interface**: Provides configuration and monitoring
+
+### Operating Modes
+- **IDS Mode**: Passive monitoring and alerting
+- **IPS Mode**: Active blocking and prevention
+- **NSM Mode**: Full packet capture and analysis
+- **Offline Mode**: Analysis of stored pcap files
+
+## Rule Language
+
+Suricata uses a rule language similar to Snort but with additional features:
+
+```
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SSH brute force attempt"; flow:established; content:"SSH"; nocase; threshold:type threshold, track by_src, count 5, seconds 60; sid:1000001; rev:1;)
+```
+
+### Advanced Rule Features
+- **HTTP Keywords**: Specific HTTP protocol analysis
+- **SSL/TLS Keywords**: Encrypted traffic analysis
+- **File Keywords**: File type and content analysis
+- **Flow Keywords**: Connection state and direction analysis
+
+## Deployment Strategies
+
+### Network-Based Deployment
+- **Inline IPS**: Active blocking of malicious traffic
+- **Passive IDS**: Monitoring without traffic modification
+- **TAP/SPAN**: Monitoring mirrored network traffic
+- **Load Balancing**: Distributed deployment across multiple sensors
+
+### Cloud and Virtual Environments
+- **Container Deployment**: Docker and Kubernetes integration
+- **Cloud-Native**: AWS, Azure, and GCP deployment options
+- **Virtual Appliances**: Pre-configured virtual machines
+- **Hybrid Deployments**: On-premises and cloud integration
+
+### High-Availability Setup
+- **Failover Configuration**: Redundant sensor deployment
+- **Load Distribution**: Traffic splitting across multiple sensors
+- **Centralized Management**: Unified configuration and monitoring
+- **Scalable Architecture**: Horizontal scaling capabilities
+
+## Career Applications
+
+### Security Analyst
+- Monitor Suricata alerts and investigate security incidents
+- Analyze network traffic patterns and identify threats
+- Tune detection rules to improve accuracy and reduce false positives
+- Correlate events with other security tools and intelligence sources
+
+### Network Security Engineer
+- Deploy and configure Suricata across network infrastructure
+- Optimize performance for high-speed networks
+- Integrate with network security architecture
+- Maintain and update rule sets and configurations
+
+### SOC Analyst
+- Monitor Suricata in security operations center environment
+- Respond to security alerts and incidents
+- Perform threat hunting using Suricata data
+- Generate security reports and metrics
+
+### Threat Hunter
+- Use Suricata for proactive threat detection
+- Analyze network traffic for indicators of compromise
+- Develop custom detection rules for emerging threats
+- Perform forensic analysis using captured packet data
+
+## Integration Capabilities
+
+### SIEM Integration
+- **Splunk**: Direct integration with Splunk Enterprise Security
+- **ELK Stack**: Logstash and Elasticsearch integration
+- **QRadar**: IBM QRadar SIEM integration
+- **Custom APIs**: REST API for custom integrations
+
+### Threat Intelligence
+- **STIX/TAXII**: Standard threat intelligence formats
+- **MISP**: Malware Information Sharing Platform integration
+- **Custom Feeds**: Integration with commercial and open-source feeds
+- **Reputation Services**: IP, domain, and file reputation checking
+
+### Security Orchestration
+- **SOAR Platforms**: Automated incident response integration
+- **Ticketing Systems**: ServiceNow, Jira, and other ITSM tools
+- **Email and Chat**: Slack, Microsoft Teams, and email notifications
+- **Custom Workflows**: Automated response and remediation
+
+## Performance Optimization
+
+### Hardware Acceleration
+- **FPGA**: Field-programmable gate array acceleration
+- **GPU**: Graphics processing unit acceleration
+- **DPDK**: Data Plane Development Kit for high-speed packet processing
+- **CPU Optimization**: Multi-core and SIMD instruction utilization
+
+### Configuration Tuning
+- **Thread Configuration**: Optimal thread allocation per CPU core
+- **Memory Management**: Efficient buffer and cache utilization
+- **Rule Optimization**: Fast-path rules and rule ordering
+- **Output Optimization**: Efficient logging and alerting mechanisms
+
+## Best Practices
+
+### Deployment Planning
+- Assess network topology and traffic patterns
+- Plan for scalability and growth requirements
+- Consider high-availability and disaster recovery
+- Document configuration and operational procedures
+
+### Rule Management
+- Start with vendor and community rule sets
+- Customize rules for your specific environment
+- Regularly update and maintain rule sets
+- Test rules in lab environment before production
+
+### Monitoring and Maintenance
+- Monitor system performance and resource utilization
+- Regular log rotation and storage management
+- Keep Suricata updated with latest versions
+- Perform regular health checks and maintenance
+
+### Security Considerations
+- Secure Suricata management interfaces
+- Implement proper access controls and authentication
+- Encrypt sensitive configuration and log data
+- Regular security assessments and penetration testing
+
+Suricata represents the evolution of network security monitoring, providing the performance, flexibility, and capabilities needed for modern network security operations. 

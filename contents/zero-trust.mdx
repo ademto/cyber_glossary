@@ -1,50 +1,210 @@
 ---
 title: "Zero Trust"
-description: "A security model that assumes no implicit trust and requires verification for every access request"
-category: "Security Architecture"
-riskLevel: "Medium"
-severity: 8
-lastUpdated: "June 2025"
-threatLevel: "Medium"
-skillPath: ["Security Architecture", "Identity and Access Management", "Network Security", "Security Fundamentals"]
-jobPath: ["Security Architect", "Security Engineer", "Identity Specialist", "Security Consultant"]
-certsPath: ["CISSP", "SANS GSEC", "Microsoft Security Certifications", "CompTIA Security+"]
-relatedTerms:
-  - name: "Identity and Access Management"
-    slug: "iam"
-    description: "Managing user identities and access rights"
-  - name: "Network Segmentation"
-    slug: "network-segmentation"
-    description: "Dividing networks into secure zones"
-  - name: "Least Privilege"
-    slug: "least-privilege"
-    description: "Giving minimal necessary access"
-resources:
-  - title: "Zero Trust Architecture Principles"
-    url: "#"
-  - title: "Implementing Zero Trust Networks"
-    url: "#"
+acronym: "ZT"
+description: "A security model that requires strict identity verification for every person and device trying to access resources on a private network, regardless of whether they are sitting inside or outside of the network perimeter."
+category: "Security Models"
+riskLevel: "Low"
+severity: 1
+skillPath: ["Network Security", "Identity Management", "Access Control", "Cloud Security"]
+jobPath: ["Security Architect", "Identity Engineer", "Cloud Security Engineer", "Security Consultant"]
+certsPath: ["CISSP", "SANS SEC530", "Microsoft AZ-500", "AWS Security Specialty"]
 quickFacts:
-  "Core Principle": "Never trust, always verify"
-  "Components": "Identity, device, network, data"
-  "Implementation": "Phased approach, continuous monitoring"
-  "Example": "Multi-factor auth for every access request"
+  "Model Type": "Security Framework"
+  "First Coined": "2010 by Forrester Research"
+  "Key Principle": "Never Trust, Always Verify"
+  "Implementation": "Multi-layered approach"
+relatedTerms:
+  - slug: "iam"
+    name: "Identity and Access Management"
+    description: "Framework for managing digital identities and access rights"
+  - slug: "access-control"
+    name: "Access Control"
+    description: "Security technique that regulates who can access resources"
+  - slug: "network-segmentation"
+    name: "Network Segmentation"
+    description: "Dividing network into smaller, more manageable segments"
+  - slug: "cloud-security"
+    name: "Cloud Security"
+    description: "Security measures and controls for cloud computing environments"
+resources:
+  - url: "https://www.nist.gov/publications/zero-trust-architecture"
+    title: "NIST Zero Trust Architecture"
+  - url: "https://www.cisa.gov/zero-trust-maturity-model"
+    title: "CISA Zero Trust Maturity Model"
+  - url: "https://www.forrester.com/report/The-Forrester-Wave-Zero-Trust-Solution-Providers-Q4-2020/RES176354"
+    title: "Forrester Zero Trust Research"
 ---
+
+# Zero Trust
+
+Zero Trust is a cybersecurity model that eliminates the concept of trust from an organization's network architecture. Instead of assuming that everything inside the network is safe, Zero Trust requires verification of every user, device, and application before granting access to resources, regardless of their location relative to the network perimeter.
 
 ## What is Zero Trust?
 
-**Zero Trust** is a security framework that eliminates implicit trust and continuously validates every stage of digital interactions. It operates on the principle of "never trust, always verify" regardless of network location.
+Zero Trust is a security framework that operates on the principle of "never trust, always verify." It assumes that threats exist both inside and outside the network and requires continuous verification of identity, device health, and context before granting access to resources. This model moves away from traditional perimeter-based security to a more granular, identity-centric approach.
 
 ## Core Principles
 
-- **Verify Explicitly** – Authenticate and authorize every request
-- **Use Least Privilege** – Grant minimal access necessary
-- **Assume Breach** – Design for potential compromise
-- **Micro-segmentation** – Segment networks into small zones
+### Never Trust, Always Verify
+- **Continuous Authentication**: Verify identity at every access attempt
+- **Device Trust**: Validate device health and compliance status
+- **Context Awareness**: Consider user behavior, location, and time
+- **Least Privilege**: Grant minimal access required for specific tasks
+
+### Assume Breach
+- **Threat Modeling**: Assume network is already compromised
+- **Micro-segmentation**: Isolate resources and limit lateral movement
+- **Continuous Monitoring**: Monitor all network activity and access
+- **Incident Response**: Prepare for and respond to security incidents
+
+### Verify Explicitly
+- **Multi-factor Authentication**: Require multiple forms of verification
+- **Risk-based Access**: Adjust access based on risk assessment
+- **Just-in-time Access**: Grant temporary access when needed
+- **Privileged Access Management**: Control elevated permissions
+
+## Zero Trust Architecture
+
+### Identity and Access Management
+- **Single Sign-On (SSO)**: Centralized authentication across applications
+- **Multi-factor Authentication (MFA)**: Multiple verification factors
+- **Identity Federation**: Integration with external identity providers
+- **Privileged Access Management (PAM)**: Control elevated permissions
+
+### Device Security
+- **Device Registration**: Enroll and manage all devices
+- **Health Checks**: Verify device compliance and security posture
+- **Endpoint Protection**: Antivirus, EDR, and security controls
+- **Mobile Device Management (MDM)**: Control mobile device access
+
+### Network Security
+- **Micro-segmentation**: Divide network into smaller segments
+- **Software-Defined Perimeter (SDP)**: Dynamic network boundaries
+- **Network Access Control (NAC)**: Control device network access
+- **Encryption**: Encrypt data in transit and at rest
+
+### Application Security
+- **Application Access Control**: Control application-level access
+- **API Security**: Secure application programming interfaces
+- **Container Security**: Secure containerized applications
+- **Cloud Security**: Extend Zero Trust to cloud environments
 
 ## Implementation Strategy
 
-- Start with identity and access management
-- Implement network segmentation
-- Deploy continuous monitoring
-- Apply to all resources and users
+### Assessment Phase
+- **Current State Analysis**: Evaluate existing security controls
+- **Gap Analysis**: Identify areas needing improvement
+- **Risk Assessment**: Prioritize implementation based on risk
+- **Stakeholder Buy-in**: Secure executive and business support
+
+### Planning Phase
+- **Architecture Design**: Design Zero Trust architecture
+- **Technology Selection**: Choose appropriate tools and platforms
+- **Implementation Roadmap**: Create phased implementation plan
+- **Resource Planning**: Allocate budget and personnel
+
+### Implementation Phase
+- **Pilot Programs**: Start with limited scope implementations
+- **Identity Foundation**: Establish strong identity management
+- **Network Segmentation**: Implement micro-segmentation
+- **Monitoring and Analytics**: Deploy comprehensive monitoring
+
+### Optimization Phase
+- **Performance Tuning**: Optimize for user experience
+- **Policy Refinement**: Adjust policies based on usage patterns
+- **Continuous Improvement**: Regular assessment and updates
+- **Training and Awareness**: Educate users and administrators
+
+## Career Applications
+
+### Security Architect
+- Design Zero Trust architectures for organizations
+- Evaluate and select appropriate technologies
+- Create implementation roadmaps and strategies
+- Ensure alignment with business objectives
+
+### Identity Engineer
+- Implement and manage identity management systems
+- Configure authentication and authorization policies
+- Integrate with existing identity providers
+- Maintain and optimize identity infrastructure
+
+### Cloud Security Engineer
+- Extend Zero Trust principles to cloud environments
+- Implement cloud-native security controls
+- Manage multi-cloud security architectures
+- Ensure compliance with cloud security standards
+
+### Security Consultant
+- Advise organizations on Zero Trust adoption
+- Conduct security assessments and gap analysis
+- Develop security strategies and roadmaps
+- Provide implementation guidance and support
+
+## Technology Stack
+
+### Identity and Access Management
+- **Microsoft Azure AD**: Cloud-based identity management
+- **Okta**: Identity and access management platform
+- **Ping Identity**: Enterprise identity platform
+- **ForgeRock**: Digital identity management
+
+### Network Security
+- **Cisco ISE**: Identity Services Engine
+- **Palo Alto Networks**: Next-generation firewalls
+- **VMware NSX**: Network virtualization and security
+- **Zscaler**: Cloud security platform
+
+### Endpoint Security
+- **CrowdStrike**: Endpoint detection and response
+- **Carbon Black**: Endpoint security platform
+- **Microsoft Defender**: Endpoint protection
+- **SentinelOne**: Autonomous endpoint protection
+
+### Monitoring and Analytics
+- **Splunk**: Security information and event management
+- **Microsoft Sentinel**: Cloud-native SIEM
+- **IBM QRadar**: Security intelligence platform
+- **Exabeam**: User and entity behavior analytics
+
+## Best Practices
+
+### Start with Identity
+- Establish strong identity foundation before other controls
+- Implement multi-factor authentication across all systems
+- Use single sign-on to improve user experience
+- Implement privileged access management for elevated permissions
+
+### Implement Gradually
+- Start with pilot programs and limited scope
+- Focus on high-value assets and critical systems
+- Expand implementation based on lessons learned
+- Maintain user experience throughout transition
+
+### Monitor and Measure
+- Implement comprehensive monitoring and logging
+- Track key performance indicators and metrics
+- Regular security assessments and penetration testing
+- Continuous improvement based on data and feedback
+
+### User Experience
+- Minimize impact on user productivity
+- Provide clear guidance and training
+- Implement self-service capabilities where possible
+- Regular communication about security improvements
+
+## Compliance and Standards
+
+### Regulatory Compliance
+- **GDPR**: Data protection and privacy requirements
+- **HIPAA**: Healthcare information security
+- **SOX**: Financial reporting and controls
+- **PCI DSS**: Payment card industry security
+
+### Industry Standards
+- **NIST Cybersecurity Framework**: Risk management framework
+- **ISO 27001**: Information security management
+- **CIS Controls**: Critical security controls
+- **OWASP**: Web application security
+
+Zero Trust represents a fundamental shift in cybersecurity thinking, moving from perimeter-based security to a more comprehensive, identity-centric approach that provides better protection in today's complex threat landscape.

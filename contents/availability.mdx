@@ -1,69 +1,251 @@
 ---
 title: "Availability"
-description: "The principle of ensuring systems and data are accessible when needed by authorized users"
-category: "CIA Triad"
-riskLevel: "High"
-severity: 8
-lastUpdated: "March 2024"
-threatLevel: "Medium"
-relatedTerms:
-  - name: "Confidentiality"
-    slug: "confidentiality"
-    description: "Protecting information from unauthorized access"
-  - name: "Integrity"
-    slug: "integrity"
-    description: "Maintaining data accuracy and completeness"
-  - name: "DDoS"
-    slug: "ddos"
-    description: "Distributed denial of service attacks"
-resources:
-  - title: "High Availability Design Patterns"
-    url: "#"
-  - title: "Business Continuity Planning"
-    url: "#"
-  - title: "SLA Best Practices"
-    url: "#"
+description: "The principle of ensuring that systems, data, and services are accessible and usable when needed by authorized users, protecting against service disruptions and downtime."
+category: "Security Fundamentals"
+severity: 9
+riskLevel: "Critical"
+skillPath: ["Information Security", "System Administration", "Network Security", "Business Continuity"]
+jobPath: ["System Administrator", "Network Engineer", "Security Engineer", "Business Continuity Manager"]
+certsPath: ["CISSP", "CompTIA Security+", "CISM", "ITIL"]
 quickFacts:
-  "Primary Goal": "Ensure system accessibility"
-  "Implementation": "Redundancy, Load Balancing"
-  "Measurement": "Uptime percentage"
-  "Target": "99.9% uptime or higher"
+  "CIA Triad": "One of the three core security principles"
+  "Focus": "Ensuring systems and data are accessible"
+  "Methods": "Redundancy, backup, disaster recovery, high availability"
+relatedTerms:
+  - slug: "confidentiality"
+    name: "Confidentiality"
+    description: "Protecting information from unauthorized access"
+  - slug: "integrity"
+    name: "Integrity"
+    description: "Ensuring data accuracy and consistency"
+  - slug: "business-continuity"
+    name: "Business Continuity"
+    description: "Maintaining business operations during disruptions"
+resources:
+  - url: "https://www.nist.gov/publications/confidentiality-integrity-and-availability"
+    title: "NIST: CIA Triad"
+  - url: "https://www.isaca.org/resources/isaca-journal/issues/2020/volume-2/confidentiality-integrity-and-availability"
+    title: "ISACA: CIA Triad"
 ---
 
-## What is Availability?
+# Availability
 
-**domiso** ensures that information systems, applications, and data are accessible and usable when required by authorized users. It involves maintaining system uptime, preventing service disruptions, and ensuring rapid recovery from failures. Availability is measured through metrics like uptime percentage and recovery time objectives.
+Availability is one of the three fundamental principles of information security, along with Confidentiality and Integrity (collectively known as the CIA triad). It ensures that systems, data, and services are accessible and usable when needed by authorized users, protecting against service disruptions and downtime.
 
-## Core Principles
+## Understanding Availability
 
-- Ensures system accessibility when needed
-- Minimizes downtime and service disruptions
-- Critical for business continuity
-- Measured through uptime metrics
+### Definition
+Availability refers to the ability of authorized users to access information, systems, and services when needed. It ensures that resources are operational and accessible within acceptable timeframes and performance levels.
 
-## Implementation Strategies
+### Importance
+- **Business Continuity**: Essential for maintaining business operations
+- **Customer Service**: Ensures customer access to services
+- **Revenue Protection**: Protects against revenue loss from downtime
+- **Compliance**: Required by various regulations and service level agreements
 
-### Redundancy
+### Metrics
+- **Uptime**: Percentage of time systems are operational
+- **Response Time**: Time to respond to user requests
+- **Throughput**: Amount of work completed in a given time
+- **Recovery Time**: Time to restore services after failure
 
-Implement redundant systems and failover mechanisms to eliminate single points of failure.
+## Availability Threats
 
-### Load Balancing
+### Natural Disasters
+- **Earthquakes**: Physical damage to infrastructure
+- **Floods**: Water damage to equipment
+- **Hurricanes**: Wind and water damage
+- **Fires**: Destruction of facilities and equipment
 
-Distribute traffic across multiple servers to prevent overload and ensure consistent performance.
+### Technical Failures
+- **Hardware Failures**: Component failures in systems
+- **Software Failures**: Application crashes and bugs
+- **Network Failures**: Network connectivity issues
+- **Power Failures**: Electrical power disruptions
 
-### Monitoring
+### Human Errors
+- **Configuration Errors**: Incorrect system configurations
+- **Operator Errors**: Mistakes by system operators
+- **Maintenance Errors**: Errors during system maintenance
+- **Training Deficiencies**: Lack of proper training
 
-Continuous monitoring of system health, performance metrics, and early warning indicators.
+### Malicious Attacks
+- **Denial of Service (DoS)**: Overwhelming systems with traffic
+- **Distributed DoS (DDoS)**: Coordinated attack from multiple sources
+- **Ransomware**: Encrypting data and demanding payment
+- **Sabotage**: Intentional damage to systems
 
-### Disaster Recovery
+## Availability Controls
 
-Comprehensive disaster recovery and business continuity plans for rapid restoration.
+### Preventive Controls
+- **Redundancy**: Duplicate critical components
+- **Failover Systems**: Automatic switching to backup systems
+- **Load Balancing**: Distribute load across multiple systems
+- **Regular Maintenance**: Preventative maintenance schedules
+
+### Detective Controls
+- **Monitoring Systems**: Monitor system health and performance
+- **Alerting**: Alert administrators to issues
+- **Logging**: Log system events and errors
+- **Health Checks**: Regular system health checks
+
+### Corrective Controls
+- **Backup Systems**: Restore from backups
+- **Disaster Recovery**: Recover from disasters
+- **Incident Response**: Respond to availability incidents
+- **Service Restoration**: Restore services quickly
+
+## High Availability (HA)
+
+### HA Architecture
+- **Active-Active**: Multiple systems running simultaneously
+- **Active-Passive**: Primary system with standby backup
+- **Clustering**: Multiple systems working together
+- **Load Balancing**: Distribute load across systems
+
+### HA Components
+- **Redundant Hardware**: Duplicate hardware components
+- **Redundant Networks**: Multiple network paths
+- **Redundant Storage**: Multiple storage systems
+- **Redundant Power**: Multiple power sources
+
+### HA Technologies
+- **Virtualization**: Virtual machine high availability
+- **Container Orchestration**: Kubernetes and Docker Swarm
+- **Database Clustering**: Database high availability
+- **Application Clustering**: Application-level high availability
+
+## Disaster Recovery (DR)
+
+### DR Planning
+- **Business Impact Analysis**: Assess impact of disasters
+- **Recovery Objectives**: Define recovery time and point objectives
+- **Recovery Strategies**: Develop recovery strategies
+- **Testing**: Test disaster recovery procedures
+
+### DR Strategies
+- **Backup and Restore**: Traditional backup and restore
+- **Replication**: Real-time data replication
+- **Cloud Recovery**: Cloud-based disaster recovery
+- **Hybrid Recovery**: Combination of on-premises and cloud
+
+### DR Components
+- **Backup Systems**: Regular data backups
+- **Recovery Sites**: Secondary recovery locations
+- **Recovery Procedures**: Step-by-step recovery procedures
+- **Communication Plans**: Communication during disasters
+
+## Business Continuity
+
+### Business Continuity Planning
+- **Risk Assessment**: Assess business risks
+- **Impact Analysis**: Analyze business impact
+- **Strategy Development**: Develop continuity strategies
+- **Plan Testing**: Test continuity plans
+
+### Continuity Strategies
+- **Work Area Recovery**: Alternative work locations
+- **Remote Work**: Enable remote work capabilities
+- **Vendor Management**: Manage critical vendors
+- **Supply Chain**: Ensure supply chain continuity
+
+### Continuity Components
+- **Emergency Response**: Emergency response procedures
+- **Crisis Management**: Crisis management procedures
+- **Communication**: Internal and external communication
+- **Training**: Employee training and awareness
+
+## Network Availability
+
+### Network Redundancy
+- **Multiple Paths**: Multiple network paths
+- **Redundant Links**: Backup network links
+- **Load Balancing**: Distribute network load
+- **Failover**: Automatic network failover
+
+### Network Monitoring
+- **Performance Monitoring**: Monitor network performance
+- **Traffic Analysis**: Analyze network traffic
+- **Alerting**: Alert on network issues
+- **Capacity Planning**: Plan for network capacity
+
+### Network Security
+- **DDoS Protection**: Protect against DDoS attacks
+- **Traffic Filtering**: Filter malicious traffic
+- **Rate Limiting**: Limit traffic rates
+- **Intrusion Prevention**: Prevent network intrusions
+
+## System Availability
+
+### System Monitoring
+- **Health Monitoring**: Monitor system health
+- **Performance Monitoring**: Monitor system performance
+- **Resource Monitoring**: Monitor system resources
+- **Application Monitoring**: Monitor application performance
+
+### System Maintenance
+- **Scheduled Maintenance**: Regular maintenance windows
+- **Patch Management**: Regular system patching
+- **Configuration Management**: Manage system configurations
+- **Capacity Management**: Manage system capacity
+
+### System Security
+- **Access Control**: Control system access
+- **Authentication**: Authenticate system users
+- **Authorization**: Authorize system access
+- **Audit Logging**: Log system activities
+
+## Cloud Availability
+
+### Cloud Service Models
+- **IaaS**: Infrastructure as a Service availability
+- **PaaS**: Platform as a Service availability
+- **SaaS**: Software as a Service availability
+- **FaaS**: Function as a Service availability
+
+### Cloud Availability Features
+- **Auto-scaling**: Automatic scaling based on demand
+- **Load Balancing**: Cloud load balancing
+- **Multi-region**: Multiple geographic regions
+- **Backup Services**: Cloud backup services
+
+### Cloud SLAs
+- **Uptime Guarantees**: Guaranteed uptime percentages
+- **Service Credits**: Compensation for downtime
+- **Performance Metrics**: Performance guarantees
+- **Support Levels**: Support service levels
 
 ## Best Practices
 
-- Implement high availability architectures
-- Conduct regular system maintenance and updates
-- Maintain comprehensive backup and recovery procedures
-- Perform performance monitoring and capacity planning
-- Deploy DDoS protection and mitigation strategies
-  \`\`\`
+### Planning
+1. **Risk Assessment**: Assess availability risks
+2. **Business Impact Analysis**: Analyze business impact
+3. **Recovery Objectives**: Define recovery objectives
+4. **Strategy Development**: Develop availability strategies
+
+### Implementation
+1. **Redundancy**: Implement system redundancy
+2. **Monitoring**: Implement comprehensive monitoring
+3. **Backup**: Implement regular backups
+4. **Testing**: Test availability controls regularly
+
+### Maintenance
+1. **Regular Updates**: Keep systems updated
+2. **Capacity Planning**: Plan for capacity growth
+3. **Performance Tuning**: Tune system performance
+4. **Documentation**: Maintain current documentation
+
+### Response
+1. **Incident Response**: Respond to availability incidents
+2. **Communication**: Communicate during incidents
+3. **Recovery**: Recover services quickly
+4. **Lessons Learned**: Learn from incidents
+
+## Related Concepts
+- **Confidentiality**: Protecting information from unauthorized access
+- **Integrity**: Ensuring data accuracy and consistency
+- **Business Continuity**: Maintaining business operations during disruptions
+
+## Conclusion
+
+Availability is a fundamental principle of information security that ensures systems, data, and services are accessible when needed. Effective availability protection requires comprehensive planning, implementation of redundancy and monitoring systems, and regular testing and maintenance.
